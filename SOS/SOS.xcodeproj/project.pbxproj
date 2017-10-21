@@ -278,6 +278,8 @@
 		84E7418F1F9A726600245B14 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8413862B1F9AE7AE0098C5BE /* RegistrationViewController.swift */,
+				841386321F9B25650098C5BE /* MainRegistrationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -407,6 +409,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SJSegmentedScrollView/SJSegmentedScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -418,6 +421,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJSegmentedScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -471,9 +475,11 @@
 				84E741AA1F9A8AA500245B14 /* GreenViewController.swift in Sources */,
 				84B10F5A1F9B3D8A001C23C7 /* BlogTableViewCell.swift in Sources */,
 				84E741B01F9AA12E00245B14 /* MainPageViewController.swift in Sources */,
+				8413862C1F9AE7AE0098C5BE /* RegistrationViewController.swift in Sources */,
 				84E741A81F9A892900245B14 /* PageViewController.swift in Sources */,
 				84E741741F9A713E00245B14 /* ViewController.swift in Sources */,
 				84E741721F9A713E00245B14 /* AppDelegate.swift in Sources */,
+				841386331F9B25650098C5BE /* MainRegistrationViewController.swift in Sources */,
 				84E741AE1F9A8ABE00245B14 /* RedViewController.swift in Sources */,
 				84B10F6E1F9B4FA2001C23C7 /* GreenMainTableViewCell.swift in Sources */,
 				84B10F571F9B3C09001C23C7 /* BlogViewController.swift in Sources */,
