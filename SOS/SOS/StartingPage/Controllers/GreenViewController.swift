@@ -14,7 +14,7 @@ class GreenViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var greenView: UIView! {
         didSet {
             greenView.layer.masksToBounds = true
-            greenView.layer.cornerRadius = 100
+            greenView.layer.cornerRadius = 60
         }
     }
     var locationManager: CLLocationManager!

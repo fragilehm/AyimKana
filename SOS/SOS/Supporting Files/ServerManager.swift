@@ -12,15 +12,6 @@ import SwiftyJSON
 
 class ServerManager: HTTPRequestManager  {
 
-    var _contactTypes: ContactTypes?
-    var _categoryName: SimplifiedCourses?
-    var _categories: Categories?
-    var _branches: Branches?
-    var _simplifiedCourses: SimplifiedCourses?
-    var _courses: Courses?
-    var _subCategoryName: SimplifiedCourses?
-    var _course: Course?
-
     class var shared: ServerManager {
         struct Static {
             static let instance = ServerManager()
@@ -28,7 +19,7 @@ class ServerManager: HTTPRequestManager  {
         return Static.instance
     }
     
-    func getContactTypes(_ completion: @escaping (ContactTypes)-> Void, error: @escaping (String)-> Void) {
+    func getAllCategories(_ completion: @escaping (ContactTypes)-> Void, error: @escaping (String)-> Void) {
         
         if _contactTypes != nil {
             completion(_contactTypes!)

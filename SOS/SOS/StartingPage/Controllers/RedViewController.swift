@@ -13,7 +13,7 @@ class RedViewController: UIViewController {
     @IBOutlet weak var redView: UIView! {
         didSet {
             redView.layer.masksToBounds = true
-            redView.layer.cornerRadius = 100
+            redView.layer.cornerRadius = 60
         }
     }
     override func viewDidLoad() {

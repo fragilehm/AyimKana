@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="Qke-n2-ghm">
             <objects>
-                <viewController id="TNv-8l-hpR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationMainViewController" id="TNv-8l-hpR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YNE-hf-SmD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="416.80000000000001" y="124.58770614692655"/>
         </scene>
-        <!--View Controller-->
+        <!--Registration View Controller-->
         <scene sceneID="OdQ-fE-iV3">
             <objects>
-                <viewController id="m5J-zU-Tve" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationViewController" id="m5J-zU-Tve" customClass="RegistrationViewController" customModule="SOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hYa-5u-RFD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1050"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

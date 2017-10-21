@@ -13,7 +13,7 @@ class YellowViewController: UIViewController {
     @IBOutlet weak var yellowView: UIView! {
         didSet {
             yellowView.layer.masksToBounds = true
-            yellowView.layer.cornerRadius = 100
+            yellowView.layer.cornerRadius = 60
         }
     }
     override func viewDidLoad() {

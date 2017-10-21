@@ -13,20 +13,27 @@ class MainPageViewController: UIViewController {
     @IBOutlet weak var greenView: UIView! {
         didSet {
             greenView.layer.masksToBounds = true
-            greenView.layer.cornerRadius = 100
+            greenView.layer.cornerRadius = 65
         }
     }
     @IBOutlet weak var yellowView: UIView! {
         didSet {
             yellowView.layer.masksToBounds = true
-            yellowView.layer.cornerRadius = 100
+            yellowView.layer.cornerRadius = 65
         }
     }
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var pinkView: UIView! {
+    @IBOutlet weak var redView: UIView! {
         didSet {
-            pinkView.layer.masksToBounds = true
-            pinkView.layer.cornerRadius = 35
+            redView.layer.masksToBounds = true
+            redView.layer.cornerRadius = 65
+        }
+    }
+    @IBOutlet weak var borderView: UIView! {
+        didSet {
+            borderView.layer.masksToBounds = true
+            borderView.layer.cornerRadius = 5
+            borderView.layer.borderWidth = 1
+            borderView.layer.borderColor = UIColor.darkGray.cgColor
         }
     }
     override func viewDidLoad() {
@@ -35,20 +42,5 @@ class MainPageViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
