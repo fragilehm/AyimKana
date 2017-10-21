@@ -17,9 +17,17 @@
 		84E741911F9A727200245B14 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E741901F9A727200245B14 /* Registration.storyboard */; };
 		84E741941F9A728800245B14 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E741931F9A728800245B14 /* Login.storyboard */; };
 		84E741981F9A72D800245B14 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E741971F9A72D800245B14 /* Profile.storyboard */; };
+		84E741A81F9A892900245B14 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741A71F9A892900245B14 /* PageViewController.swift */; };
+		84E741AA1F9A8AA500245B14 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741A91F9A8AA500245B14 /* GreenViewController.swift */; };
+		84E741AC1F9A8AB300245B14 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741AB1F9A8AB300245B14 /* YellowViewController.swift */; };
+		84E741AE1F9A8ABE00245B14 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741AD1F9A8ABE00245B14 /* RedViewController.swift */; };
+		84E741B01F9AA12E00245B14 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741AF1F9AA12E00245B14 /* MainPageViewController.swift */; };
+		A378D610496AF55F59F7CF5E /* Pods_SOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AF172DF51CFC48DE679C59 /* Pods_SOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18AF172DF51CFC48DE679C59 /* Pods_SOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69E5A18DDC8000C5F161D3C2 /* Pods-SOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SOS/Pods-SOS.debug.xcconfig"; sourceTree = "<group>"; };
 		84E7416E1F9A713E00245B14 /* SOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E741711F9A713E00245B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E741731F9A713E00245B14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +44,12 @@
 		84E7419A1F9A732A00245B14 /* HTTPRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestManager.swift; sourceTree = "<group>"; };
 		84E7419B1F9A733000245B14 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		84E7419C1F9A733B00245B14 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		84E741A71F9A892900245B14 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		84E741A91F9A8AA500245B14 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		84E741AB1F9A8AB300245B14 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		84E741AD1F9A8ABE00245B14 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
+		84E741AF1F9AA12E00245B14 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		E13AF5A7BDB9AC2D2A8E07DE /* Pods-SOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOS/Pods-SOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +57,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A378D610496AF55F59F7CF5E /* Pods_SOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D827974C23F9BFE7F76AB63 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69E5A18DDC8000C5F161D3C2 /* Pods-SOS.debug.xcconfig */,
+				E13AF5A7BDB9AC2D2A8E07DE /* Pods-SOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		84E741651F9A713E00245B14 = {
 			isa = PBXGroup;
 			children = (
 				84E741701F9A713E00245B14 /* SOS */,
 				84E7416F1F9A713E00245B14 /* Products */,
+				2D827974C23F9BFE7F76AB63 /* Pods */,
+				EC15D40AA7F76C84DE516B6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +168,10 @@
 		84E741891F9A720C00245B14 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84E741A71F9A892900245B14 /* PageViewController.swift */,
+				84E741A91F9A8AA500245B14 /* GreenViewController.swift */,
+				84E741AB1F9A8AB300245B14 /* YellowViewController.swift */,
+				84E741AD1F9A8ABE00245B14 /* RedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -149,6 +179,7 @@
 		84E7418C1F9A723500245B14 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84E741AF1F9AA12E00245B14 /* MainPageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -183,6 +214,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		EC15D40AA7F76C84DE516B6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18AF172DF51CFC48DE679C59 /* Pods_SOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,9 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84E741801F9A713E00245B14 /* Build configuration list for PBXNativeTarget "SOS" */;
 			buildPhases = (
+				905CEBD62A6BC366727AF488 /* [CP] Check Pods Manifest.lock */,
 				84E7416A1F9A713E00245B14 /* Sources */,
 				84E7416B1F9A713E00245B14 /* Frameworks */,
 				84E7416C1F9A713E00245B14 /* Resources */,
+				7D8092B836CEAE0546B27979 /* [CP] Embed Pods Frameworks */,
+				C67E80AFDC2A6F9959E07228 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,13 +297,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7D8092B836CEAE0546B27979 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SOS/Pods-SOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/EMPageViewController/EMPageViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SJSegmentedScrollView/SJSegmentedScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EMPageViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJSegmentedScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SOS/Pods-SOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		905CEBD62A6BC366727AF488 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C67E80AFDC2A6F9959E07228 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SOS/Pods-SOS-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SOS/Pods-SOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84E7416A1F9A713E00245B14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E741AA1F9A8AA500245B14 /* GreenViewController.swift in Sources */,
+				84E741B01F9AA12E00245B14 /* MainPageViewController.swift in Sources */,
+				84E741A81F9A892900245B14 /* PageViewController.swift in Sources */,
 				84E741741F9A713E00245B14 /* ViewController.swift in Sources */,
 				84E741721F9A713E00245B14 /* AppDelegate.swift in Sources */,
+				84E741AE1F9A8ABE00245B14 /* RedViewController.swift in Sources */,
+				84E741AC1F9A8AB300245B14 /* YellowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,10 +517,11 @@
 		};
 		84E741811F9A713E00245B14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69E5A18DDC8000C5F161D3C2 /* Pods-SOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E3ZV847C68;
+				DEVELOPMENT_TEAM = U5DCDBG2W2;
 				INFOPLIST_FILE = SOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = example.com.SOS;
@@ -411,10 +533,11 @@
 		};
 		84E741821F9A713E00245B14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E13AF5A7BDB9AC2D2A8E07DE /* Pods-SOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E3ZV847C68;
+				DEVELOPMENT_TEAM = U5DCDBG2W2;
 				INFOPLIST_FILE = SOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = example.com.SOS;
