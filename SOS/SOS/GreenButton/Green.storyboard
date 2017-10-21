@@ -163,10 +163,10 @@
             </objects>
             <point key="canvasLocation" x="1048.8" y="36.431784107946029"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="Xps-lV-Ry0">
             <objects>
-                <viewController id="0uR-5j-ixL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" id="0uR-5j-ixL" customClass="DetailsViewController" customModule="SOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="azG-Be-d25">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,23 +174,58 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vzv-s2-fAf">
                                 <rect key="frame" x="12" y="32" width="351" height="29"/>
                                 <segments>
-                                    <segment title="Details"/>
-                                    <segment title="Map"/>
+                                    <segment title="Карта"/>
+                                    <segment title="Информация"/>
                                 </segments>
                             </segmentedControl>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jlk-pg-X9m">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vzv-s2-fAf" firstAttribute="leading" secondItem="RpE-jP-HgO" secondAttribute="leading" constant="12" id="2Ra-k1-3uN"/>
+                            <constraint firstItem="RpE-jP-HgO" firstAttribute="bottom" secondItem="Jlk-pg-X9m" secondAttribute="bottom" id="BqJ-LY-2Ls"/>
+                            <constraint firstItem="Jlk-pg-X9m" firstAttribute="top" secondItem="vzv-s2-fAf" secondAttribute="bottom" constant="12" id="MpJ-Ym-nJx"/>
+                            <constraint firstItem="RpE-jP-HgO" firstAttribute="trailing" secondItem="Jlk-pg-X9m" secondAttribute="trailing" id="Nfa-1F-Cyj"/>
                             <constraint firstItem="vzv-s2-fAf" firstAttribute="top" secondItem="RpE-jP-HgO" secondAttribute="top" constant="12" id="WpK-7s-JKj"/>
+                            <constraint firstItem="Jlk-pg-X9m" firstAttribute="leading" secondItem="RpE-jP-HgO" secondAttribute="leading" id="fYl-jZ-yWm"/>
                             <constraint firstItem="RpE-jP-HgO" firstAttribute="trailing" secondItem="vzv-s2-fAf" secondAttribute="trailing" constant="12" id="mxB-KM-qEg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RpE-jP-HgO"/>
                     </view>
+                    <connections>
+                        <outlet property="DetailsSegmentedControl" destination="vzv-s2-fAf" id="Tzq-QV-lrt"/>
+                        <outlet property="mapView" destination="Jlk-pg-X9m" id="TN6-dD-uaR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFq-Ag-Nkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1814" y="36"/>
+            <point key="canvasLocation" x="1813.5999999999999" y="35.532233883058474"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pbU-OI-GrT">
+            <objects>
+                <viewController id="lLL-Mb-gOZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P8Z-I2-6DW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncR-Oj-wfO">
+                                <rect key="frame" x="166" y="309" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="3s5-bG-O5m"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Z4-4d-PRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2536" y="39"/>
         </scene>
     </scenes>
 </document>
