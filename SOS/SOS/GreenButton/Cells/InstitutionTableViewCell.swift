@@ -1,5 +1,5 @@
 //
-//  GreenMainTableViewCell.swift
+//  IntstitutionTableViewCell.swift
 //  SOS
 //
 //  Created by Khasanza on 10/21/17.
@@ -8,12 +8,14 @@
 
 import UIKit
 
-class GreenMainTableViewCell: UITableViewCell {
+class InstitutionTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    
 }
