@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import IQKeyboardManager
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        IQKeyboardManager.shared().isEnabled = true
+        UINavigationBar.appearance().backgroundColor = UIColor.init(netHex: 0x9C627F)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes =  [NSAttributedStringKey.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().barTintColor = UIColor.init(netHex: 0x9C627F)
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        UINavigationBar.appearance().clipsToBounds = true
+        
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        
+        statusBar.backgroundColor = UIColor.init(netHex: 0x9C627F)
         return true
     }
 
