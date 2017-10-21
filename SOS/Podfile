@@ -14,5 +14,6 @@ target 'SOS' do
  	pod 'SJSegmentedScrollView'
  	pod 'ImageSlideshow/Kingfisher’
  	pod 'KRProgressHUD'
+    pod 'UITextView+Placeholder'
 
 end

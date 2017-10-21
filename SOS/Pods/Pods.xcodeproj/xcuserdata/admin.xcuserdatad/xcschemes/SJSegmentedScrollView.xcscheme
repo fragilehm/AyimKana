@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9D0162B0E2BA339D99D560C26FA556F9'
+               BlueprintIdentifier = '19B06DB0E1D4597900771B9B2CD79C5A'
                BlueprintName = 'SJSegmentedScrollView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SJSegmentedScrollView.framework'>

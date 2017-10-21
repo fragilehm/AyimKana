@@ -72,7 +72,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         // the first view controller.
         guard orderedViewControllersCount != nextIndex else {
             // Uncommment the line below, remove the line above if you don't want the page control to loop.
-            //pageControl.isHidden = true
+            pageControl.isHidden = true
             return nil
         }
         
@@ -92,12 +92,12 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         return UIStoryboard(name: "StartingPage", bundle: nil).instantiateViewController(withIdentifier: viewController)
     }
     lazy var orderedViewControllers: [UIViewController] = {
-        let vc = UIStoryboard(name: "Registration", bundle: nil).instantiateViewController(withIdentifier: "RegistrationMainViewController")
-        let navigationController = UINavigationController(rootViewController: vc)
+        let vc = UIStoryboard(name: "Registration", bundle: nil).instantiateViewController(withIdentifier: "RegistrationViewController")
+        //let navigationController = UINavigationController(rootViewController: vc)
         return [self.newVc(viewController: "GreenViewController"),
                 self.newVc(viewController: "YellowViewController"),
                 self.newVc(viewController: "RedViewController"),
-                navigationController]
+                vc]
     }()
 }
 

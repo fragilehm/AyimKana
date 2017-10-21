@@ -18,6 +18,7 @@ PODS:
     - KRActivityIndicatorView (~> 2.1.0)
   - SJSegmentedScrollView (1.3.8)
   - SwiftyJSON (3.1.4)
+  - UITextView+Placeholder (1.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - KRProgressHUD
   - SJSegmentedScrollView
   - SwiftyJSON
+  - UITextView+Placeholder
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
@@ -40,7 +42,8 @@ SPEC CHECKSUMS:
   KRProgressHUD: 590711f91da7088bce0e7f6abdf273d51359e505
   SJSegmentedScrollView: 2308af5e7dbbbcbf7042efd47128f162186ed078
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
 
-PODFILE CHECKSUM: 002acf0ba447915d5ff4e99f524b7837a0a0c637
+PODFILE CHECKSUM: 0f750441d11ee74ed7f13bb5bb57f5c1981d6c0f
 
 COCOAPODS: 1.3.1
