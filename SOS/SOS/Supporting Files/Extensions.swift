@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 extension UIViewController {
     
     func alert(message: String, title: String = "") {
@@ -36,16 +36,5 @@ extension UIViewController {
         alertController.addAction(OKAction)
         self.present(alertController, animated: true, completion: nil)
     }
-    func setNavigationBar() {
-        let revealVC = self.revealViewController()
-        if revealVC != nil {
-            let leftButton = UIBarButtonItem(image: UIImage(named: "menu"),
-                                             style: .plain,
-                                             target: revealVC,
-                                             action:  #selector(SWRevealViewController.revealToggle(_:)))
-            
-            self.navigationItem.leftBarButtonItem = leftButton
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-    }
+    
 }

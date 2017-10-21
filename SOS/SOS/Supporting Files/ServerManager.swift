@@ -19,29 +19,20 @@ class ServerManager: HTTPRequestManager  {
         return Static.instance
     }
     
-    func getAllCategories(_ completion: @escaping (ContactTypes)-> Void, error: @escaping (String)-> Void) {
-        
-        if _contactTypes != nil {
-            completion(_contactTypes!)
-            return
-        }
-        
-        self.get(api: "getAllContactTypes", completion: { (json) in
-            let obj = ContactTypes(json: json)
-            self._contactTypes = obj
-            completion(obj)
+    func getAllCategories(_ completion: @escaping (Categories)-> Void, error: @escaping (String)-> Void) {
+        self.get(api: "categories", completion: { (json) in
+            completion(Categories(json: json))
         }, error: error)
     }
-    
-    func addCourse(course: Course, completion: @escaping ()-> Void,error: @escaping (String)-> Void) {
-        let param = course.toDict()
-        
-        post(api: "addCourse",
-             parameters: param, completion: {(json) in
-            self._simplifiedCourses = nil
-            completion()
-            }
-        , error: error)
-    }
-   
+//    func addCourse(course: Course, completion: @escaping ()-> Void,error: @escaping (String)-> Void) {
+//        let param = course.toDict()
+//
+//        post(api: "addCourse",
+//             parameters: param, completion: {(json) in
+//            self._simplifiedCourses = nil
+//            completion()
+//            }
+//        , error: error)
+//    }
+//
 }

@@ -41,6 +41,15 @@ class MainPageViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        ServerManager.shared.getAllCategories(getCategories, error: showError)
 
+    }
+    func getCategories(categories: Categories) {
+        print(categories.array[0].name)
+    }
+    func showError(msaage: String) {
+        
+    }
 
 }
