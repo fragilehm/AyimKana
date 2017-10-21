@@ -97,6 +97,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         return [self.newVc(viewController: "GreenViewController"),
                 self.newVc(viewController: "YellowViewController"),
                 self.newVc(viewController: "RedViewController"),
+                self.newVc(viewController: "EnvelopeViewController"),
                 vc]
     }()
 }
