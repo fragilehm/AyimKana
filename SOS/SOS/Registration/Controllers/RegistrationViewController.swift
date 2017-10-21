@@ -54,7 +54,7 @@ class RegistrationViewController: UIViewController, UITextViewDelegate {
             alertMessageTextView.layer.borderWidth = 1
             alertMessageTextView.layer.cornerRadius = 8
             alertMessageTextView.layer.borderColor = generalColor
-            alertMessageTextView.placeholder = "Enter a message that will be sent to emergency contacts"
+            alertMessageTextView.placeholder = "Введите сообщение, которое будет отправлено вашим близкимю."
         }
     }
     
