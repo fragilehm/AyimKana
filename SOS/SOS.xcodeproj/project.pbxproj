@@ -11,6 +11,10 @@
 		8402CA921F9B6A17001FF052 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7419B1F9A733000245B14 /* ServerManager.swift */; };
 		8402CA931F9B6A17001FF052 /* HTTPRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7419A1F9A732A00245B14 /* HTTPRequestManager.swift */; };
 		8402CA941F9B6A17001FF052 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741991F9A731600245B14 /* HTTPStatusCode.swift */; };
+		8402CA981F9B73EB001FF052 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CA971F9B73EB001FF052 /* MainListViewController.swift */; };
+		8402CA9A1F9B7593001FF052 /* MainListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CA991F9B7593001FF052 /* MainListTableViewCell.swift */; };
+		8402CA9B1F9B7736001FF052 /* MainRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CA951F9B6C79001FF052 /* MainRegistrationViewController.swift */; };
+		8402CA9C1F9B7736001FF052 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CA961F9B6C79001FF052 /* RegistrationViewController.swift */; };
 		84B10F571F9B3C09001C23C7 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B10F561F9B3C09001C23C7 /* BlogViewController.swift */; };
 		84B10F5A1F9B3D8A001C23C7 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B10F591F9B3D8A001C23C7 /* BlogTableViewCell.swift */; };
 		84B10F5E1F9B4C6E001C23C7 /* Green.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B10F5D1F9B4C6E001C23C7 /* Green.storyboard */; };
@@ -43,6 +47,8 @@
 		69E5A18DDC8000C5F161D3C2 /* Pods-SOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SOS/Pods-SOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8402CA951F9B6C79001FF052 /* MainRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRegistrationViewController.swift; sourceTree = "<group>"; };
 		8402CA961F9B6C79001FF052 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		8402CA971F9B73EB001FF052 /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
+		8402CA991F9B7593001FF052 /* MainListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableViewCell.swift; sourceTree = "<group>"; };
 		84B10F561F9B3C09001C23C7 /* BlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
 		84B10F591F9B3D8A001C23C7 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
 		84B10F5D1F9B4C6E001C23C7 /* Green.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Green.storyboard; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				84B10F591F9B3D8A001C23C7 /* BlogTableViewCell.swift */,
+				8402CA991F9B7593001FF052 /* MainListTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -277,6 +284,7 @@
 			children = (
 				84E741AF1F9AA12E00245B14 /* MainPageViewController.swift */,
 				84B10F561F9B3C09001C23C7 /* BlogViewController.swift */,
+				8402CA971F9B73EB001FF052 /* MainListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -415,6 +423,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SJSegmentedScrollView/SJSegmentedScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -426,6 +435,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJSegmentedScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -476,6 +486,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8402CA9B1F9B7736001FF052 /* MainRegistrationViewController.swift in Sources */,
+				8402CA9C1F9B7736001FF052 /* RegistrationViewController.swift in Sources */,
 				8402CA911F9B6A17001FF052 /* Extensions.swift in Sources */,
 				8402CA921F9B6A17001FF052 /* ServerManager.swift in Sources */,
 				8402CA931F9B6A17001FF052 /* HTTPRequestManager.swift in Sources */,
@@ -485,6 +497,8 @@
 				84E741B01F9AA12E00245B14 /* MainPageViewController.swift in Sources */,
 				84E741A81F9A892900245B14 /* PageViewController.swift in Sources */,
 				84E741741F9A713E00245B14 /* ViewController.swift in Sources */,
+				8402CA9A1F9B7593001FF052 /* MainListTableViewCell.swift in Sources */,
+				8402CA981F9B73EB001FF052 /* MainListViewController.swift in Sources */,
 				84E741721F9A713E00245B14 /* AppDelegate.swift in Sources */,
 				84E741AE1F9A8ABE00245B14 /* RedViewController.swift in Sources */,
 				84B10F6E1F9B4FA2001C23C7 /* GreenMainTableViewCell.swift in Sources */,
