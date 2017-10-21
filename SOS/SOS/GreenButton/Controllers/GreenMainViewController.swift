@@ -34,6 +34,7 @@ extension GreenMainViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = greenCategoryTableView.dequeueReusableCell(withIdentifier: "GreenCategoryTableViewCell", for: indexPath) as! GreenCategoryTableViewCell
         cell.titleLabel.text = categories.array[indexPath.row].name
         cell.descriptionLabel.text = categories.array[indexPath.row].description
+        cell.categoryImageView.image = UIImage(named: "category\(indexPath.row)")
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -41,8 +42,8 @@ extension GreenMainViewController: UITableViewDelegate, UITableViewDataSource {
         vc.id = categories.array[indexPath.row].id
         self.navigationController?.show(vc, sender: self)
     }
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 90
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
 }

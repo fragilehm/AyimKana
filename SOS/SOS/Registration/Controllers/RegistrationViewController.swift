@@ -63,5 +63,11 @@ class RegistrationViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         
     }
+    @IBAction func savePressed(_ sender: Any) {
+        let vc = UIStoryboard(name: "MainPage", bundle: nil).instantiateViewController(withIdentifier: "MainListViewController")
+        let navigationController = UINavigationController(rootViewController: vc)
+        self.present(navigationController, animated: true, completion: nil)
 
+    }
+    
 }

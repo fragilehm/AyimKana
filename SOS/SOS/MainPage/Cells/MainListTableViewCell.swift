@@ -11,8 +11,9 @@ import UIKit
 class MainListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-
+    @IBOutlet weak var logoImageView: UIImageView!
+    
+    @IBOutlet weak var descriptionTextView: UITextView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
