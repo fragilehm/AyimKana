@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,21 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axX-D5-e1Z">
-                                <rect key="frame" x="146" y="323" width="33" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FGx-Qh-ykw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FGx-Qh-ykw" firstAttribute="leading" secondItem="scb-Mz-sHO" secondAttribute="leading" id="Hpb-d2-GZ0"/>
+                            <constraint firstItem="FGx-Qh-ykw" firstAttribute="top" secondItem="scb-Mz-sHO" secondAttribute="top" id="OMA-F2-YS1"/>
+                            <constraint firstItem="scb-Mz-sHO" firstAttribute="trailing" secondItem="FGx-Qh-ykw" secondAttribute="trailing" id="gdh-WR-jAq"/>
+                            <constraint firstItem="scb-Mz-sHO" firstAttribute="bottom" secondItem="FGx-Qh-ykw" secondAttribute="bottom" id="zQL-5y-OOv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="scb-Mz-sHO"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="FGx-Qh-ykw" id="fAD-8G-Qvb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yIV-Cv-osL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1" y="135"/>
+            <point key="canvasLocation" x="0.80000000000000004" y="134.48275862068968"/>
         </scene>
     </scenes>
 </document>

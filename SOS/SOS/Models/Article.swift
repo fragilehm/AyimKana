@@ -18,7 +18,7 @@ struct Article {
     init() {
         id = 0
         title = ""
-        img_url = ""
+        image_url = ""
         body = ""
         last_updated = ""
     }
