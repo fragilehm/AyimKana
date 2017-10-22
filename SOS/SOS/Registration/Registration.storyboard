@@ -18,25 +18,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="контакт #1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q4G-Zv-YdF">
-                                <rect key="frame" x="24" y="243" width="327" height="30"/>
+                                <rect key="frame" x="24" y="123" width="327" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="OyO-ha-zR0"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="контакт #2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="roJ-SN-plk">
-                                <rect key="frame" x="24" y="297" width="327" height="30"/>
+                                <rect key="frame" x="24" y="207" width="327" height="60"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="контакт #3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HAS-Vn-lEc">
-                                <rect key="frame" x="24" y="351" width="327" height="30"/>
+                                <rect key="frame" x="24" y="291" width="327" height="60"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="контакт #4" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cZN-Nk-eA4">
-                                <rect key="frame" x="24" y="405" width="327" height="30"/>
+                                <rect key="frame" x="24" y="375" width="327" height="60"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -63,13 +66,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phonebook-2" translatesAutoresizingMaskIntoConstraints="NO" id="qHG-uF-Gvt">
-                                <rect key="frame" x="112.5" y="32" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="9Qd-mZ-eg0"/>
-                                    <constraint firstAttribute="height" constant="150" id="oAb-JE-vRF"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -81,18 +77,20 @@
                             <constraint firstItem="ogL-nD-G98" firstAttribute="top" secondItem="qzw-dS-TwM" secondAttribute="bottom" constant="24" id="AnU-Db-iHn"/>
                             <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="HAS-Vn-lEc" secondAttribute="trailing" constant="24" id="CFu-7n-N6s"/>
                             <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="ogL-nD-G98" secondAttribute="trailing" constant="24" id="D2V-e4-3sn"/>
+                            <constraint firstItem="HAS-Vn-lEc" firstAttribute="height" secondItem="q4G-Zv-YdF" secondAttribute="height" id="DhH-cd-huR"/>
+                            <constraint firstItem="ogL-nD-G98" firstAttribute="height" secondItem="q4G-Zv-YdF" secondAttribute="height" id="Eob-aT-rqY"/>
+                            <constraint firstItem="roJ-SN-plk" firstAttribute="height" secondItem="q4G-Zv-YdF" secondAttribute="height" id="J5B-Zr-ySm"/>
                             <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="q4G-Zv-YdF" secondAttribute="trailing" constant="24" id="KZt-1g-aJb"/>
                             <constraint firstItem="roJ-SN-plk" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="SSU-VJ-Kns"/>
                             <constraint firstItem="q4G-Zv-YdF" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="SsT-Xs-Fob"/>
                             <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="roJ-SN-plk" secondAttribute="trailing" constant="24" id="TyR-8c-2Tb"/>
-                            <constraint firstItem="qHG-uF-Gvt" firstAttribute="top" secondItem="7qe-Ov-PB8" secondAttribute="top" constant="12" id="ZkK-Mi-PA0"/>
                             <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="cZN-Nk-eA4" secondAttribute="trailing" constant="24" id="bZV-3e-0wG"/>
                             <constraint firstItem="HAS-Vn-lEc" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="c62-Mo-9Kv"/>
                             <constraint firstItem="cZN-Nk-eA4" firstAttribute="top" secondItem="HAS-Vn-lEc" secondAttribute="bottom" constant="24" id="fZ1-e8-wMZ"/>
                             <constraint firstItem="qzw-dS-TwM" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="hI0-tP-nki"/>
                             <constraint firstItem="qzw-dS-TwM" firstAttribute="top" secondItem="cZN-Nk-eA4" secondAttribute="bottom" constant="24" id="hZv-54-Hoa"/>
                             <constraint firstItem="cZN-Nk-eA4" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="wtR-2m-3Cb"/>
-                            <constraint firstItem="qHG-uF-Gvt" firstAttribute="centerX" secondItem="9O3-nk-nGS" secondAttribute="centerX" id="xdF-8J-gGf"/>
+                            <constraint firstItem="cZN-Nk-eA4" firstAttribute="height" secondItem="q4G-Zv-YdF" secondAttribute="height" id="zBf-ab-DCe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7qe-Ov-PB8"/>
                     </view>
@@ -110,7 +108,4 @@
             <point key="canvasLocation" x="-703.20000000000005" y="34.632683658170919"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="phonebook-2" width="256" height="256"/>
-    </resources>
 </document>

@@ -20,7 +20,11 @@ class MainListViewController: UIViewController, CLLocationManagerDelegate {
     var storyboards = ["HandBook", "Green", "Pins", "SMS", "Registration"]
     var vcs = ["HandBookViewController", "GreenMainViewController", "PinsViewController", "SMSViewController",
                "RegistrationViewController"]
-    @IBOutlet weak var mainListTableView: UITableView!
+    @IBOutlet weak var mainListTableView: UITableView! {
+        didSet {
+            mainListTableView.delegate = self
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         mainListTableView.tableFooterView = UIView()
@@ -55,25 +59,22 @@ extension MainListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 3 {
-            alert(message: "вы уверены ?", {
-                if (self.messageComposer.canSendText()) {
-                    let messageComposeVC = self.messageComposer.configuredMessageComposeViewController()
-                    messageComposeVC.body = "If you received this message, please response asap"
-                    messageComposeVC.addAttachmentURL(self.locationVCardURLFromCoordinate(coordinate: CLLocationCoordinate2D(latitude: self.userLatitude, longitude: self.userLongitude))! as URL, withAlternateFilename: "vCard.loc.vcf")
-                    self.present(messageComposeVC, animated: true, completion: nil)
-                } else {
-                    let errorAlert = UIAlertView(title: "can not send", message: "Your device is not able to send", delegate: self, cancelButtonTitle: "Shit!")
-                    errorAlert.show()
-                }
-            }, cancel: {
-                print("canceled")
-            })
+            if (self.messageComposer.canSendText()) {
+                let messageComposeVC = self.messageComposer.configuredMessageComposeViewController()
+                messageComposeVC.body = "If you received this message, please response asap"
+                messageComposeVC.addAttachmentURL(self.locationVCardURLFromCoordinate(coordinate: CLLocationCoordinate2D(latitude: self.userLatitude, longitude: self.userLongitude))! as URL, withAlternateFilename: "vCard.loc.vcf")
+                self.present(messageComposeVC, animated: true, completion: nil)
+            } else {
+                let errorAlert = UIAlertView(title: "can not send", message: "Your device is not able to send", delegate: self, cancelButtonTitle: "Shit!")
+                errorAlert.show()
+            }
+            
         }
         else {
             self.navigationController?.show(getVC(storyboard: storyboards[indexPath.row], name: vcs[indexPath.row]), sender: self)
         }
-        
     }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             userLatitude = location.coordinate.latitude
