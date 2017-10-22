@@ -106,6 +106,7 @@
                                     <segment title="Карта"/>
                                     <segment title="Информация"/>
                                 </segments>
+                                <color key="tintColor" red="0.61176470589999998" green="0.38431372549999998" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="valueChanged:" destination="0uR-5j-ixL" eventType="valueChanged" id="sJD-US-d3G"/>
                                 </connections>
