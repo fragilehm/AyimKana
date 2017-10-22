@@ -33,7 +33,7 @@ extension HandBookViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard(name: "HandBook", bundle: nil).instantiateViewController(withIdentifier: "ArticleDetailsViewController") as! ArticleDetailsViewController
+        let vc = UIStoryboard(name: "HandBook", bundle: nil).instantiateViewController(withIdentifier: "InformationViewCnotroller") as! ArticleDetailsViewController
         vc.article = articles.array[indexPath.row]
         self.navigationController?.show(vc, sender: self)
     }
