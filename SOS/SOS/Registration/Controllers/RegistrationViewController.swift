@@ -64,7 +64,22 @@ class RegistrationViewController: UIViewController, UITextViewDelegate {
         
     }
     @IBAction func savePressed(_ sender: Any) {
-        let vc = UIStoryboard(name: "MainPage", bundle: nil).instantiateViewController(withIdentifier: "MainListViewController")
+        var numbers = [String]()
+        if firstContact.text != "" {
+            numbers.append(firstContact.text!)
+        }
+        if secondContact.text != "" {
+            numbers.append(secondContact.text!)
+        }
+        if thirdContact.text != "" {
+            numbers.append(thirdContact.text!)
+        }
+        if fourthContact.text != "" {
+            numbers.append(fourthContact.text!)
+        }
+        let vc = UIStoryboard(name: "MainPage", bundle: nil).instantiateViewController(withIdentifier: "MainListViewController") as! MainListViewController
+        vc.messageComposer.setNumbers(numbers: numbers)
+        vc.message = self.alertMessageTextView.text!
         let navigationController = UINavigationController(rootViewController: vc)
         self.present(navigationController, animated: true, completion: nil)
 
