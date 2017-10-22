@@ -47,6 +47,8 @@
 		84E741AA1F9A8AA500245B14 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741A91F9A8AA500245B14 /* GreenViewController.swift */; };
 		84E741AC1F9A8AB300245B14 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741AB1F9A8AB300245B14 /* YellowViewController.swift */; };
 		84E741AE1F9A8ABE00245B14 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741AD1F9A8ABE00245B14 /* RedViewController.swift */; };
+		84F3D9E21F9C704800046EF1 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3D9E11F9C704800046EF1 /* DetailedViewController.swift */; };
+		84F3D9E41F9C717F00046EF1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3D9E31F9C717F00046EF1 /* DataManager.swift */; };
 		A378D610496AF55F59F7CF5E /* Pods_SOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AF172DF51CFC48DE679C59 /* Pods_SOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,8 @@
 		84E741A91F9A8AA500245B14 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		84E741AB1F9A8AB300245B14 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		84E741AD1F9A8ABE00245B14 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
+		84F3D9E11F9C704800046EF1 /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
+		84F3D9E31F9C717F00046EF1 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E13AF5A7BDB9AC2D2A8E07DE /* Pods-SOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOS/Pods-SOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +147,7 @@
 				84B10F6A1F9B4F69001C23C7 /* GreenMainViewController.swift */,
 				8402CA9D1F9B8DB2001FF052 /* InstitutionViewController.swift */,
 				84D16D3C1F9C035A001D4019 /* DetailsViewController.swift */,
+				84F3D9E11F9C704800046EF1 /* DetailedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 		84E741841F9A717A00245B14 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84F3D9E31F9C717F00046EF1 /* DataManager.swift */,
 				84E7419C1F9A733B00245B14 /* Extensions.swift */,
 				84E7419B1F9A733000245B14 /* ServerManager.swift */,
 				84E7419A1F9A732A00245B14 /* HTTPRequestManager.swift */,
@@ -550,6 +556,7 @@
 				84D16D351F9BFFB0001D4019 /* SMSViewController.swift in Sources */,
 				8402CA911F9B6A17001FF052 /* Extensions.swift in Sources */,
 				8402CA921F9B6A17001FF052 /* ServerManager.swift in Sources */,
+				84F3D9E21F9C704800046EF1 /* DetailedViewController.swift in Sources */,
 				8402CA931F9B6A17001FF052 /* HTTPRequestManager.swift in Sources */,
 				84D16D431F9C2631001D4019 /* MessageComposer.swift in Sources */,
 				8402CA941F9B6A17001FF052 /* HTTPStatusCode.swift in Sources */,
@@ -561,6 +568,7 @@
 				84D16D3D1F9C035A001D4019 /* DetailsViewController.swift in Sources */,
 				84E741741F9A713E00245B14 /* ViewController.swift in Sources */,
 				8402CA9A1F9B7593001FF052 /* MainListTableViewCell.swift in Sources */,
+				84F3D9E41F9C717F00046EF1 /* DataManager.swift in Sources */,
 				8402CA981F9B73EB001FF052 /* MainListViewController.swift in Sources */,
 				8402CAA01F9B8F9C001FF052 /* InstitutionTableViewCell.swift in Sources */,
 				84E741721F9A713E00245B14 /* AppDelegate.swift in Sources */,

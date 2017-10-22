@@ -9,6 +9,8 @@
 import UIKit
 import UITextView_Placeholder
 import QuartzCore
+import Contacts
+import ContactsUI
 
 class RegistrationViewController: UIViewController, UITextViewDelegate {
 
@@ -49,18 +51,25 @@ class RegistrationViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    @IBOutlet weak var alertMessageTextView: UITextView!{
+    @IBOutlet weak var alertMessageTextView: UITextField!{
         didSet {
             alertMessageTextView.layer.borderWidth = 1
             alertMessageTextView.layer.cornerRadius = 8
             alertMessageTextView.layer.borderColor = generalColor
-            alertMessageTextView.placeholder = "Введите сообщение, которое будет отправлено вашим близкимю."
         }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        firstContact.delegate = self
+        secondContact.delegate = self
+
+        thirdContact.delegate = self
+
+        fourthContact.delegate = self
+
+
         
     }
     @IBAction func savePressed(_ sender: Any) {
@@ -78,11 +87,61 @@ class RegistrationViewController: UIViewController, UITextViewDelegate {
             numbers.append(fourthContact.text!)
         }
         let vc = UIStoryboard(name: "MainPage", bundle: nil).instantiateViewController(withIdentifier: "MainListViewController") as! MainListViewController
-        vc.messageComposer.setNumbers(numbers: numbers)
+        vc.messageComposer.setNumbers(numbers: DataManager.shared.getPhones())
         vc.message = self.alertMessageTextView.text!
         let navigationController = UINavigationController(rootViewController: vc)
         self.present(navigationController, animated: true, completion: nil)
 
     }
     
+}
+extension RegistrationViewController: UITextFieldDelegate, CNContactPickerDelegate{
+    func textFieldShouldBeginEditing(_ contactTextField: UITextField) -> Bool {
+        
+        print("AMMA IN SHOULD BEGIN")
+        let entityType = CNEntityType.contacts
+        let authStatus = CNContactStore.authorizationStatus(for: entityType)
+        
+        if authStatus == CNAuthorizationStatus.notDetermined {
+            
+            let contactStore = CNContactStore.init()
+            contactStore.requestAccess(for: entityType, completionHandler: { (success, nil) in
+                
+                if success {
+                    self.openContacts()
+                }
+                else {
+                    print("Not authorized")
+                }
+            })
+        }
+        else if authStatus == CNAuthorizationStatus.authorized {
+            
+            self.openContacts()
+        }
+        
+        return true
+    }
+    
+    func openContacts() {
+        let contactPicker = CNContactPickerViewController.init()
+        contactPicker.delegate = self as! CNContactPickerDelegate
+        self.present(contactPicker, animated: true, completion: nil)
+    }
+    
+    func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
+        picker.dismiss(animated: true)  {
+            
+        }
+    }
+    
+    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
+        let fullName = "\(contact.givenName)"
+        
+        var phoneNo = "Not Available"
+        let phoneString = ((((contact.phoneNumbers[0] as AnyObject).value(forKey: "labelValuePair") as AnyObject).value(forKey: "value") as AnyObject).value(forKey: "stringValue"))
+        phoneNo = phoneString! as! String
+        DataManager.shared.setPhones(phones: [phoneNo])
+        self.firstContact.text = "\(fullName)"
+    }
 }

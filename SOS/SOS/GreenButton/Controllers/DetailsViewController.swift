@@ -21,7 +21,6 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     var location: Location!
     var address = ""
     var points = [MKPointAnnotation]()
-    
     override func viewDidLoad() {
         let centerLocation = CLLocation(latitude: location.latitude, longitude: location.longitude)
         super.viewDidLoad()
@@ -33,11 +32,26 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         mapView.addAnnotation(point)
         mapView.delegate = self
         centerMapOnLocation(location: centerLocation)
+
     }
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
+    }
+    @IBAction func valueChanged(_ sender: Any) {
+        switch DetailsSegmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            let vc = UIStoryboard(name: "Green", bundle: nil).instantiateViewController(withIdentifier: "DetailedViewController")
+            //self.navigationController?.show(vc, sender: self)
+        case 1:
+             let vc = UIStoryboard(name: "Green", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController")
+             //self.navigationController?.show(vc, sender: self)
+
+        default:
+            break;
+        }
     }
 }
 
