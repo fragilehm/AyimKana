@@ -61,7 +61,7 @@ extension MainListViewController: UITableViewDataSource, UITableViewDelegate {
         if indexPath.row == 3 {
             if (self.messageComposer.canSendText()) {
                 let messageComposeVC = self.messageComposer.configuredMessageComposeViewController()
-                messageComposeVC.body = "If you received this message, please response asap"
+                messageComposeVC.body = message
                 messageComposeVC.addAttachmentURL(self.locationVCardURLFromCoordinate(coordinate: CLLocationCoordinate2D(latitude: self.userLatitude, longitude: self.userLongitude))! as URL, withAlternateFilename: "vCard.loc.vcf")
                 self.present(messageComposeVC, animated: true, completion: nil)
             } else {

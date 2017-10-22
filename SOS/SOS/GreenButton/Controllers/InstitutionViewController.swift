@@ -41,6 +41,7 @@ extension InstitutionViewController: UITableViewDelegate, UITableViewDataSource 
          let vc = UIStoryboard(name: "Green", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
         vc.location = Location(latitude: institutes.array[indexPath.row].latitude, longitude: institutes.array[indexPath.row].longitude)
         vc.address = institutes.array[indexPath.row].address
+        vc.institute = institutes.array[indexPath.row]
         self.navigationController?.show(vc, sender: self)
     }
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

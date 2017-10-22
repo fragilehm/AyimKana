@@ -14,16 +14,25 @@ import SwiftyJSON
 
 class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var detailsView: UIView!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var linkLabel: UILabel!
+
     @IBOutlet weak var DetailsSegmentedControl: UISegmentedControl!
     @IBOutlet weak var mapView: MKMapView!
     var titles: [String] = []
     let regionRadius: CLLocationDistance = 2000
     var location: Location!
     var address = ""
+    var institute: Institute?
     var points = [MKPointAnnotation]()
     override func viewDidLoad() {
         let centerLocation = CLLocation(latitude: location.latitude, longitude: location.longitude)
         super.viewDidLoad()
+        detailsView.isHidden = true
         mapView.showsUserLocation = true
         let point = MKPointAnnotation()
         point.coordinate = CLLocationCoordinate2D(latitude: (location.latitude), longitude: (location.longitude))
@@ -32,7 +41,15 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         mapView.addAnnotation(point)
         mapView.delegate = self
         centerMapOnLocation(location: centerLocation)
-
+        
+        fillInfo()
+    }
+    func fillInfo() {
+        self.nameLabel.text = institute?.name
+        self.addressLabel.text = institute?.address
+        self.phoneLabel.text = institute?.phone_1
+        self.descriptionLabel.text = institute?.description
+        self.linkLabel.text = institute?.website
     }
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
@@ -43,12 +60,12 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         switch DetailsSegmentedControl.selectedSegmentIndex
         {
         case 0:
-            let vc = UIStoryboard(name: "Green", bundle: nil).instantiateViewController(withIdentifier: "DetailedViewController")
-            //self.navigationController?.show(vc, sender: self)
+            mapView.isHidden = false
+            detailsView.isHidden = true
+            
         case 1:
-             let vc = UIStoryboard(name: "Green", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController")
-             //self.navigationController?.show(vc, sender: self)
-
+            mapView.isHidden = true
+            detailsView.isHidden = false
         default:
             break;
         }

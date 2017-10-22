@@ -29,6 +29,11 @@ class ServerManager: HTTPRequestManager  {
             completion(Institutes(json: json))
         }, error: error)
     }
+    func getArticles(_ completion: @escaping (Articles)-> Void, error: @escaping (String)-> Void) {
+        self.get(api: "infos", completion: { (json) in
+            completion(Articles(json: json))
+        }, error: error)
+    }
 //    func addCourse(course: Course, completion: @escaping ()-> Void,error: @escaping (String)-> Void) {
 //        let param = course.toDict()
 //
