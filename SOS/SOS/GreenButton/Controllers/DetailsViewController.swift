@@ -13,44 +13,49 @@ import CoreLocation
 import SwiftyJSON
 
 class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
-
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var addressLabel: UILabel!
+    
+    
     @IBOutlet weak var detailsView: UIView!
-    @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var linkLabel: UILabel!
-
     @IBOutlet weak var DetailsSegmentedControl: UISegmentedControl!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var tableView: UITableView!
+    
     var titles: [String] = []
     let regionRadius: CLLocationDistance = 2000
-    var location: Location!
     var address = ""
-    var institute: Institute?
+    // var institute: Institute?
+    var institutes = Institutes()
+    var id = 0
     var points = [MKPointAnnotation]()
     override func viewDidLoad() {
-        let centerLocation = CLLocation(latitude: location.latitude, longitude: location.longitude)
         super.viewDidLoad()
-        detailsView.isHidden = true
-        mapView.showsUserLocation = true
-        let point = MKPointAnnotation()
-        point.coordinate = CLLocationCoordinate2D(latitude: (location.latitude), longitude: (location.longitude))
-        point.title = "Адрес:"
-        point.subtitle = address
-        mapView.addAnnotation(point)
-        mapView.delegate = self
-        centerMapOnLocation(location: centerLocation)
         
-        fillInfo()
+        mapView.showsUserLocation = true
+        mapView.delegate = self
+        detailsView.isHidden = true
+        if titles.count == 0 {
+            ServerManager.shared.getInstitutesById(id: id, setInstitutes, error: showErrorAlert)
+        }
+        
     }
-    func fillInfo() {
-        self.nameLabel.text = institute?.name
-        self.addressLabel.text = institute?.address
-        self.phoneLabel.text = institute?.phone_1
-        self.descriptionLabel.text = institute?.description
-        self.linkLabel.text = institute?.website
+    func setInstitutes(institutes: Institutes){
+        self.institutes = institutes
+        let locationOfBishkek = CLLocation(latitude: 42.874722, longitude: 74.612222)
+        
+        for item in institutes.array {
+            let point = MKPointAnnotation()
+            let location = Location(latitude: item.latitude, longitude: item.longitude)
+            
+            point.coordinate = CLLocationCoordinate2D(latitude: (location.latitude), longitude: (location.longitude))
+            point.title = "Адрес: \(item.address)"
+            //point.subtitle = titles[count]
+            mapView.addAnnotation(point)
+        }
+        
+        centerMapOnLocation(location: locationOfBishkek)
+        tableView.reloadData()
     }
+    
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius * 2.0, regionRadius * 2.0)
@@ -71,6 +76,17 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         }
     }
 }
-
-
+extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return institutes.array.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "InstitutionTableViewCell", for: indexPath) as! InstitutionTableViewCell
+        cell.nameLabel.text = institutes.array[indexPath.row].name
+        cell.addressLabel.text = institutes.array[indexPath.row].address
+        cell.phoneLabel.text = institutes.array[indexPath.row].phone_1
+        
+        return cell
+    }
+}
 

@@ -52,6 +52,7 @@
 		84F3D9E71F9C83F900046EF1 /* HandBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3D9E61F9C83F900046EF1 /* HandBookTableViewCell.swift */; };
 		84F3D9E91F9C845200046EF1 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3D9E81F9C845200046EF1 /* Article.swift */; };
 		84F3D9EB1F9C863D00046EF1 /* ArticleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3D9EA1F9C863D00046EF1 /* ArticleDetailsViewController.swift */; };
+		84F3D9ED1F9CA17000046EF1 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3D9EC1F9CA16F00046EF1 /* Pin.swift */; };
 		A378D610496AF55F59F7CF5E /* Pods_SOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AF172DF51CFC48DE679C59 /* Pods_SOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		84F3D9E61F9C83F900046EF1 /* HandBookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandBookTableViewCell.swift; sourceTree = "<group>"; };
 		84F3D9E81F9C845200046EF1 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		84F3D9EA1F9C863D00046EF1 /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = "<group>"; };
+		84F3D9EC1F9CA16F00046EF1 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		E13AF5A7BDB9AC2D2A8E07DE /* Pods-SOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOS/Pods-SOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -299,6 +301,7 @@
 		84E741831F9A717300245B14 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				84F3D9EC1F9CA16F00046EF1 /* Pin.swift */,
 				84B10F711F9B5248001C23C7 /* Category.swift */,
 				8402CAA11F9B9C6D001FF052 /* Institute.swift */,
 				84D16D3E1F9C0A69001D4019 /* Location.swift */,
@@ -579,6 +582,7 @@
 				8402CA941F9B6A17001FF052 /* HTTPStatusCode.swift in Sources */,
 				84D16D3F1F9C0A69001D4019 /* Location.swift in Sources */,
 				84E741AA1F9A8AA500245B14 /* GreenViewController.swift in Sources */,
+				84F3D9ED1F9CA17000046EF1 /* Pin.swift in Sources */,
 				8402CAA21F9B9C6D001FF052 /* Institute.swift in Sources */,
 				84D16D3B1F9BFFEB001D4019 /* HandBookViewController.swift in Sources */,
 				84E741A81F9A892900245B14 /* PageViewController.swift in Sources */,

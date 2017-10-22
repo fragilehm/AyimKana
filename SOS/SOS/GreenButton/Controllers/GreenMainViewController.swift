@@ -38,7 +38,7 @@ extension GreenMainViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard(name: "Green", bundle: nil).instantiateViewController(withIdentifier: "InstitutionViewController") as! InstitutionViewController
+        let vc = UIStoryboard(name: "Green", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
         vc.id = categories.array[indexPath.row].id
         self.navigationController?.show(vc, sender: self)
     }
