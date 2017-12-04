@@ -18,7 +18,7 @@ class MainListViewController: UIViewController, CLLocationManagerDelegate {
     var names = ["Все о насилии", "Куда обратиться?", "Опасные зоны", "SOS - СМС", "Круг доверия"]
     var descriptions = ["Что такое насилие? Какие бывают виды? Конкретные примеры. Здесь вы узнаете о всех гендерных видах насилия и как с ними бороться.", "Список учереждений на карте с инструкцией и ожидаемыми действиями.", "Опасные зоны, где уровень гендерного насилия является высоким. Опасные точки отмечены на карте Кыргызстана.", "Оперативное оповещение круга доверенных лиц, о том, что вы возможно находитесь в опасности. При нажатии на эту кнопку, вы отправляете СМС с гео данными о вашем местооложении вашим доверенным контактам.", "Здесь вы можете добавить/изменять/удалять состав доверенным лиц. Так же написать шаблон SOS сообщения."]
     var storyboards = ["HandBook", "Green", "Pins", "SMS", "Registration"]
-    var vcs = ["InformationController", "GreenMainViewController", "PinsViewController", "SMSViewController",
+    var vcs = ["HandBookViewController", "GreenMainViewController", "PinsViewController", "SMSViewController",
                "RegistrationViewController"]
     @IBOutlet weak var mainListTableView: UITableView! {
         didSet {
@@ -65,7 +65,7 @@ extension MainListViewController: UITableViewDataSource, UITableViewDelegate {
                 messageComposeVC.addAttachmentURL(self.locationVCardURLFromCoordinate(coordinate: CLLocationCoordinate2D(latitude: self.userLatitude, longitude: self.userLongitude))! as URL, withAlternateFilename: "vCard.loc.vcf")
                 self.present(messageComposeVC, animated: true, completion: nil)
             } else {
-                let errorAlert = UIAlertView(title: "can not send", message: "Your device is not able to send", delegate: self, cancelButtonTitle: "Shit!")
+                let errorAlert = UIAlertView(title: "can not send", message: "Your device is not able to send", delegate: self, cancelButtonTitle: "OK")
                 errorAlert.show()
             }
             

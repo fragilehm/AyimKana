@@ -16,6 +16,7 @@ class HandBookViewController: UIViewController {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
         ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
+        //ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
         // Do any additional setup after loading the view.
     }
     func setArticles(articles: Articles){
@@ -30,11 +31,20 @@ extension HandBookViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HandBookTableViewCell", for: indexPath) as! HandBookTableViewCell
         cell.nameLabel.text = articles.array[indexPath.row].title
+        cell.hImg.image = UIImage(named: "sad")
         return cell
     }
+  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard(name: "HandBook", bundle: nil).instantiateViewController(withIdentifier: "InformationViewCnotroller") as! ArticleDetailsViewController
-        vc.article = articles.array[indexPath.row]
-        self.navigationController?.show(vc, sender: self)
+
+        let sb = UIStoryboard(name: "HandBook", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "DescriptionViewController") as! DescriptionViewController
+        vc.article = self.articles.array[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+//        let vc = UIStoryboard(name: "HandBook", bundle: nil).instantiateViewController(withIdentifier: "InformationViewCnotroller") as! ArticleDetailsViewController
+//        vc.article = articles[indexPath.row]
+//        self.navigationController?.show(vc, sender: self)
     }
 }

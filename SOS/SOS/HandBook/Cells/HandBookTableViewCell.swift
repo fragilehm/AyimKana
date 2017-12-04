@@ -10,6 +10,7 @@ import UIKit
 
 class HandBookTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var hImg: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,5 +23,4 @@ class HandBookTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    //print("")
 }
