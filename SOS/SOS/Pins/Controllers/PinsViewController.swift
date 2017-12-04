@@ -20,11 +20,26 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         super.viewDidLoad()
         let locationOfBishkek = CLLocation(latitude: 42.874722, longitude: 74.612222)
         
+        let plusBtn = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTaped))
+        self.navigationItem.setRightBarButton(plusBtn, animated: true)
+        
         mapView.showsUserLocation = true
         ServerManager.shared.getPins(setPins, error: showErrorAlert)
         
         mapView.delegate = self
         centerMapOnLocation(location: locationOfBishkek)
+    }
+    
+    @objc func addTaped()
+    {
+        let alert = UIAlertController(title: "Adding Danger Zone", message: "Add either your current location as a danger zone or choose a location from map ", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Current Location", style: UIAlertActionStyle.default, handler: {
+            (action: UIAlertAction!) in print("Adding your location as danger zone")
+        } ))
+        alert.addAction(UIAlertAction(title: "Choose From Map", style: UIAlertActionStyle.default, handler: {
+            (action: UIAlertAction!) in print("Choose From Map Then...")
+        } ))
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
