@@ -15,5 +15,6 @@ target 'SOS' do
  	pod 'ImageSlideshow/Kingfisher’
  	pod 'KRProgressHUD'
     pod 'UITextView+Placeholder'
+    pod 'Kingfisher'
 
 end

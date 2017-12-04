@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HandBookViewController: UIViewController {
 
@@ -16,13 +17,13 @@ class HandBookViewController: UIViewController {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
         ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
-        //ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
-        // Do any additional setup after loading the view.
     }
+   
     func setArticles(articles: Articles){
         self.articles = articles
         tableView.reloadData()
     }
+    
 }
 extension HandBookViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,7 +32,9 @@ extension HandBookViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HandBookTableViewCell", for: indexPath) as! HandBookTableViewCell
         cell.nameLabel.text = articles.array[indexPath.row].title
-        cell.hImg.image = UIImage(named: "sad")
+        let url = URL(string: articles.array[indexPath.row].title)
+        cell.hImg.kf.setImage(with: url)
+        //cell.hImg.image = UIImage(named: "sad")
         return cell
     }
   

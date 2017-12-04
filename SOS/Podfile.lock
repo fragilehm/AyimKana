@@ -26,6 +26,7 @@ DEPENDENCIES:
   - GooglePlaces
   - ImageSlideshow/Kingfisher
   - IQKeyboardManager
+  - Kingfisher
   - KRProgressHUD
   - SJSegmentedScrollView
   - SwiftyJSON
@@ -44,6 +45,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
 
-PODFILE CHECKSUM: 0f750441d11ee74ed7f13bb5bb57f5c1981d6c0f
+PODFILE CHECKSUM: ab0d5c71c678e31fefd884ef757b6fdd51dcd10d
 
 COCOAPODS: 1.3.1
