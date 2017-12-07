@@ -29,6 +29,9 @@ struct Pin {
         longitude = json["longitude"].stringValue
         
     }
+    func getDict() -> [String: Any] {
+        return ["info": info, "latitude": latitude, "longitude": longitude]
+    }
 }
 
 class Pins: NSObject {

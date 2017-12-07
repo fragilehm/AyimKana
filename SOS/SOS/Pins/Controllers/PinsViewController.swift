@@ -15,6 +15,8 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     let regionRadius: CLLocationDistance = 2000
     var location: Location!
     var points = [MKPointAnnotation]()
+    var gestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,14 +34,53 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     @objc func addTaped()
     {
-        let alert = UIAlertController(title: "Adding Danger Zone", message: "Add either your current location as a danger zone or choose a location from map ", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Current Location", style: UIAlertActionStyle.default, handler: {
-            (action: UIAlertAction!) in print("Adding your location as danger zone")
-        } ))
-        alert.addAction(UIAlertAction(title: "Choose From Map", style: UIAlertActionStyle.default, handler: {
-            (action: UIAlertAction!) in print("Choose From Map Then...")
-        } ))
+        let alert = UIAlertController(title: "Adding Danger Zone", message: "Choose From Map Danger Zone", preferredStyle: UIAlertControllerStyle.alert)
+        
+        //alert.addAction(UIAlertAction(title: "Current Location", style: UIAlertActionStyle.default, handler: addCurrLocation))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: addChosenLocation))
+        
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func addCurrLocation(action: UIAlertAction)
+    {
+        
+    }
+    
+    func addChosenLocation(action: UIAlertAction)
+    {
+        gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        mapView.addGestureRecognizer(gestureRecognizer)
+        
+    }
+    
+    @objc func handleTap(_ recognizer: UITapGestureRecognizer)
+    {
+        
+        let location = gestureRecognizer.location(in: mapView)
+        let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
+        print("Coordinates are \(coordinate)")
+        
+        let addMsgAlert = UIAlertController(title: "Description", message: "Please insert a description message:", preferredStyle: UIAlertControllerStyle.alert)
+        
+        addMsgAlert.addTextField { (textField) in
+            textField.placeholder = "Message"
+        }
+        
+        addMsgAlert.addAction(<#T##action: UIAlertAction##UIAlertAction#>)
+        addMsgAlert.addAction(UIAlertAction(title = "Cancel", style = U) { (_) in })
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        var pin = Pin()
+        pin.info = "pollution"
+        pin.latitude = coordinate.latitude.description
+        pin.longitude = coordinate.longitude.description
+        ServerManager.shared.addPins(pin: pin, addPin, error: showErrorAlert)
+        mapView.addAnnotation(annotation)
+    }
+    func addPin() {
+        print("added")
     }
     
     override func viewWillAppear(_ animated: Bool) {

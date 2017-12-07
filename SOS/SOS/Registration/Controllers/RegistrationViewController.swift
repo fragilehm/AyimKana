@@ -62,16 +62,16 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for (index, phone) in DataManager.shared.getNames().enumerated() {
+        for (index, c) in DataManager.shared.getContacts().enumerated() {
             switch index {
             case 0:
-                self.firstContact.text = phone
+                self.firstContact.text = c.number
             case 1:
-                self.secondContact.text = phone
+                self.secondContact.text = c.number
             case 2:
-                self.thirdContact.text = phone
+                self.thirdContact.text = c.number
             default:
-                self.fourthContact.text = phone
+                self.fourthContact.text = c.number
                 
             }
         }
@@ -91,12 +91,14 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
         if fourthContact.text != "" {
             numbers.append(fourthContact.text!)
         }
+        
         let vc = UIStoryboard(name: "MainPage", bundle: nil).instantiateViewController(withIdentifier: "MainListViewController") as! MainListViewController
-        vc.messageComposer.setNumbers(numbers: DataManager.shared.getPhones())
+        vc.messageComposer.setNumbers(numbers: numbers)
         vc.message = self.alertMessageTextView.text!
         DataManager.shared.setMessage(message: self.alertMessageTextView.text!)
-        self.navigationController?.popViewController(animated: true)
-
+        let navigationController = UINavigationController(rootViewController: vc)
+        self.present(navigationController, animated: true, completion: nil)
+        //self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func contact1(_ sender: Any) {
@@ -158,8 +160,8 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
         var phoneNo = "Not Available"
         let phoneString = ((((contact.phoneNumbers[0] as AnyObject).value(forKey: "labelValuePair") as AnyObject).value(forKey: "value") as AnyObject).value(forKey: "stringValue"))
         phoneNo = phoneString! as! String
-        DataManager.shared.appendPhone(phone: phoneNo)
-        DataManager.shared.appendName(name: fullName)
+        let cont = Contact(name: fullName, number: phoneNo)
+        DataManager.shared.appendContacts(contact: cont)
 
         switch contactId {
         case 1:

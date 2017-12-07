@@ -28,11 +28,11 @@ class HTTPRequestManager {
         }
         
         let APIaddress = "\(url)\(api)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        print(APIaddress)
+        //print(APIaddress)
         
         let header: HTTPHeaders = [:]
 
-        
+        //print(parameters)
         Alamofire.request(APIaddress!, method: method, parameters: parameters, encoding: JSONEncoding.default , headers: header).responseJSON { (response:DataResponse<Any>) in
             
             guard response.response != nil else {
