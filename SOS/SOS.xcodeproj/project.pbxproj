@@ -46,7 +46,6 @@
 		84E7418B1F9A722B00245B14 /* StartingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E7418A1F9A722B00245B14 /* StartingPage.storyboard */; };
 		84E7418E1F9A724200245B14 /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E7418D1F9A724200245B14 /* MainPage.storyboard */; };
 		84E741941F9A728800245B14 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E741931F9A728800245B14 /* Login.storyboard */; };
-		84E741981F9A72D800245B14 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E741971F9A72D800245B14 /* Profile.storyboard */; };
 		84E741A81F9A892900245B14 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741A71F9A892900245B14 /* PageViewController.swift */; };
 		84E741AA1F9A8AA500245B14 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741A91F9A8AA500245B14 /* GreenViewController.swift */; };
 		84E741AC1F9A8AB300245B14 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741AB1F9A8AB300245B14 /* YellowViewController.swift */; };
@@ -99,7 +98,6 @@
 		84E7418A1F9A722B00245B14 /* StartingPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartingPage.storyboard; sourceTree = "<group>"; };
 		84E7418D1F9A724200245B14 /* MainPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
 		84E741931F9A728800245B14 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		84E741971F9A72D800245B14 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		84E741991F9A731600245B14 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		84E7419A1F9A732A00245B14 /* HTTPRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestManager.swift; sourceTree = "<group>"; };
 		84E7419B1F9A733000245B14 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
@@ -291,7 +289,6 @@
 				84B10F631F9B4C8F001C23C7 /* Red */,
 				84B10F5F1F9B4C74001C23C7 /* Yellow */,
 				84B10F5B1F9B4C30001C23C7 /* GreenButton */,
-				84E741951F9A72BE00245B14 /* Profile */,
 				84E741881F9A71A200245B14 /* MainPage */,
 				84E741871F9A719400245B14 /* StartingPage */,
 				84E741861F9A718900245B14 /* Registration */,
@@ -395,14 +392,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		84E741951F9A72BE00245B14 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				84E741971F9A72D800245B14 /* Profile.storyboard */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		84F3D9E51F9C83D400046EF1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,7 +474,6 @@
 				84B10F5E1F9B4C6E001C23C7 /* Green.storyboard in Resources */,
 				84E7417C1F9A713E00245B14 /* LaunchScreen.storyboard in Resources */,
 				84D16D291F9BE05F001D4019 /* Registration.storyboard in Resources */,
-				84E741981F9A72D800245B14 /* Profile.storyboard in Resources */,
 				84E741941F9A728800245B14 /* Login.storyboard in Resources */,
 				84D16D331F9BFF85001D4019 /* SMS.storyboard in Resources */,
 				84E741791F9A713E00245B14 /* Assets.xcassets in Resources */,

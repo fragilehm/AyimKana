@@ -95,8 +95,7 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
         vc.messageComposer.setNumbers(numbers: DataManager.shared.getPhones())
         vc.message = self.alertMessageTextView.text!
         DataManager.shared.setMessage(message: self.alertMessageTextView.text!)
-        let navigationController = UINavigationController(rootViewController: vc)
-        self.present(navigationController, animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
 
     }
     
