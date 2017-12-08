@@ -17,6 +17,7 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     var points = [MKPointAnnotation]()
     var gestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
     
+    var alertTxtField: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +62,7 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     @objc func handleTap(_ recognizer: UITapGestureRecognizer)
     {
-        
+        //var defMsg = "N/A"
         let location = gestureRecognizer.location(in: mapView)
         let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
         print("Coordinates are \(coordinate)")
@@ -70,13 +71,14 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         
         addMsgAlert.addTextField { (textField) in
             textField.placeholder = "Message"
+            
         }
-        
+    
         addMsgAlert.addAction(UIAlertAction(title: "Add", style: UIAlertActionStyle.default, handler: { action in
             let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
             var pin = Pin()
-            pin.info = "pollution"
+            pin.info = addMsgAlert.textFields![0].text!
             pin.latitude = coordinate.latitude.description
             pin.longitude = coordinate.longitude.description
             ServerManager.shared.addPins(pin: pin, self.addPin, error: self.showErrorAlert)
@@ -86,9 +88,9 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         addMsgAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
         
         self.present(addMsgAlert, animated: true, completion: nil)
-        
-        
+    
     }
+    
     func addPin() {
         print("added")
     }
