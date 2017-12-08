@@ -7,20 +7,21 @@
 //
 
 import UIKit
-import IQKeyboardManager
+import IQKeyboardManagerSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        //IQKeyboardManager.shared().isEnabled = true
-//        UINavigationBar.appearance().backgroundColor = UIColor.init(netHex: 0x9C627F)
-//        UINavigationBar.appearance().titleTextAttributes =  [NSAttributedStringKey.foregroundColor: UIColor.white]
-//        UINavigationBar.appearance().barTintColor = UIColor.init(netHex: 0x9C627F)
-//        UIApplication.shared.statusBarStyle = .lightContent
-//
+        
+        if UserDefaults.standard.bool(forKey: "wasLaunched") {
+            let storyboard = UIStoryboard.init(name: "MainPage", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MainListViewController")
+            let navigationController = UINavigationController(rootViewController: vc)
+            self.window?.rootViewController = navigationController
+        }
+        IQKeyboardManager.sharedManager().enable = true
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().barTintColor = UIColor.init(netHex: 0x9C627F)

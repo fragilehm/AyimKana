@@ -27,8 +27,11 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     var institutes = Institutes()
     var id = 0
     var points = [MKPointAnnotation]()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         mapView.showsUserLocation = true
         mapView.delegate = self
@@ -85,6 +88,8 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.nameLabel.text = institutes.array[indexPath.row].name
         cell.addressLabel.text = institutes.array[indexPath.row].address
         cell.phoneLabel.text = institutes.array[indexPath.row].phone_1
+        cell.phoneLabel2.text = institutes.array[indexPath.row].phone_2
+        cell.centreDescription.text = institutes.array[indexPath.row].description
         
         return cell
     }

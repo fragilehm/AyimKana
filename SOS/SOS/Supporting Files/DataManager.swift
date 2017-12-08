@@ -24,18 +24,25 @@ class DataManager {
         }
         return Static.instance
     }
-    var contacts = [Contact]()
+    var contacts = [Contact].init(repeating:  Contact(name: "", number: ""), count: 4)
     
     var message = ""
     
-    func appendContacts(contact: Contact)
+    func updateContacts(contact: Contact, index: Int)
     {
-        self.contacts.append(contact)
+        self.contacts[index] = contact
     }
     
     func getContacts() -> [Contact]
     {
         return contacts
+    }
+    func getNumbers() -> [String] {
+        var nums = [String]()
+        for contact in contacts {
+         nums.append(contact.number)
+        }
+        return nums
     }
 //    func appendPhone(phone: String) {
 //        phones.append(phone)
@@ -55,7 +62,6 @@ class DataManager {
     func getMessage() -> String {
         return self.message
     }
-    
     func clearData(){
         self.contacts.removeAll()
         //self.phones.removeAll()

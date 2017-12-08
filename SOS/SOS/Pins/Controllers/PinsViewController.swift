@@ -35,7 +35,7 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     @objc func addTaped()
     {
-        let alert = UIAlertController(title: "Adding Danger Zone", message: "Choose From Map Danger Zone", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Добавление Опасной Зоны", message: "Выберете Место Которое Считаете Опасным", preferredStyle: UIAlertControllerStyle.alert)
         
         //alert.addAction(UIAlertAction(title: "Current Location", style: UIAlertActionStyle.default, handler: addCurrLocation))
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: addChosenLocation))
@@ -67,14 +67,14 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
         print("Coordinates are \(coordinate)")
     
-        let addMsgAlert = UIAlertController(title: "Description", message: "Please insert a description message:", preferredStyle: UIAlertControllerStyle.alert)
+        let addMsgAlert = UIAlertController(title: "Описание", message: "Добавьте Описание", preferredStyle: UIAlertControllerStyle.alert)
         
         addMsgAlert.addTextField { (textField) in
             textField.placeholder = "Message"
             
         }
     
-        addMsgAlert.addAction(UIAlertAction(title: "Add", style: UIAlertActionStyle.default, handler: { action in
+        addMsgAlert.addAction(UIAlertAction(title: "Добавить", style: UIAlertActionStyle.default, handler: { action in
             let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
             var pin = Pin()
@@ -85,7 +85,7 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             self.mapView.addAnnotation(annotation)
         }))
         
-        addMsgAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        addMsgAlert.addAction(UIAlertAction(title: "Отмена", style: UIAlertActionStyle.cancel, handler: nil))
         
         self.present(addMsgAlert, animated: true, completion: nil)
     

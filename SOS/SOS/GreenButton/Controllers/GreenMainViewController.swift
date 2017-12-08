@@ -15,6 +15,7 @@ class GreenMainViewController: UIViewController {
     var categories = Categories()
     override func viewDidLoad() {
         super.viewDidLoad()
+        greenCategoryTableView.estimatedRowHeight = 100
         greenCategoryTableView.tableFooterView = UIView()
         ServerManager.shared.getAllCategories(setCategories, error: showErrorAlert)
         // Do any additional setup after loading the view.
@@ -34,7 +35,7 @@ extension GreenMainViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = greenCategoryTableView.dequeueReusableCell(withIdentifier: "GreenCategoryTableViewCell", for: indexPath) as! GreenCategoryTableViewCell
         cell.titleLabel.text = categories.array[indexPath.row].name
         cell.descriptionLabel.text = categories.array[indexPath.row].description
-        cell.categoryImageView.image = UIImage(named: "category\(indexPath.row)")
+        //cell.categoryImageView.image = UIImage(named: "category\(indexPath.row)")
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -43,7 +44,7 @@ extension GreenMainViewController: UITableViewDelegate, UITableViewDataSource {
         self.navigationController?.show(vc, sender: self)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return UITableViewAutomaticDimension
     }
     
 }

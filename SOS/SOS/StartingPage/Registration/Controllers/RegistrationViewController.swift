@@ -65,13 +65,13 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
         for (index, c) in DataManager.shared.getContacts().enumerated() {
             switch index {
             case 0:
-                self.firstContact.text = c.number
+                self.firstContact.text = c.name
             case 1:
-                self.secondContact.text = c.number
+                self.secondContact.text = c.name
             case 2:
-                self.thirdContact.text = c.number
+                self.thirdContact.text = c.name
             default:
-                self.fourthContact.text = c.number
+                self.fourthContact.text = c.name
                 
             }
         }
@@ -96,9 +96,14 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
         vc.messageComposer.setNumbers(numbers: numbers)
         vc.message = self.alertMessageTextView.text!
         DataManager.shared.setMessage(message: self.alertMessageTextView.text!)
-        let navigationController = UINavigationController(rootViewController: vc)
-        self.present(navigationController, animated: true, completion: nil)
-        //self.navigationController?.popViewController(animated: true)
+        
+        if (UserDefaults.standard.bool(forKey: "wasLaunched"))
+        {
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            let navigationController = UINavigationController(rootViewController: vc)
+            self.present(navigationController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func contact1(_ sender: Any) {
@@ -137,10 +142,8 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
             })
         }
         else if authStatus == CNAuthorizationStatus.authorized {
-            
             self.openContactss()
         }
-
     }
     func openContactss() {
         let contactPicker = CNContactPickerViewController.init()
@@ -161,18 +164,22 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
         let phoneString = ((((contact.phoneNumbers[0] as AnyObject).value(forKey: "labelValuePair") as AnyObject).value(forKey: "value") as AnyObject).value(forKey: "stringValue"))
         phoneNo = phoneString! as! String
         let cont = Contact(name: fullName, number: phoneNo)
-        DataManager.shared.appendContacts(contact: cont)
+        var index = 0
         switch contactId {
         case 1:
             self.firstContact.text = "\(fullName)"
         case 2:
+            index = 1
             self.secondContact.text = "\(fullName)"
         case 3:
+            index = 2
             self.thirdContact.text = "\(fullName)"
         default:
+            index = 3
             self.fourthContact.text = "\(fullName)"
-
         }
+        DataManager.shared.updateContacts(contact: cont, index: index)
+
     }
 }
 

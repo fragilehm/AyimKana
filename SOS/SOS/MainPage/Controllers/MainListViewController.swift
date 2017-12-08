@@ -27,6 +27,7 @@ class MainListViewController: UIViewController, CLLocationManagerDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.set(true, forKey: "wasLaunched")
         mainListTableView.tableFooterView = UIView()
         // Do any additional setup after loading the view.
         locationManager.requestAlwaysAuthorization()
@@ -62,6 +63,7 @@ extension MainListViewController: UITableViewDataSource, UITableViewDelegate {
             if (self.messageComposer.canSendText()) {
                 let messageComposeVC = self.messageComposer.configuredMessageComposeViewController()
                 messageComposeVC.body = message
+                messageComposeVC.recipients = DataManager.shared.getNumbers()
                 messageComposeVC.addAttachmentURL(self.locationVCardURLFromCoordinate(coordinate: CLLocationCoordinate2D(latitude: self.userLatitude, longitude: self.userLongitude))! as URL, withAlternateFilename: "vCard.loc.vcf")
                 self.present(messageComposeVC, animated: true, completion: nil)
             } else {
@@ -131,7 +133,11 @@ extension MainListViewController: UITableViewDataSource, UITableViewDelegate {
         
         let openAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
             if let url = URL(string: UIApplicationOpenSettingsURLString) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
             }
         }
         alertController.addAction(openAction)

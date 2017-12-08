@@ -22,16 +22,7 @@ class GreenViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AVAudioSession.sharedInstance().requestRecordPermission () {
-            [unowned self] allowed in
-            if allowed {
-                // Microphone allowed, do what you like!
-                
-            } else {
-                // User denied microphone. Tell them off!
-                
-            }
-        }
+        
         //locationManager.delegate = self
         locationManager = CLLocationManager()
         locationManager.delegate = self

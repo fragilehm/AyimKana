@@ -13,6 +13,9 @@ class InstitutionTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var phoneLabel2: UILabel!
+    @IBOutlet weak var centreDescription: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

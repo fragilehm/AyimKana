@@ -21,8 +21,6 @@
 		8450A9E01FD02188009117B6 /* WhatToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A9DF1FD02188009117B6 /* WhatToDoTableViewCell.swift */; };
 		8450A9E21FD03A60009117B6 /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A9E11FD03A60009117B6 /* LegalViewController.swift */; };
 		84B10F5E1F9B4C6E001C23C7 /* Green.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B10F5D1F9B4C6E001C23C7 /* Green.storyboard */; };
-		84B10F621F9B4C89001C23C7 /* Yellow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B10F611F9B4C89001C23C7 /* Yellow.storyboard */; };
-		84B10F661F9B4CA3001C23C7 /* Red.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B10F651F9B4CA3001C23C7 /* Red.storyboard */; };
 		84B10F6B1F9B4F69001C23C7 /* GreenMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B10F6A1F9B4F69001C23C7 /* GreenMainViewController.swift */; };
 		84B10F701F9B4FCF001C23C7 /* GreenCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B10F6F1F9B4FCF001C23C7 /* GreenCategoryTableViewCell.swift */; };
 		84B10F721F9B5248001C23C7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B10F711F9B5248001C23C7 /* Category.swift */; };
@@ -72,8 +70,6 @@
 		8450A9DF1FD02188009117B6 /* WhatToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatToDoTableViewCell.swift; sourceTree = "<group>"; };
 		8450A9E11FD03A60009117B6 /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
 		84B10F5D1F9B4C6E001C23C7 /* Green.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Green.storyboard; sourceTree = "<group>"; };
-		84B10F611F9B4C89001C23C7 /* Yellow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Yellow.storyboard; sourceTree = "<group>"; };
-		84B10F651F9B4CA3001C23C7 /* Red.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Red.storyboard; sourceTree = "<group>"; };
 		84B10F6A1F9B4F69001C23C7 /* GreenMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenMainViewController.swift; sourceTree = "<group>"; };
 		84B10F6F1F9B4FCF001C23C7 /* GreenCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		84B10F711F9B5248001C23C7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -162,38 +158,6 @@
 				8402CA9D1F9B8DB2001FF052 /* InstitutionViewController.swift */,
 				84D16D3C1F9C035A001D4019 /* DetailsViewController.swift */,
 				84F3D9E11F9C704800046EF1 /* DetailedViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		84B10F5F1F9B4C74001C23C7 /* Yellow */ = {
-			isa = PBXGroup;
-			children = (
-				84B10F601F9B4C7C001C23C7 /* Controllers */,
-				84B10F611F9B4C89001C23C7 /* Yellow.storyboard */,
-			);
-			path = Yellow;
-			sourceTree = "<group>";
-		};
-		84B10F601F9B4C7C001C23C7 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		84B10F631F9B4C8F001C23C7 /* Red */ = {
-			isa = PBXGroup;
-			children = (
-				84B10F641F9B4C95001C23C7 /* Controllers */,
-				84B10F651F9B4CA3001C23C7 /* Red.storyboard */,
-			);
-			path = Red;
-			sourceTree = "<group>";
-		};
-		84B10F641F9B4C95001C23C7 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -288,12 +252,9 @@
 				84D16D2A1F9BFE88001D4019 /* Pins */,
 				84E741831F9A717300245B14 /* Models */,
 				84E741841F9A717A00245B14 /* Supporting Files */,
-				84B10F631F9B4C8F001C23C7 /* Red */,
-				84B10F5F1F9B4C74001C23C7 /* Yellow */,
 				84B10F5B1F9B4C30001C23C7 /* GreenButton */,
 				84E741881F9A71A200245B14 /* MainPage */,
 				84E741871F9A719400245B14 /* StartingPage */,
-				84E741861F9A718900245B14 /* Registration */,
 				84E741851F9A718300245B14 /* Login */,
 				84E741711F9A713E00245B14 /* AppDelegate.swift */,
 				84E741731F9A713E00245B14 /* ViewController.swift */,
@@ -351,6 +312,7 @@
 			children = (
 				84E741891F9A720C00245B14 /* Controllers */,
 				84E7418A1F9A722B00245B14 /* StartingPage.storyboard */,
+				84E741861F9A718900245B14 /* Registration */,
 			);
 			path = StartingPage;
 			sourceTree = "<group>";
@@ -480,12 +442,10 @@
 				84E741941F9A728800245B14 /* Login.storyboard in Resources */,
 				84D16D331F9BFF85001D4019 /* SMS.storyboard in Resources */,
 				84E741791F9A713E00245B14 /* Assets.xcassets in Resources */,
-				84B10F621F9B4C89001C23C7 /* Yellow.storyboard in Resources */,
 				84D16D381F9BFFD3001D4019 /* HandBook.storyboard in Resources */,
 				84E7418E1F9A724200245B14 /* MainPage.storyboard in Resources */,
 				84D16D2C1F9BFE96001D4019 /* Pins.storyboard in Resources */,
 				84E741771F9A713E00245B14 /* Main.storyboard in Resources */,
-				84B10F661F9B4CA3001C23C7 /* Red.storyboard in Resources */,
 				84E7418B1F9A722B00245B14 /* StartingPage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,24 +461,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SOS/Pods-SOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
-				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/SJSegmentedScrollView/SJSegmentedScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJSegmentedScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
 			);
@@ -680,7 +634,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -731,7 +685,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -747,12 +701,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5DCDBG2W2;
 				INFOPLIST_FILE = SOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = example.com.SOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -764,12 +718,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5DCDBG2W2;
 				INFOPLIST_FILE = SOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = example.com.SOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

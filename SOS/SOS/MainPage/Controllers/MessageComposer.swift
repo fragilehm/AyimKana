@@ -9,7 +9,7 @@
 import Foundation
 import MessageUI
 
-var textMessageRecipients = [String]()
+var textMessageRecipients = [String].init(repeating: "", count: 4)
 
 class MessageComposer: NSObject, MFMessageComposeViewControllerDelegate {
    
@@ -34,9 +34,10 @@ class MessageComposer: NSObject, MFMessageComposeViewControllerDelegate {
         return messageComposeVC
     }
     func setNumbers(numbers: [String]){
-        for number in numbers {
-            textMessageRecipients.append("+996\(number)")
+        for (index, number) in numbers.enumerated() {
+            textMessageRecipients[index] = "\(number)"
         }
+        
     }
     
     

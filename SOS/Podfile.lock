@@ -11,12 +11,8 @@ PODS:
   - ImageSlideshow/Kingfisher (1.4.0):
     - ImageSlideshow/Core
     - Kingfisher (> 3.0)
-  - IQKeyboardManager (5.0.2)
+  - IQKeyboardManagerSwift (5.0.0)
   - Kingfisher (4.1.0)
-  - KRActivityIndicatorView (2.1.0)
-  - KRProgressHUD (3.1.0):
-    - KRActivityIndicatorView (~> 2.1.0)
-  - SJSegmentedScrollView (1.3.8)
   - SwiftyJSON (3.1.4)
   - UITextView+Placeholder (1.2.0)
 
@@ -25,10 +21,8 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - ImageSlideshow/Kingfisher
-  - IQKeyboardManager
+  - IQKeyboardManagerSwift (= 5.0.0)
   - Kingfisher
-  - KRProgressHUD
-  - SJSegmentedScrollView
   - SwiftyJSON
   - UITextView+Placeholder
 
@@ -37,14 +31,11 @@ SPEC CHECKSUMS:
   GoogleMaps: 8436ab5d1c25e36915b2f7416d0c8e3fa2e76c61
   GooglePlaces: aafe5990fa7951e98e078761bbdaaf236d7e0c65
   ImageSlideshow: 2c4de19eae796a46f1c827f9d3520d3193079613
-  IQKeyboardManager: 5ab84749f20f682f784160c2c63bef4f19d10d26
+  IQKeyboardManagerSwift: 3f340202ebe1a7076279b9b9b3c817243ddb3aab
   Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
-  KRActivityIndicatorView: d1bab0525ff3def4e600ec0cef6bb3057a99ba7d
-  KRProgressHUD: 590711f91da7088bce0e7f6abdf273d51359e505
-  SJSegmentedScrollView: 2308af5e7dbbbcbf7042efd47128f162186ed078
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
 
-PODFILE CHECKSUM: ab0d5c71c678e31fefd884ef757b6fdd51dcd10d
+PODFILE CHECKSUM: b21aad93000ff1b66d64cf1e3046a22ea39b4c8b
 
 COCOAPODS: 1.3.1

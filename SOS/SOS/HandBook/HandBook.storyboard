@@ -36,31 +36,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnx-Yf-wUy">
-                                                    <rect key="frame" x="75" y="23" width="261" height="26"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="26" id="R1T-Ha-HKa"/>
-                                                        <constraint firstAttribute="width" constant="261" id="t9S-0S-Prl"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="12" y="12" width="351" height="48.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HoZ-m6-Zrp">
-                                                    <rect key="frame" x="15" y="11" width="52" height="51"/>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="HoZ-m6-Zrp" firstAttribute="leading" secondItem="P5s-ZC-Mrs" secondAttribute="leadingMargin" id="2M6-cv-jgZ"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Xnx-Yf-wUy" secondAttribute="trailing" constant="24" id="AGF-oq-uQT"/>
-                                                <constraint firstItem="HoZ-m6-Zrp" firstAttribute="bottom" secondItem="P5s-ZC-Mrs" secondAttribute="bottomMargin" id="Jxl-bZ-vHc"/>
-                                                <constraint firstItem="HoZ-m6-Zrp" firstAttribute="top" secondItem="P5s-ZC-Mrs" secondAttribute="topMargin" id="Ksl-GQ-0hh"/>
-                                                <constraint firstAttribute="bottom" secondItem="Xnx-Yf-wUy" secondAttribute="bottom" constant="24" id="NYy-6f-PUN"/>
-                                                <constraint firstItem="Xnx-Yf-wUy" firstAttribute="top" secondItem="P5s-ZC-Mrs" secondAttribute="topMargin" constant="12" id="P4O-4n-dPn"/>
-                                                <constraint firstItem="Xnx-Yf-wUy" firstAttribute="leading" secondItem="HoZ-m6-Zrp" secondAttribute="trailing" constant="8" id="oKS-GE-xdm"/>
+                                                <constraint firstItem="Xnx-Yf-wUy" firstAttribute="top" secondItem="P5s-ZC-Mrs" secondAttribute="top" constant="12" id="QCa-WF-RYC"/>
+                                                <constraint firstItem="Xnx-Yf-wUy" firstAttribute="leading" secondItem="P5s-ZC-Mrs" secondAttribute="leading" constant="12" id="Wwa-qj-HDY"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xnx-Yf-wUy" secondAttribute="trailing" constant="12" id="a0N-HY-mOP"/>
+                                                <constraint firstAttribute="bottom" secondItem="Xnx-Yf-wUy" secondAttribute="bottom" constant="12" id="fgU-5k-OKT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="hImg" destination="HoZ-m6-Zrp" id="zpe-Mu-hyR"/>
                                             <outlet property="nameLabel" destination="Xnx-Yf-wUy" id="yYq-qn-Ia4"/>
                                         </connections>
                                     </tableViewCell>
@@ -87,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnY-dH-eKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1244" y="107"/>
+            <point key="canvasLocation" x="-1244" y="106.59670164917542"/>
         </scene>
         <!--Description View Controller-->
         <scene sceneID="tr0-po-7tY">
@@ -126,26 +115,28 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S9a-YI-OHU">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S9a-YI-OHU">
                                         <rect key="frame" x="0.0" y="45" width="375" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.61176470588235299" green="0.38431372549019605" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAx-kL-7NF">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAx-kL-7NF">
                                         <rect key="frame" x="0.0" y="91" width="375" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.61176470588235299" green="0.38431372549019605" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="S9a-YI-OHU" firstAttribute="leading" secondItem="nmi-fU-YdX" secondAttribute="leading" id="29b-JJ-iUT"/>
+                                    <constraint firstAttribute="trailing" secondItem="JAx-kL-7NF" secondAttribute="trailing" id="794-zV-tVP"/>
                                     <constraint firstItem="niO-DM-Wcy" firstAttribute="centerX" secondItem="nmi-fU-YdX" secondAttribute="centerX" id="ARE-bs-VzB"/>
                                     <constraint firstItem="hsk-aC-aui" firstAttribute="top" secondItem="niO-DM-Wcy" secondAttribute="bottom" constant="12" id="NqQ-Bc-J5T"/>
                                     <constraint firstItem="cY3-S6-LMW" firstAttribute="leading" secondItem="nmi-fU-YdX" secondAttribute="leading" constant="12" id="OnB-vC-NFp"/>
                                     <constraint firstItem="cY3-S6-LMW" firstAttribute="top" secondItem="hsk-aC-aui" secondAttribute="bottom" constant="24" id="QJC-k7-RMN"/>
+                                    <constraint firstItem="JAx-kL-7NF" firstAttribute="leading" secondItem="nmi-fU-YdX" secondAttribute="leading" id="cxK-BS-j4q"/>
                                     <constraint firstItem="cY3-S6-LMW" firstAttribute="centerX" secondItem="nmi-fU-YdX" secondAttribute="centerX" id="hL0-Cg-Aql"/>
                                     <constraint firstAttribute="bottom" secondItem="cY3-S6-LMW" secondAttribute="bottom" constant="24" id="iTu-5g-PhY"/>
                                     <constraint firstAttribute="trailing" secondItem="cY3-S6-LMW" secondAttribute="trailing" constant="12" id="lzS-vx-Yma"/>
                                     <constraint firstItem="niO-DM-Wcy" firstAttribute="top" secondItem="nmi-fU-YdX" secondAttribute="top" constant="16" id="mKm-D1-7qs"/>
+                                    <constraint firstAttribute="trailing" secondItem="S9a-YI-OHU" secondAttribute="trailing" id="nql-Hm-K81"/>
                                     <constraint firstItem="hsk-aC-aui" firstAttribute="centerX" secondItem="nmi-fU-YdX" secondAttribute="centerX" id="zIg-AE-hfU"/>
                                 </constraints>
                             </scrollView>
