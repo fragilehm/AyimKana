@@ -35,6 +35,7 @@ struct Article {
     var title: String
     var image_url: String
     var description: String
+    var what_to_do: String
     var legal: String
     var last_updated: String
     var actions = [Actions]()
@@ -43,6 +44,7 @@ struct Article {
         title = ""
         image_url = ""
         description = ""
+        what_to_do = ""
         last_updated = ""
         legal = ""
     }
@@ -52,6 +54,7 @@ struct Article {
         title = json["title"].stringValue
         image_url = json["image_url"].stringValue
         description = json["description"].stringValue
+        what_to_do = json["what_to_do"].stringValue
         last_updated = json["last_updated"].stringValue
         legal = json["legal"].stringValue
         for actionJson in json["actions"].arrayValue {

@@ -36,6 +36,7 @@ enum ActionEnum: Int {
 class WhatToDoTableViewController: UITableViewController {
    
     var actions = [Actions]()
+    var wtdDescription = ""
     var dateCellExpanded = [Bool]()
    
     override func viewDidLoad() {
@@ -48,41 +49,58 @@ class WhatToDoTableViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return actions.count
+        return actions.count + 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if dateCellExpanded[section] {
-             return 4
-        } else {
+        if section == actions.count
+        {
             return 1
+        }
+        else {
+            if dateCellExpanded[section] {
+                return 4
+            } else {
+                return 1
+            }
         }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = tableView.dequeueReusableCell(withIdentifier: "WhatToDoTableViewCell", for: indexPath) as! WhatToDoTableViewCell
-        if indexPath.row == 0 {
-            cell.set(text: actions[indexPath.section].title)
-            cell.setHeader()
+        if indexPath.section == actions.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell", for: indexPath) as! DescriptionTableViewCell
+            cell.wtdDescriptionLabel.text = wtdDescription
+            return cell
         } else {
-            let actionType = ActionEnum(rawValue: indexPath.row)
-            cell.set(text: actionType!.getTitle())
-            cell.setTitle()
+            let cell  = tableView.dequeueReusableCell(withIdentifier: "WhatToDoTableViewCell", for: indexPath) as! WhatToDoTableViewCell
+            if indexPath.row == 0 {
+                cell.set(text: actions[indexPath.section].title)
+                cell.setHeader()
+            } else {
+                let actionType = ActionEnum(rawValue: indexPath.row)
+                cell.set(text: actionType!.getTitle())
+                cell.setTitle()
+            }
+            return cell
+
         }
-        return cell
+        
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            dateCellExpanded[indexPath.section] = !dateCellExpanded[indexPath.section]
-            tableView.reloadData()
-        } else {
-            let sb = UIStoryboard(name: "HandBook", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "LegalViewController") as! LegalViewController
-            let actionType = ActionEnum(rawValue: indexPath.row)
-            vc.text = actionType!.getContent(actions[indexPath.section])
-            vc.title = actionType!.getTitle()
-            navigationController?.pushViewController(vc, animated: true)
+        if indexPath.section != actions.count {
+            if indexPath.row == 0 {
+                dateCellExpanded[indexPath.section] = !dateCellExpanded[indexPath.section]
+                tableView.reloadData()
+            } else {
+                let sb = UIStoryboard(name: "HandBook", bundle: nil)
+                let vc = sb.instantiateViewController(withIdentifier: "LegalViewController") as! LegalViewController
+                let actionType = ActionEnum(rawValue: indexPath.row)
+                vc.text = actionType!.getContent(actions[indexPath.section])
+                vc.title = actionType!.getTitle()
+                navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
 

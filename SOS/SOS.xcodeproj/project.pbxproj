@@ -26,6 +26,7 @@
 		84B10F6B1F9B4F69001C23C7 /* GreenMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B10F6A1F9B4F69001C23C7 /* GreenMainViewController.swift */; };
 		84B10F701F9B4FCF001C23C7 /* GreenCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B10F6F1F9B4FCF001C23C7 /* GreenCategoryTableViewCell.swift */; };
 		84B10F721F9B5248001C23C7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B10F711F9B5248001C23C7 /* Category.swift */; };
+		84C215E61FDA751300E3D054 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C215E51FDA751300E3D054 /* DescriptionTableViewCell.swift */; };
 		84D16D291F9BE05F001D4019 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D16D281F9BE05F001D4019 /* Registration.storyboard */; };
 		84D16D2C1F9BFE96001D4019 /* Pins.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D16D2B1F9BFE96001D4019 /* Pins.storyboard */; };
 		84D16D2F1F9BFEAF001D4019 /* PinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D16D2E1F9BFEAF001D4019 /* PinsViewController.swift */; };
@@ -76,6 +77,7 @@
 		84B10F6A1F9B4F69001C23C7 /* GreenMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenMainViewController.swift; sourceTree = "<group>"; };
 		84B10F6F1F9B4FCF001C23C7 /* GreenCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		84B10F711F9B5248001C23C7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		84C215E51FDA751300E3D054 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		84D16D281F9BE05F001D4019 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		84D16D2B1F9BFE96001D4019 /* Pins.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pins.storyboard; sourceTree = "<group>"; };
 		84D16D2E1F9BFEAF001D4019 /* PinsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinsViewController.swift; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 			children = (
 				84F3D9E61F9C83F900046EF1 /* HandBookTableViewCell.swift */,
 				8450A9DF1FD02188009117B6 /* WhatToDoTableViewCell.swift */,
+				84C215E51FDA751300E3D054 /* DescriptionTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				84F3D9ED1F9CA17000046EF1 /* Pin.swift in Sources */,
 				8402CAA21F9B9C6D001FF052 /* Institute.swift in Sources */,
 				84D16D3B1F9BFFEB001D4019 /* HandBookViewController.swift in Sources */,
+				84C215E61FDA751300E3D054 /* DescriptionTableViewCell.swift in Sources */,
 				84E741A81F9A892900245B14 /* PageViewController.swift in Sources */,
 				84E26A971FCDB3A9001C23E4 /* WhatToDoTableViewController.swift in Sources */,
 				84F3D9E91F9C845200046EF1 /* Article.swift in Sources */,

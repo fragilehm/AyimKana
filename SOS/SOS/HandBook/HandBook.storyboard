@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -242,6 +242,31 @@
                                         <constraint firstItem="wKx-6u-R2J" firstAttribute="top" secondItem="f5N-GB-lw9" secondAttribute="top" constant="16" id="qxA-Ue-QNK"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DescriptionTableViewCell" id="ErS-qP-5VK" customClass="DescriptionTableViewCell" customModule="SOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="109" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ErS-qP-5VK" id="5oH-S5-ZC0">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAL-BR-sdA">
+                                            <rect key="frame" x="10" y="10" width="355" height="23.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="bAL-BR-sdA" secondAttribute="trailing" constant="10" id="CLU-aO-pOt"/>
+                                        <constraint firstAttribute="bottom" secondItem="bAL-BR-sdA" secondAttribute="bottom" constant="10" id="GQU-U6-QY5"/>
+                                        <constraint firstItem="bAL-BR-sdA" firstAttribute="leading" secondItem="5oH-S5-ZC0" secondAttribute="leading" constant="10" id="Sdb-3b-Yea"/>
+                                        <constraint firstItem="bAL-BR-sdA" firstAttribute="top" secondItem="5oH-S5-ZC0" secondAttribute="top" constant="10" id="Wsd-KG-eKw"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="wtdDescriptionLabel" destination="bAL-BR-sdA" id="dM9-36-mqi"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

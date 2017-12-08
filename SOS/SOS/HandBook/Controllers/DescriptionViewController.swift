@@ -35,6 +35,7 @@ class DescriptionViewController: UIViewController {
         let sb = UIStoryboard(name: "HandBook", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "WhatToDoTableViewController") as! WhatToDoTableViewController
         vc.actions = (self.article?.actions)!
+        vc.wtdDescription = (self.article?.what_to_do)!
         navigationController?.pushViewController(vc, animated: true)
     }
     
