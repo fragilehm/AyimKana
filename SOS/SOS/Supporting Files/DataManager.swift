@@ -28,14 +28,14 @@ class DataManager {
     
     var message = ""
     
-    func appendContacts()
+    func appendContacts(contact: Contact)
     {
-        
+        self.contacts.append(contact)
     }
     
-    func getContacts(cont: contacts)
+    func getContacts() -> [Contact]
     {
-        
+        return contacts
     }
 //    func appendPhone(phone: String) {
 //        phones.append(phone)

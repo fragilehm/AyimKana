@@ -162,7 +162,6 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
         phoneNo = phoneString! as! String
         let cont = Contact(name: fullName, number: phoneNo)
         DataManager.shared.appendContacts(contact: cont)
-
         switch contactId {
         case 1:
             self.firstContact.text = "\(fullName)"
