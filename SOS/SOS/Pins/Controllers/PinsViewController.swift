@@ -54,30 +54,40 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         
     }
     
+    func addDangerMsg(action: UIAlertAction)
+    {
+       
+    }
+    
     @objc func handleTap(_ recognizer: UITapGestureRecognizer)
     {
         
         let location = gestureRecognizer.location(in: mapView)
         let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
         print("Coordinates are \(coordinate)")
-        
+    
         let addMsgAlert = UIAlertController(title: "Description", message: "Please insert a description message:", preferredStyle: UIAlertControllerStyle.alert)
         
         addMsgAlert.addTextField { (textField) in
             textField.placeholder = "Message"
         }
         
-        addMsgAlert.addAction(<#T##action: UIAlertAction##UIAlertAction#>)
-        addMsgAlert.addAction(UIAlertAction(title = "Cancel", style = U) { (_) in })
+        addMsgAlert.addAction(UIAlertAction(title: "Add", style: UIAlertActionStyle.default, handler: { action in
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coordinate
+            var pin = Pin()
+            pin.info = "pollution"
+            pin.latitude = coordinate.latitude.description
+            pin.longitude = coordinate.longitude.description
+            ServerManager.shared.addPins(pin: pin, self.addPin, error: self.showErrorAlert)
+            self.mapView.addAnnotation(annotation)
+        }))
         
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = coordinate
-        var pin = Pin()
-        pin.info = "pollution"
-        pin.latitude = coordinate.latitude.description
-        pin.longitude = coordinate.longitude.description
-        ServerManager.shared.addPins(pin: pin, addPin, error: showErrorAlert)
-        mapView.addAnnotation(annotation)
+        addMsgAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        
+        self.present(addMsgAlert, animated: true, completion: nil)
+        
+        
     }
     func addPin() {
         print("added")
