@@ -14,50 +14,92 @@ import ContactsUI
 
 class RegistrationViewController: UIViewController, UITextViewDelegate, CNContactPickerDelegate {
     var contactId = 1
-    let generalColor = UIColor.init(netHex: 0x9C627F).cgColor
+    let generalColor = UIColor.init(netHex: 0xBDBDBD).cgColor
+    
+    var contactImageView = UIImageView()
+    var contactImg = UIImage(named: "contactIcon")
+    //contactImageView.image = contactImg
+    //contactImageView.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
+    //view.addSubview(contactImageView)
+    
     @IBOutlet weak var doneButton: UIButton! {
         didSet {
             doneButton.layer.borderWidth = 1
-            doneButton.layer.cornerRadius = 8
+            //doneButton.layer.cornerRadius = 8
             doneButton.layer.borderColor = generalColor
+            //doneButton.layer.masksToBounds = false
+
+            //doneButton.layer.shadowColor = UIColor.init(netHex: 0xBDBDBD).cgColor
+            //doneButton.layer.shadowOpacity = 0.8;
+            //doneButton.layer.shadowRadius = 12;
+            //doneButton.layer.shadowOffset = CGSize(12.0)
         }
     }
     @IBOutlet weak var firstContact: UITextField! {
         didSet {
             firstContact.layer.borderWidth = 1
-            firstContact.layer.cornerRadius = 8
+            firstContact.layer.cornerRadius = 2
             firstContact.layer.borderColor = generalColor
+//            contactImageView.image = contactImg
+//            contactImageView.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
+//            firstContact.leftView = contactImageView
+//            firstContact.leftViewMode = UITextFieldViewMode.always
+//            view.addSubview(contactImageView)
         }
     }
     @IBOutlet weak var secondContact: UITextField! {
         didSet {
             secondContact.layer.borderWidth = 1
-            secondContact.layer.cornerRadius = 8
+            secondContact.layer.cornerRadius = 2
             secondContact.layer.borderColor = generalColor
+//            contactImageView.image = contactImg
+//            contactImageView.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
+//            secondContact.leftView = contactImageView
+//            secondContact.leftViewMode = UITextFieldViewMode.always
+//            view.addSubview(contactImageView)
         }
     }
     @IBOutlet weak var thirdContact: UITextField! {
         didSet {
             thirdContact.layer.borderWidth = 1
-            thirdContact.layer.cornerRadius = 8
+            thirdContact.layer.cornerRadius = 2
             thirdContact.layer.borderColor = generalColor
+//            contactImageView.image = contactImg
+//            contactImageView.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
+//            thirdContact.leftView = contactImageView
+//            thirdContact.leftViewMode = UITextFieldViewMode.always
+//            view.addSubview(contactImageView)
         }
     }
     @IBOutlet weak var fourthContact: UITextField! {
         didSet {
             fourthContact.layer.borderWidth = 1
-            fourthContact.layer.cornerRadius = 8
+            fourthContact.layer.cornerRadius = 2
             fourthContact.layer.borderColor = generalColor
+//            contactImageView.image = contactImg
+//            contactImageView.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
+//            fourthContact.leftView = contactImageView
+//            fourthContact.leftViewMode = UITextFieldViewMode.always
+//            view.addSubview(contactImageView)
         }
     }
     
-    @IBOutlet weak var alertMessageTextView: UITextField!{
+    @IBOutlet weak var alertMessageTextView: UITextView! {
         didSet {
             alertMessageTextView.layer.borderWidth = 1
-            alertMessageTextView.layer.cornerRadius = 8
+            //alertMessageTextView.layer.cornerRadius = 8
             alertMessageTextView.layer.borderColor = generalColor
+            alertMessageTextView.placeholder = "message"
+            alertMessageTextView.placeholderColor = UIColor.init(netHex: 0x6E7185)
         }
     }
+//    @IBOutlet weak var alertMessageTextView: UITextField!{
+//        didSet {
+//            alertMessageTextView.layer.borderWidth = 1
+//            alertMessageTextView.layer.cornerRadius = 8
+//            alertMessageTextView.layer.borderColor = generalColor
+//        }
+//    }
     
     
     override func viewDidLoad() {
@@ -97,13 +139,13 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
         vc.message = self.alertMessageTextView.text!
         DataManager.shared.setMessage(message: self.alertMessageTextView.text!)
         
-        if (UserDefaults.standard.bool(forKey: "wasLaunched"))
-        {
-            self.navigationController?.popViewController(animated: true)
-        } else {
+//        if (UserDefaults.standard.bool(forKey: "wasLaunched"))
+//        {
+//            self.navigationController?.popViewController(animated: true)
+//        } else {
             let navigationController = UINavigationController(rootViewController: vc)
             self.present(navigationController, animated: true, completion: nil)
-        }
+//        }
     }
     
     @IBAction func contact1(_ sender: Any) {
