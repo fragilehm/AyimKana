@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="контакт #1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q4G-Zv-YdF">
-                                <rect key="frame" x="24" y="103" width="327" height="70"/>
+                                <rect key="frame" x="24" y="85.5" width="327" height="39"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="OyO-ha-zR0"/>
+                                    <constraint firstAttribute="height" constant="39" id="OyO-ha-zR0"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -30,8 +30,17 @@
                                     <action selector="contact1:" destination="FPK-p3-yOo" eventType="editingDidBegin" id="RbG-9U-S6E"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="контакт #2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="roJ-SN-plk">
+                                <rect key="frame" x="24" y="136.5" width="327" height="39"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="contact2:" destination="FPK-p3-yOo" eventType="editingDidBegin" id="Ol0-9K-To1"/>
+                                </connections>
+                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="контакт #3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HAS-Vn-lEc">
-                                <rect key="frame" x="24" y="291" width="327" height="70"/>
+                                <rect key="frame" x="24" y="187.5" width="327" height="39"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -40,7 +49,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="контакт #4" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cZN-Nk-eA4">
-                                <rect key="frame" x="24" y="385" width="327" height="70"/>
+                                <rect key="frame" x="24" y="238.5" width="327" height="39"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -48,65 +57,71 @@
                                     <action selector="contact4:" destination="FPK-p3-yOo" eventType="editingDidBegin" id="9fr-ti-zuD"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7q-TT-ysX">
+                                <rect key="frame" x="0.0" y="301.5" width="375" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.3411764706" green="0.54901960780000003" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BFb-Yg-4Yd">
+                                <rect key="frame" x="24" y="347" width="327" height="218"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.43137254901960786" green="0.44313725490196076" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOf-5z-a5P">
+                                <rect key="frame" x="0.0" y="32" width="375" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.3411764706" green="0.54901960780000003" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogL-nD-G98">
-                                <rect key="frame" x="24" y="573" width="327" height="70"/>
-                                <color key="backgroundColor" red="0.61176470589999998" green="0.38431372549999998" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="Hpv-Xh-cpN"/>
-                                </constraints>
+                                <rect key="frame" x="24" y="577" width="327" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Сохранить">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.43137254901960786" green="0.44313725490196076" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="savePressed:" destination="FPK-p3-yOo" eventType="touchUpInside" id="oy8-V9-S9y"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите сообщение" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i4T-er-png">
-                                <rect key="frame" x="24" y="479" width="327" height="70"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="контакт #2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="roJ-SN-plk">
-                                <rect key="frame" x="24" y="197" width="327" height="70"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="contact2:" destination="FPK-p3-yOo" eventType="editingDidBegin" id="Ol0-9K-To1"/>
-                                </connections>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="roJ-SN-plk" firstAttribute="top" secondItem="q4G-Zv-YdF" secondAttribute="bottom" constant="24" id="2dE-Ig-OqI"/>
-                            <constraint firstItem="7qe-Ov-PB8" firstAttribute="bottom" secondItem="ogL-nD-G98" secondAttribute="bottom" constant="24" id="4ZH-Sn-vQN"/>
-                            <constraint firstItem="HAS-Vn-lEc" firstAttribute="top" secondItem="roJ-SN-plk" secondAttribute="bottom" constant="24" id="6TE-nj-pfl"/>
+                            <constraint firstItem="cZN-Nk-eA4" firstAttribute="top" secondItem="HAS-Vn-lEc" secondAttribute="bottom" constant="12" id="1QO-kR-duX"/>
+                            <constraint firstItem="ogL-nD-G98" firstAttribute="top" secondItem="BFb-Yg-4Yd" secondAttribute="bottom" constant="12" id="5BD-fx-Xc2"/>
+                            <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="BFb-Yg-4Yd" secondAttribute="trailing" constant="24" id="5qr-XA-fm4"/>
                             <constraint firstItem="ogL-nD-G98" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="8gH-jl-tRg"/>
+                            <constraint firstItem="sOf-5z-a5P" firstAttribute="top" secondItem="7qe-Ov-PB8" secondAttribute="top" constant="12" id="AM7-5b-dqm"/>
+                            <constraint firstItem="sOf-5z-a5P" firstAttribute="trailing" secondItem="7qe-Ov-PB8" secondAttribute="trailing" id="B2Z-pC-Xmd"/>
+                            <constraint firstItem="7qe-Ov-PB8" firstAttribute="bottom" secondItem="ogL-nD-G98" secondAttribute="bottom" constant="60" id="CD1-VP-gsx"/>
                             <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="HAS-Vn-lEc" secondAttribute="trailing" constant="24" id="CFu-7n-N6s"/>
-                            <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="i4T-er-png" secondAttribute="trailing" constant="24" id="CVe-fS-AGx"/>
                             <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="ogL-nD-G98" secondAttribute="trailing" constant="24" id="D2V-e4-3sn"/>
                             <constraint firstItem="HAS-Vn-lEc" firstAttribute="height" secondItem="q4G-Zv-YdF" secondAttribute="height" id="DhH-cd-huR"/>
-                            <constraint firstItem="ogL-nD-G98" firstAttribute="height" secondItem="q4G-Zv-YdF" secondAttribute="height" id="Eob-aT-rqY"/>
                             <constraint firstItem="roJ-SN-plk" firstAttribute="height" secondItem="q4G-Zv-YdF" secondAttribute="height" id="J5B-Zr-ySm"/>
-                            <constraint firstItem="i4T-er-png" firstAttribute="top" secondItem="cZN-Nk-eA4" secondAttribute="bottom" constant="24" id="JfJ-hM-caI"/>
                             <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="q4G-Zv-YdF" secondAttribute="trailing" constant="24" id="KZt-1g-aJb"/>
+                            <constraint firstItem="roJ-SN-plk" firstAttribute="top" secondItem="q4G-Zv-YdF" secondAttribute="bottom" constant="12" id="SDE-JW-pGu"/>
                             <constraint firstItem="roJ-SN-plk" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="SSU-VJ-Kns"/>
                             <constraint firstItem="q4G-Zv-YdF" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="SsT-Xs-Fob"/>
                             <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="roJ-SN-plk" secondAttribute="trailing" constant="24" id="TyR-8c-2Tb"/>
-                            <constraint firstItem="ogL-nD-G98" firstAttribute="top" secondItem="i4T-er-png" secondAttribute="bottom" constant="24" id="Unx-oH-Gif"/>
-                            <constraint firstItem="i4T-er-png" firstAttribute="height" secondItem="q4G-Zv-YdF" secondAttribute="height" id="Xw7-ns-K37"/>
                             <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="cZN-Nk-eA4" secondAttribute="trailing" constant="24" id="bZV-3e-0wG"/>
                             <constraint firstItem="HAS-Vn-lEc" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="c62-Mo-9Kv"/>
-                            <constraint firstItem="cZN-Nk-eA4" firstAttribute="top" secondItem="HAS-Vn-lEc" secondAttribute="bottom" constant="24" id="fZ1-e8-wMZ"/>
-                            <constraint firstItem="i4T-er-png" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="oqN-rx-m3A"/>
+                            <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="l7q-TT-ysX" secondAttribute="trailing" id="cDz-MT-siV"/>
+                            <constraint firstItem="q4G-Zv-YdF" firstAttribute="top" secondItem="sOf-5z-a5P" secondAttribute="bottom" constant="20" id="jf1-v0-MMu"/>
+                            <constraint firstItem="BFb-Yg-4Yd" firstAttribute="top" secondItem="l7q-TT-ysX" secondAttribute="bottom" constant="12" id="oBW-08-2Uh"/>
+                            <constraint firstItem="sOf-5z-a5P" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" id="rnB-gY-Kgn"/>
+                            <constraint firstItem="HAS-Vn-lEc" firstAttribute="top" secondItem="roJ-SN-plk" secondAttribute="bottom" constant="12" id="uMR-YB-XcN"/>
+                            <constraint firstItem="l7q-TT-ysX" firstAttribute="top" secondItem="cZN-Nk-eA4" secondAttribute="bottom" constant="24" id="uTE-aQ-jb3"/>
                             <constraint firstItem="cZN-Nk-eA4" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="wtR-2m-3Cb"/>
+                            <constraint firstItem="l7q-TT-ysX" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" id="z6e-XS-aCq"/>
                             <constraint firstItem="cZN-Nk-eA4" firstAttribute="height" secondItem="q4G-Zv-YdF" secondAttribute="height" id="zBf-ab-DCe"/>
+                            <constraint firstItem="BFb-Yg-4Yd" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="zjX-2w-ZhA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7qe-Ov-PB8"/>
                     </view>
                     <connections>
-                        <outlet property="alertMessageTextView" destination="i4T-er-png" id="72g-Xp-j9j"/>
+                        <outlet property="alertMessageTextView" destination="BFb-Yg-4Yd" id="UeD-7B-qVI"/>
                         <outlet property="doneButton" destination="ogL-nD-G98" id="KYu-Z2-1nx"/>
                         <outlet property="firstContact" destination="q4G-Zv-YdF" id="PGW-gs-cIh"/>
                         <outlet property="fourthContact" destination="cZN-Nk-eA4" id="zCp-fi-LoY"/>

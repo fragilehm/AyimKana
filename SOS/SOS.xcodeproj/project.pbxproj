@@ -38,6 +38,8 @@
 		84D16D3D1F9C035A001D4019 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D16D3C1F9C035A001D4019 /* DetailsViewController.swift */; };
 		84D16D3F1F9C0A69001D4019 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D16D3E1F9C0A69001D4019 /* Location.swift */; };
 		84D16D431F9C2631001D4019 /* MessageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D16D421F9C2631001D4019 /* MessageComposer.swift */; };
+		84E07E841FE17F0E0028BED8 /* Stories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E07E831FE17F0E0028BED8 /* Stories.storyboard */; };
+		84E07E881FE180160028BED8 /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E07E871FE180160028BED8 /* StoriesTableViewController.swift */; };
 		84E26A951FCDA5B1001C23E4 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E26A941FCDA5B1001C23E4 /* DescriptionViewController.swift */; };
 		84E26A971FCDB3A9001C23E4 /* WhatToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E26A961FCDB3A9001C23E4 /* WhatToDoTableViewController.swift */; };
 		84E741721F9A713E00245B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741711F9A713E00245B14 /* AppDelegate.swift */; };
@@ -90,6 +92,8 @@
 		84D16D3C1F9C035A001D4019 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		84D16D3E1F9C0A69001D4019 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		84D16D421F9C2631001D4019 /* MessageComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageComposer.swift; sourceTree = "<group>"; };
+		84E07E831FE17F0E0028BED8 /* Stories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stories.storyboard; sourceTree = "<group>"; };
+		84E07E871FE180160028BED8 /* StoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewController.swift; sourceTree = "<group>"; };
 		84E26A941FCDA5B1001C23E4 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		84E26A961FCDB3A9001C23E4 /* WhatToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatToDoTableViewController.swift; sourceTree = "<group>"; };
 		84E7416E1F9A713E00245B14 /* SOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +238,23 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		84E07E801FE17EBF0028BED8 /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				84E07E811FE17EDA0028BED8 /* Controllers */,
+				84E07E831FE17F0E0028BED8 /* Stories.storyboard */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
+		84E07E811FE17EDA0028BED8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84E07E871FE180160028BED8 /* StoriesTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		84E741651F9A713E00245B14 = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +276,7 @@
 		84E741701F9A713E00245B14 /* SOS */ = {
 			isa = PBXGroup;
 			children = (
+				84E07E801FE17EBF0028BED8 /* Stories */,
 				84D16D361F9BFFC4001D4019 /* HandBook */,
 				84D16D301F9BFF73001D4019 /* SMS */,
 				84D16D2A1F9BFE88001D4019 /* Pins */,
@@ -456,6 +478,7 @@
 				84E7418E1F9A724200245B14 /* MainPage.storyboard in Resources */,
 				84D16D2C1F9BFE96001D4019 /* Pins.storyboard in Resources */,
 				84E741771F9A713E00245B14 /* Main.storyboard in Resources */,
+				84E07E841FE17F0E0028BED8 /* Stories.storyboard in Resources */,
 				84E7418B1F9A722B00245B14 /* StartingPage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +585,7 @@
 				8402CA9A1F9B7593001FF052 /* MainListTableViewCell.swift in Sources */,
 				84F3D9E71F9C83F900046EF1 /* HandBookTableViewCell.swift in Sources */,
 				84F3D9E41F9C717F00046EF1 /* DataManager.swift in Sources */,
+				84E07E881FE180160028BED8 /* StoriesTableViewController.swift in Sources */,
 				8402CA981F9B73EB001FF052 /* MainListViewController.swift in Sources */,
 				8402CAA01F9B8F9C001FF052 /* InstitutionTableViewCell.swift in Sources */,
 				84E741721F9A713E00245B14 /* AppDelegate.swift in Sources */,
