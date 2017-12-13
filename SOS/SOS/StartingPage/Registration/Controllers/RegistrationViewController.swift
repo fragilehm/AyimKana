@@ -18,14 +18,11 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
     
     var contactImageView = UIImageView()
     var contactImg = UIImage(named: "contactIcon")
-    //contactImageView.image = contactImg
-    //contactImageView.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
-    //view.addSubview(contactImageView)
     
     @IBOutlet weak var doneButton: UIButton! {
         didSet {
             doneButton.layer.borderWidth = 1
-            //doneButton.layer.cornerRadius = 8
+            doneButton.layer.cornerRadius = 2
             doneButton.layer.borderColor = generalColor
             //doneButton.layer.masksToBounds = false
 
@@ -87,20 +84,12 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
     @IBOutlet weak var alertMessageTextView: UITextView! {
         didSet {
             alertMessageTextView.layer.borderWidth = 1
-            //alertMessageTextView.layer.cornerRadius = 8
+            alertMessageTextView.layer.cornerRadius = 2
             alertMessageTextView.layer.borderColor = generalColor
             alertMessageTextView.placeholder = "message"
             alertMessageTextView.placeholderColor = UIColor.init(netHex: 0x6E7185)
         }
     }
-//    @IBOutlet weak var alertMessageTextView: UITextField!{
-//        didSet {
-//            alertMessageTextView.layer.borderWidth = 1
-//            alertMessageTextView.layer.cornerRadius = 8
-//            alertMessageTextView.layer.borderColor = generalColor
-//        }
-//    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -139,13 +128,13 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
         vc.message = self.alertMessageTextView.text!
         DataManager.shared.setMessage(message: self.alertMessageTextView.text!)
         
-//        if (UserDefaults.standard.bool(forKey: "wasLaunched"))
-//        {
-//            self.navigationController?.popViewController(animated: true)
-//        } else {
+        if (UserDefaults.standard.bool(forKey: "wasLaunched"))
+        {
+            self.navigationController?.popViewController(animated: true)
+        } else {
             let navigationController = UINavigationController(rootViewController: vc)
             self.present(navigationController, animated: true, completion: nil)
-//        }
+        }
     }
     
     @IBAction func contact1(_ sender: Any) {
