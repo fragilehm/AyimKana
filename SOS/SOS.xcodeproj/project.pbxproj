@@ -20,6 +20,9 @@
 		8402CAA41F9BBA8A001FF052 /* EnvelopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CAA31F9BBA8A001FF052 /* EnvelopeViewController.swift */; };
 		8450A9E01FD02188009117B6 /* WhatToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A9DF1FD02188009117B6 /* WhatToDoTableViewCell.swift */; };
 		8450A9E21FD03A60009117B6 /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A9E11FD03A60009117B6 /* LegalViewController.swift */; };
+		848D48351FE156B9004DB3B8 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D48331FE156B9004DB3B8 /* MainCollectionViewCell.swift */; };
+		848D48361FE156B9004DB3B8 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848D48341FE156B9004DB3B8 /* MainCollectionViewCell.xib */; };
+		848D48381FE158F2004DB3B8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D48371FE158F2004DB3B8 /* MainViewController.swift */; };
 		84B10F5E1F9B4C6E001C23C7 /* Green.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B10F5D1F9B4C6E001C23C7 /* Green.storyboard */; };
 		84B10F6B1F9B4F69001C23C7 /* GreenMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B10F6A1F9B4F69001C23C7 /* GreenMainViewController.swift */; };
 		84B10F701F9B4FCF001C23C7 /* GreenCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B10F6F1F9B4FCF001C23C7 /* GreenCategoryTableViewCell.swift */; };
@@ -69,6 +72,9 @@
 		8402CAA31F9BBA8A001FF052 /* EnvelopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvelopeViewController.swift; sourceTree = "<group>"; };
 		8450A9DF1FD02188009117B6 /* WhatToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatToDoTableViewCell.swift; sourceTree = "<group>"; };
 		8450A9E11FD03A60009117B6 /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
+		848D48331FE156B9004DB3B8 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		848D48341FE156B9004DB3B8 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		848D48371FE158F2004DB3B8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		84B10F5D1F9B4C6E001C23C7 /* Green.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Green.storyboard; sourceTree = "<group>"; };
 		84B10F6A1F9B4F69001C23C7 /* GreenMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenMainViewController.swift; sourceTree = "<group>"; };
 		84B10F6F1F9B4FCF001C23C7 /* GreenCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenCategoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				8402CA991F9B7593001FF052 /* MainListTableViewCell.swift */,
+				848D48331FE156B9004DB3B8 /* MainCollectionViewCell.swift */,
+				848D48341FE156B9004DB3B8 /* MainCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -344,6 +352,7 @@
 			children = (
 				84D16D421F9C2631001D4019 /* MessageComposer.swift */,
 				8402CA971F9B73EB001FF052 /* MainListViewController.swift */,
+				848D48371FE158F2004DB3B8 /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -443,6 +452,7 @@
 				84D16D331F9BFF85001D4019 /* SMS.storyboard in Resources */,
 				84E741791F9A713E00245B14 /* Assets.xcassets in Resources */,
 				84D16D381F9BFFD3001D4019 /* HandBook.storyboard in Resources */,
+				848D48361FE156B9004DB3B8 /* MainCollectionViewCell.xib in Resources */,
 				84E7418E1F9A724200245B14 /* MainPage.storyboard in Resources */,
 				84D16D2C1F9BFE96001D4019 /* Pins.storyboard in Resources */,
 				84E741771F9A713E00245B14 /* Main.storyboard in Resources */,
@@ -530,6 +540,7 @@
 				8450A9E21FD03A60009117B6 /* LegalViewController.swift in Sources */,
 				84D16D351F9BFFB0001D4019 /* SMSViewController.swift in Sources */,
 				8450A9E01FD02188009117B6 /* WhatToDoTableViewCell.swift in Sources */,
+				848D48381FE158F2004DB3B8 /* MainViewController.swift in Sources */,
 				8402CA911F9B6A17001FF052 /* Extensions.swift in Sources */,
 				8402CA921F9B6A17001FF052 /* ServerManager.swift in Sources */,
 				84F3D9E21F9C704800046EF1 /* DetailedViewController.swift in Sources */,
@@ -545,6 +556,7 @@
 				84E741A81F9A892900245B14 /* PageViewController.swift in Sources */,
 				84E26A971FCDB3A9001C23E4 /* WhatToDoTableViewController.swift in Sources */,
 				84F3D9E91F9C845200046EF1 /* Article.swift in Sources */,
+				848D48351FE156B9004DB3B8 /* MainCollectionViewCell.swift in Sources */,
 				84D16D3D1F9C035A001D4019 /* DetailsViewController.swift in Sources */,
 				84E741741F9A713E00245B14 /* ViewController.swift in Sources */,
 				8402CA9A1F9B7593001FF052 /* MainListTableViewCell.swift in Sources */,

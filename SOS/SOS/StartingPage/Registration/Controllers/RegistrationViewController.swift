@@ -92,7 +92,7 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
             numbers.append(fourthContact.text!)
         }
         
-        let vc = UIStoryboard(name: "MainPage", bundle: nil).instantiateViewController(withIdentifier: "MainListViewController") as! MainListViewController
+        let vc = UIStoryboard(name: "MainPage", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
         vc.messageComposer.setNumbers(numbers: numbers)
         vc.message = self.alertMessageTextView.text!
         DataManager.shared.setMessage(message: self.alertMessageTextView.text!)

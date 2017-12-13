@@ -17,18 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if UserDefaults.standard.bool(forKey: "wasLaunched") {
             let storyboard = UIStoryboard.init(name: "MainPage", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "MainListViewController")
+            let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController")
             let navigationController = UINavigationController(rootViewController: vc)
             self.window?.rootViewController = navigationController
         }
         IQKeyboardManager.sharedManager().enable = true
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().barTintColor = UIColor.init(netHex: 0x9C627F)
-        UIApplication.shared.statusBarStyle = .default
-        UINavigationBar.appearance().clipsToBounds = true
-        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
-        statusBar.backgroundColor = UIColor.init(netHex: 0x9C627F)
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.init(netHex: 0x578C88)]
+//        UINavigationBar.appearance().tintColor = UIColor.clear
+//        UINavigationBar.appearance().barTintColor = UIColor.init(netHex: 0xE0E0E0)
+//        UIApplication.shared.statusBarStyle = .lightContent
+//        UINavigationBar.appearance().clipsToBounds = true
+//        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+//        statusBar.backgroundColor = UIColor.init(netHex: 0xE0E0E0)
         
         
 
