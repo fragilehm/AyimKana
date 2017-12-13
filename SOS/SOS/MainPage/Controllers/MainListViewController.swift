@@ -62,12 +62,16 @@ extension MainListViewController: UITableViewDataSource, UITableViewDelegate {
         if indexPath.row == 3 {
             if (self.messageComposer.canSendText()) {
                 let messageComposeVC = self.messageComposer.configuredMessageComposeViewController()
-                messageComposeVC.body = message
+                messageComposeVC.body = "\(DataManager.shared.getMessage()) \nhttp://maps.google.com/?saddr=\(userLatitude),\(userLongitude)"
                 messageComposeVC.recipients = DataManager.shared.getNumbers()
-                messageComposeVC.addAttachmentURL(self.locationVCardURLFromCoordinate(coordinate: CLLocationCoordinate2D(latitude: self.userLatitude, longitude: self.userLongitude))! as URL, withAlternateFilename: "vCard.loc.vcf")
+//                print(DataManager.shared.getNumbers())
+//                print(messageComposeVC.recipients)
+
+                //messageComposeVC.addAttachmentURL(self.locationVCardURLFromCoordinate(coordinate: CLLocationCoordinate2D(latitude: self.userLatitude, longitude: self.userLongitude))! as URL, withAlternateFilename: "vCard.loc.vcf")
+                
                 self.present(messageComposeVC, animated: true, completion: nil)
             } else {
-                let errorAlert = UIAlertView(title: "can not send", message: "Your device is not able to send", delegate: self, cancelButtonTitle: "OK")
+                let errorAlert = UIAlertView(title: "can not send", message: "Your device is not able to send a message", delegate: self, cancelButtonTitle: "OK")
                 errorAlert.show()
             }
             

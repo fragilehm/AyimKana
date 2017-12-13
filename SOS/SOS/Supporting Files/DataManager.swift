@@ -25,12 +25,17 @@ class DataManager {
         return Static.instance
     }
     var contacts = [Contact].init(repeating:  Contact(name: "", number: ""), count: 4)
-    
+    //var names = [String].init(repeating:  "", count: 4)
+    //var phones = [String].init(repeating:  "", count: 4)
     var message = ""
     
     func updateContacts(contact: Contact, index: Int)
     {
         self.contacts[index] = contact
+        //names[index] = contact.name
+        //phones[index] = contact.number
+        
+        //UserDefaults.standard.se
     }
     
     func getContacts() -> [Contact]
@@ -40,7 +45,9 @@ class DataManager {
     func getNumbers() -> [String] {
         var nums = [String]()
         for contact in contacts {
-         nums.append(contact.number)
+            if contact.number != "" {
+                nums.append(contact.number)
+            }
         }
         return nums
     }
