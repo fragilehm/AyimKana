@@ -64,7 +64,7 @@ extension MainListViewController: UITableViewDataSource, UITableViewDelegate {
                 let messageComposeVC = self.messageComposer.configuredMessageComposeViewController()
                 messageComposeVC.body = "\(DataManager.shared.getMessage()) \nhttp://maps.google.com/?saddr=\(userLatitude),\(userLongitude)"
                 messageComposeVC.recipients = DataManager.shared.getNumbers()
-//                print(DataManager.shared.getNumbers())
+                print(DataManager.shared.getNumbers())
 //                print(messageComposeVC.recipients)
 
                 //messageComposeVC.addAttachmentURL(self.locationVCardURLFromCoordinate(coordinate: CLLocationCoordinate2D(latitude: self.userLatitude, longitude: self.userLongitude))! as URL, withAlternateFilename: "vCard.loc.vcf")

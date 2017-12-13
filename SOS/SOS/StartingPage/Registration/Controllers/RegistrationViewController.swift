@@ -62,16 +62,16 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for (index, c) in DataManager.shared.getContacts().enumerated() {
+        for (index, name) in DataManager.shared.getContacts().enumerated() {
             switch index {
             case 0:
-                self.firstContact.text = c.name
+                self.firstContact.text = name
             case 1:
-                self.secondContact.text = c.name
+                self.secondContact.text = name
             case 2:
-                self.thirdContact.text = c.name
+                self.thirdContact.text = name
             default:
-                self.fourthContact.text = c.name
+                self.fourthContact.text = name
                 
             }
         }
