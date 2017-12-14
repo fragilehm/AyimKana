@@ -43,11 +43,6 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         self.present(alert, animated: true, completion: nil)
     }
     
-    func addCurrLocation(action: UIAlertAction)
-    {
-        
-    }
-    
     func addChosenLocation(action: UIAlertAction)
     {
         gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
@@ -83,9 +78,14 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             pin.longitude = coordinate.longitude.description
             ServerManager.shared.addPins(pin: pin, self.addPin, error: self.showErrorAlert)
             self.mapView.addAnnotation(annotation)
+            self.gestureRecognizer.isEnabled = false
+            //disable gestureRecognizer
         }))
         
-        addMsgAlert.addAction(UIAlertAction(title: "Отмена", style: UIAlertActionStyle.cancel, handler: nil))
+        addMsgAlert.addAction(UIAlertAction(title: "Отмена", style: UIAlertActionStyle.cancel, handler: { action in
+            self.gestureRecognizer.isEnabled = false
+            //disable gestureRecognizer
+        }  ))
         
         self.present(addMsgAlert, animated: true, completion: nil)
     
