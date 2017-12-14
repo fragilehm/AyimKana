@@ -53,3 +53,21 @@ extension UIColor {
     }
 }
 
+extension String {
+    
+    func decode64(imageData: String) -> UIImage {
+        let dataDecode:NSData = NSData(base64Encoded: imageData, options:.ignoreUnknownCharacters)!
+        return UIImage(data: dataDecode as Data)!
+    }
+    
+    func localized(lang:String) -> String? {
+        if let path = Bundle.main.path(forResource: lang, ofType: "lproj") {
+            if let bundle = Bundle(path: path) {
+                return NSLocalizedString(self, tableName: nil, bundle: bundle, value: "", comment: "")
+            }
+        }
+        
+        return nil;
+    }
+}
+

@@ -10,6 +10,13 @@ import UIKit
 
 class YellowViewController: UIViewController {
 
+    @IBOutlet weak var establishmentLabel: UILabel!{
+        didSet {
+            establishmentLabel.text = Constants.StartingPage.wheretogo[0]
+            descriptionLabel.text = Constants.StartingPage.wheretogo[1]
+        }
+    }
+    @IBOutlet weak var descriptionLabel: UILabel! 
     @IBOutlet weak var yellowView: UIView! {
         didSet {
             yellowView.layer.masksToBounds = true

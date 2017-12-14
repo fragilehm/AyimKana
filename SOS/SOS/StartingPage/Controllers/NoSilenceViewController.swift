@@ -1,20 +1,20 @@
 //
-//  EnvelopeViewController.swift
+//  NoSilenceViewController.swift
 //  SOS
 //
-//  Created by Khasanza on 10/21/17.
+//  Created by ITLabAdmin on 12/14/17.
 //  Copyright © 2017 Admin. All rights reserved.
 //
 
 import UIKit
 
-class EnvelopeViewController: UIViewController {
+class NoSilenceViewController: UIViewController {
 
-    @IBOutlet weak var smsLabel: UILabel! {
+    @IBOutlet weak var nosilenceLabel: UILabel!
+        {
         didSet {
-            smsLabel.text = Constants.StartingPage.sms[0]
-            descriptionLabel.text = Constants.StartingPage.sms[1]
-            
+            nosilenceLabel.text = Constants.StartingPage.nosilence[0]
+            descriptionLabel.text = Constants.StartingPage.nosilence[1]
         }
     }
     @IBOutlet weak var descriptionLabel: UILabel!

@@ -10,6 +10,13 @@ import UIKit
 
 class RedViewController: UIViewController {
 
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var mapLabel: UILabel!{
+        didSet {
+            mapLabel.text = Constants.StartingPage.map[0]
+            descriptionLabel.text = Constants.StartingPage.map[1]
+        }
+    }
     @IBOutlet weak var redView: UIView! {
         didSet {
             redView.layer.masksToBounds = true

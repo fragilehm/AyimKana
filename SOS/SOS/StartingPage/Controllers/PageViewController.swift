@@ -98,7 +98,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
                 self.newVc(viewController: "YellowViewController"),
                 self.newVc(viewController: "RedViewController"),
                 self.newVc(viewController: "EnvelopeViewController"),
-                self.newVc(viewController: "StoriesViewController"),
+                self.newVc(viewController: "NoSilenceViewController"),
                 vc]
     }()
 }
