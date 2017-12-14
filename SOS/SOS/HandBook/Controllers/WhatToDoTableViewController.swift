@@ -7,6 +7,9 @@
 //
 
 import UIKit
+
+let aColor = UIColor.init(netHex: 0xBDBDBD).cgColor
+
 enum ActionEnum: Int {
     case behave = 1
     case expect = 2
@@ -15,11 +18,11 @@ enum ActionEnum: Int {
     func getTitle() -> String {
         switch self {
         case .behave:
-            return "- Как себя вести?"
+            return "    - Как себя вести?"
         case .expect:
-            return "- Что ожидать?"
+            return "    - Что ожидать?"
         case .qa:
-            return "- Вопросы и ответы"
+            return "    - Вопросы и ответы"
         }
     }
     func getContent(_ content: Actions) -> String {
@@ -70,6 +73,11 @@ class WhatToDoTableViewController: UITableViewController {
         if indexPath.section == actions.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell", for: indexPath) as! DescriptionTableViewCell
             cell.wtdDescriptionLabel.text = wtdDescription
+            cell.wtdDescriptionLabel.backgroundColor = UIColor.white
+            cell.wtdDescriptionLabel.layer.borderWidth = 1
+            cell.wtdDescriptionLabel.layer.borderColor = aColor
+            cell.wtdDescriptionLabel.layer.cornerRadius = 2
+            
             return cell
         } else {
             let cell  = tableView.dequeueReusableCell(withIdentifier: "WhatToDoTableViewCell", for: indexPath) as! WhatToDoTableViewCell

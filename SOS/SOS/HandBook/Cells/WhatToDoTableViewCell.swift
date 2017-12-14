@@ -28,7 +28,7 @@ class WhatToDoTableViewCell: UITableViewCell {
     }
     
     func setHeader() {
-        self.textLabel?.textColor = UIColor.init(netHex: 0x9C627F)
+        self.textLabel?.textColor = UIColor.init(netHex: 0x578C88)
         self.textLabel?.font =  self.textLabel?.font.withSize(18)
     }
     
