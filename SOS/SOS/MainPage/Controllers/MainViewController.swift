@@ -24,12 +24,27 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Выберите Язык", style: .plain, target: self, action: #selector(addTapped))
         UserDefaults.standard.set(true, forKey: "wasLaunched")
         configureCollectionView()
         cofigureLocation()
     }
+    @objc func addTapped(sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: "Выберите Язык" , message: message, preferredStyle: .alert)
+        let russianAction = UIAlertAction(title: "Русский", style: .default, handler: { (action) in
+            DataManager.shared.setLanguage(language: "ru")
+        })
+        let kyrgyzAction = UIAlertAction(title: "Кыргызча", style: .default, handler: { (action) in
+            DataManager.shared.setLanguage(language: "ky")
+        })
+        alertController.addAction(russianAction)
+        alertController.addAction(kyrgyzAction)
+
+        self.present(alertController, animated: true, completion: nil)
+    }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationItem.title = "Главное меню"
+     
+        self.navigationItem.title = Constants.MainPage.mainmenu
     }
 }
 extension MainViewController {

@@ -15,7 +15,7 @@ class MainListViewController: UIViewController, CLLocationManagerDelegate {
     var userLongitude = CLLocationDegrees()
     var userLatitude = CLLocationDegrees()
     var message = ""
-    var names = ["Все о насилии", "Куда обратиться?", "Опасные зоны", "SOS - СМС", "Круг доверия"]
+    var names = Constants.MainPage.names
     var descriptions = ["Что такое насилие? Какие бывают виды? Конкретные примеры. Здесь вы узнаете о всех гендерных видах насилия и как с ними бороться.", "Список учереждений на карте с инструкцией и ожидаемыми действиями.", "Опасные зоны, где уровень гендерного насилия является высоким. Опасные точки отмечены на карте Кыргызстана.", "Оперативное оповещение круга доверенных лиц, о том, что вы возможно находитесь в опасности. При нажатии на эту кнопку, вы отправляете СМС с гео данными о вашем местооложении вашим доверенным контактам.", "Здесь вы можете добавить/изменять/удалять состав доверенным лиц. Так же написать шаблон SOS сообщения."]
     var storyboards = ["HandBook", "Green", "Pins", "SMS", "Registration"]
     var vcs = ["HandBookViewController", "GreenMainViewController", "PinsViewController", "SMSViewController",

@@ -32,6 +32,7 @@ struct Constants {
         Network.ErrorMessage.init()
         StartingPage.init()
         Registration.init()
+        MainPage.init()
     }
     
     
@@ -97,6 +98,14 @@ struct Constants {
         
         init() {
             Registration.save = "save".localized(lang: lang!)
+        }
+    }
+    struct MainPage {
+        static var mainmenu: String?
+        static var names = [String]()
+        init(){
+            MainPage.mainmenu = "mainmenu".localized(lang: lang!)
+            MainPage.names = ["frist_cell".localized(lang: lang!)!, "second_cell".localized(lang: lang!)!, "third_cell".localized(lang: lang!)!, "fourth_lang".localized(lang: lang!)!, "fifth_cell".localized(lang: lang!)!, "sixth".localized(lang: lang!)!]
         }
     }
 }
