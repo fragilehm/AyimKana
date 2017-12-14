@@ -14,11 +14,10 @@ class DescriptionViewController: UIViewController {
     
     var article: Article?
     
-    
     @IBOutlet weak var firstButton: UIButton!{
         didSet {
             firstButton.backgroundColor = UIColor.white
-            firstButton.layer.borderWidth = 1
+            firstButton.layer.borderWidth = 0.7
             firstButton.layer.borderColor = aColor
             firstButton.layer.cornerRadius = 2
         }
@@ -32,14 +31,15 @@ class DescriptionViewController: UIViewController {
         
     }
     
-    @IBOutlet weak var descriptionLabel: UILabel! {
+    @IBOutlet weak var descriptionView: UIView! {
         didSet {
-            descriptionLabel.backgroundColor = UIColor.white
-            descriptionLabel.layer.borderColor = aColor
-            descriptionLabel.layer.borderWidth = 1
-            descriptionLabel.layer.cornerRadius = 2
+            descriptionView.layer.borderColor = aColor
+            descriptionView.layer.borderWidth = 0.5
+            descriptionView.layer.cornerRadius = 2
         }
     }
+    @IBOutlet weak var descriptionLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

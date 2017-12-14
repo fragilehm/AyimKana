@@ -18,8 +18,14 @@
 		8402CAA01F9B8F9C001FF052 /* InstitutionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CA9F1F9B8F9C001FF052 /* InstitutionTableViewCell.swift */; };
 		8402CAA21F9B9C6D001FF052 /* Institute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CAA11F9B9C6D001FF052 /* Institute.swift */; };
 		8402CAA41F9BBA8A001FF052 /* EnvelopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CAA31F9BBA8A001FF052 /* EnvelopeViewController.swift */; };
+		842EA6161FE2798A00EC2034 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842EA6181FE2798A00EC2034 /* Localizable.strings */; };
+		842EA61B1FE27A9500EC2034 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EA61A1FE27A9500EC2034 /* LanguageViewController.swift */; };
+		842EA61D1FE27B2200EC2034 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EA61C1FE27B2200EC2034 /* Constants.swift */; };
+		842EA61F1FE27B7A00EC2034 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EA61E1FE27B7A00EC2034 /* ViewController.swift */; };
+		842EA6211FE2910D00EC2034 /* NoSilenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EA6201FE2910D00EC2034 /* NoSilenceViewController.swift */; };
 		8441791A1FE29FF700ECF06E /* StoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844179191FE29FF700ECF06E /* StoriesTableViewCell.swift */; };
 		8441791E1FE2A42800ECF06E /* AddStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441791D1FE2A42800ECF06E /* AddStoryViewController.swift */; };
+		844179201FE2B7D500ECF06E /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441791F1FE2B7D500ECF06E /* Story.swift */; };
 		8450A9E01FD02188009117B6 /* WhatToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A9DF1FD02188009117B6 /* WhatToDoTableViewCell.swift */; };
 		8450A9E21FD03A60009117B6 /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A9E11FD03A60009117B6 /* LegalViewController.swift */; };
 		848D48351FE156B9004DB3B8 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D48331FE156B9004DB3B8 /* MainCollectionViewCell.swift */; };
@@ -73,8 +79,19 @@
 		8402CA9F1F9B8F9C001FF052 /* InstitutionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionTableViewCell.swift; sourceTree = "<group>"; };
 		8402CAA11F9B9C6D001FF052 /* Institute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Institute.swift; sourceTree = "<group>"; };
 		8402CAA31F9BBA8A001FF052 /* EnvelopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvelopeViewController.swift; sourceTree = "<group>"; };
+		842EA60F1FE2792A00EC2034 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		842EA6101FE2792B00EC2034 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		842EA6111FE2794800EC2034 /* ky */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ky; path = ky.lproj/Main.strings; sourceTree = "<group>"; };
+		842EA6121FE2794800EC2034 /* ky */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ky; path = ky.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		842EA6171FE2798A00EC2034 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		842EA6191FE2798B00EC2034 /* ky */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ky; path = ky.lproj/Localizable.strings; sourceTree = "<group>"; };
+		842EA61A1FE27A9500EC2034 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		842EA61C1FE27B2200EC2034 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		842EA61E1FE27B7A00EC2034 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		842EA6201FE2910D00EC2034 /* NoSilenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSilenceViewController.swift; sourceTree = "<group>"; };
 		844179191FE29FF700ECF06E /* StoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewCell.swift; sourceTree = "<group>"; };
 		8441791D1FE2A42800ECF06E /* AddStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoryViewController.swift; sourceTree = "<group>"; };
+		8441791F1FE2B7D500ECF06E /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		8450A9DF1FD02188009117B6 /* WhatToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatToDoTableViewCell.swift; sourceTree = "<group>"; };
 		8450A9E11FD03A60009117B6 /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
 		848D48331FE156B9004DB3B8 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -316,6 +333,7 @@
 				8402CAA11F9B9C6D001FF052 /* Institute.swift */,
 				84D16D3E1F9C0A69001D4019 /* Location.swift */,
 				84F3D9E81F9C845200046EF1 /* Article.swift */,
+				8441791F1FE2B7D500ECF06E /* Story.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -514,6 +532,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/PickerView/PickerView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
 			);
@@ -523,6 +542,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PickerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
 			);
@@ -546,7 +566,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C67E80AFDC2A6F9959E07228 /* [CP] Copy Pods Resources */ = {
@@ -619,6 +639,7 @@
 				84B10F6B1F9B4F69001C23C7 /* GreenMainViewController.swift in Sources */,
 				8402CA9E1F9B8DB2001FF052 /* InstitutionViewController.swift in Sources */,
 				8441791E1FE2A42800ECF06E /* AddStoryViewController.swift in Sources */,
+				844179201FE2B7D500ECF06E /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

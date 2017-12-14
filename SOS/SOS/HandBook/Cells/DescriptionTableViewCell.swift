@@ -12,6 +12,15 @@ class DescriptionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var wtdDescriptionLabel: UILabel!
 
+    @IBOutlet weak var wtdDescriptionView: UIView!
+    {
+        didSet {
+            wtdDescriptionView.layer.borderColor = UIColor.init(netHex: 0xBDBDBD).cgColor
+            wtdDescriptionView.layer.borderWidth = 0.5
+            wtdDescriptionView.layer.cornerRadius = 2
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

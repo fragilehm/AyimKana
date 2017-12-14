@@ -14,14 +14,18 @@ class LegalViewController: UIViewController {
     let padding = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5);
     
     @IBOutlet weak var legalLabel: UILabel!
-  
+    @IBOutlet weak var legalView: UIView!
+    {
+        didSet {
+            legalView.layer.borderWidth = 0.5
+            legalView.layer.borderColor = aColor
+            legalView.layer.cornerRadius = 5
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         legalLabel.text = text
-        legalLabel.backgroundColor = UIColor.white
-        legalLabel.layer.borderWidth = 1
-        legalLabel.layer.borderColor = aColor
-        legalLabel.layer.cornerRadius = 2
         
         // Do any additional setup after loading the view.
     }

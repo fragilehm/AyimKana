@@ -10,9 +10,12 @@ import UIKit
 
 class StoriesTableViewController: UITableViewController {
 
+    var stories = Stories()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ServerManager.shared.getAllStories(setStories, error: showErrorAlert)
+        //self.view.backgroundColor = UIColor.init(netHex: 0xF7F7F7)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -20,6 +23,16 @@ class StoriesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        ServerManager.shared.getAllStories(setStories, error: showErrorAlert)
+    }
+    
+    func setStories(stories: Stories)
+    {
+        self.stories = stories
+        tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,12 +47,14 @@ class StoriesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return stories.array.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StoriesTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StoriesTableViewCell", for: indexPath) as! StoriesTableViewCell
+        cell.storyContentLabel.text = stories.array[indexPath.row].body
+        cell.storyDate.text = stories.array[indexPath.row].timeAdded
         return cell
     }
     

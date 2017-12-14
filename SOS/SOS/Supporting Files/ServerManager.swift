@@ -19,6 +19,20 @@ class ServerManager: HTTPRequestManager  {
         return Static.instance
     }
     
+    func getAllStories(_ completion: @escaping (Stories)-> Void, error: @escaping (String)-> Void) {
+        self.get(api: "stories", completion: { (json) in
+            completion(Stories(json: json))
+        }, error: error)
+    }
+    
+    func addStories(story: Story,_ completion: @escaping ()-> Void, error: @escaping (String)-> Void) {
+        self.post(api: "stories/", parameters: story.getDict(), completion: { (json) in
+            completion()
+        }) { (message) in
+            print(message)
+        }
+    }
+    
     func getAllCategories(_ completion: @escaping (Categories)-> Void, error: @escaping (String)-> Void) {
         self.get(api: "categories", completion: { (json) in
             completion(Categories(json: json))

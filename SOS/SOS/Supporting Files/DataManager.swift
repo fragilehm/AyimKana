@@ -65,18 +65,7 @@ class DataManager {
         }
         return nums
     }
-//    func appendPhone(phone: String) {
-//        phones.append(phone)
-//    }
-//    func appendName(name: String) {
-//        phones.append(name)
-//    }
-//    func getPhones() -> [String]{
-//        return phones
-//    }
-//    func getNames() -> [String]{
-//        return names
-//    }
+
     func setMessage(message: String){
         UserDefaults.standard.setValue(message, forKey: "message")
     }

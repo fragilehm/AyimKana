@@ -43,7 +43,7 @@ extension HandBookViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HandBookTableViewCell", for: indexPath) as! HandBookTableViewCell
         cell.nameLabel.text = articles.array[indexPath.row].title
-        cell.violenceDescriptionLabel.text = articles.array[indexPath.row].what_to_do
+        cell.violenceDescriptionLabel.text = articles.array[indexPath.row].description
         
         //let url = URL(string: articles.array[indexPath.row].title)
         //cell.hImg.kf.setImage(with: url)

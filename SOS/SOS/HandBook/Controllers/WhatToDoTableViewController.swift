@@ -73,10 +73,6 @@ class WhatToDoTableViewController: UITableViewController {
         if indexPath.section == actions.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell", for: indexPath) as! DescriptionTableViewCell
             cell.wtdDescriptionLabel.text = wtdDescription
-            cell.wtdDescriptionLabel.backgroundColor = UIColor.white
-            cell.wtdDescriptionLabel.layer.borderWidth = 1
-            cell.wtdDescriptionLabel.layer.borderColor = aColor
-            cell.wtdDescriptionLabel.layer.cornerRadius = 2
             
             return cell
         } else {

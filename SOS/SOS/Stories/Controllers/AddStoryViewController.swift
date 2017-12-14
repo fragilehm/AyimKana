@@ -11,17 +11,34 @@ import UIKit
 class AddStoryViewController: UIViewController {
 
     
-    @IBOutlet weak var myStoryTextView: UITextView!
+    @IBOutlet weak var myStoryTextView: UITextView! {
+        didSet {
+            myStoryTextView.layer.borderWidth = 0.7
+            myStoryTextView.layer.borderColor = UIColor.init(netHex: 0xBDBDBD).cgColor
+            myStoryTextView.layer.cornerRadius = 5
+        }
+    }
     
     @IBOutlet weak var myNumberTextField: UITextField!
     
-    
-    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var addButton: UIButton! {
+        didSet {
+            addButton.layer.borderWidth = 1
+            addButton.layer.borderColor = UIColor.init(netHex: 0xBDBDBD).cgColor
+            addButton.layer.cornerRadius = 2
+        }
+    }
     
     
     @IBAction func AddButtonAction(_ sender: Any) {
+        var story = Story(title: "Title", body: myStoryTextView.text, phoneNum: myNumberTextField.text!)
+        ServerManager.shared.addStories(story: story, storyAdded, error: showErrorAlert)
     }
-     
+    
+    func storyAdded() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

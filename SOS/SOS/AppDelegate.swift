@@ -23,9 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         IQKeyboardManager.sharedManager().enable = true
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.init(netHex: 0x578C88)]
-//        UINavigationBar.appearance().tintColor = UIColor.clear
-//        UINavigationBar.appearance().barTintColor = UIColor.init(netHex: 0xE0E0E0)
-//        UIApplication.shared.statusBarStyle = .lightContent
+        
+         UINavigationBar.appearance().tintColor = UIColor.init(netHex: 0x578C88)
+//        UINavigationBar.appearance().barTintColor = UIColor.init(netHex: 0x578C88)
+//          UIApplication.shared.statusBarStyle = .lightContent
 //        UINavigationBar.appearance().clipsToBounds = true
 //        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
 //        statusBar.backgroundColor = UIColor.init(netHex: 0xE0E0E0)
