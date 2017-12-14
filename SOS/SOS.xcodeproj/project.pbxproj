@@ -18,6 +18,8 @@
 		8402CAA01F9B8F9C001FF052 /* InstitutionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CA9F1F9B8F9C001FF052 /* InstitutionTableViewCell.swift */; };
 		8402CAA21F9B9C6D001FF052 /* Institute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CAA11F9B9C6D001FF052 /* Institute.swift */; };
 		8402CAA41F9BBA8A001FF052 /* EnvelopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CAA31F9BBA8A001FF052 /* EnvelopeViewController.swift */; };
+		8441791A1FE29FF700ECF06E /* StoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844179191FE29FF700ECF06E /* StoriesTableViewCell.swift */; };
+		8441791E1FE2A42800ECF06E /* AddStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441791D1FE2A42800ECF06E /* AddStoryViewController.swift */; };
 		8450A9E01FD02188009117B6 /* WhatToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A9DF1FD02188009117B6 /* WhatToDoTableViewCell.swift */; };
 		8450A9E21FD03A60009117B6 /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A9E11FD03A60009117B6 /* LegalViewController.swift */; };
 		848D48351FE156B9004DB3B8 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D48331FE156B9004DB3B8 /* MainCollectionViewCell.swift */; };
@@ -72,6 +74,8 @@
 		8402CA9F1F9B8F9C001FF052 /* InstitutionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionTableViewCell.swift; sourceTree = "<group>"; };
 		8402CAA11F9B9C6D001FF052 /* Institute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Institute.swift; sourceTree = "<group>"; };
 		8402CAA31F9BBA8A001FF052 /* EnvelopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvelopeViewController.swift; sourceTree = "<group>"; };
+		844179191FE29FF700ECF06E /* StoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewCell.swift; sourceTree = "<group>"; };
+		8441791D1FE2A42800ECF06E /* AddStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoryViewController.swift; sourceTree = "<group>"; };
 		8450A9DF1FD02188009117B6 /* WhatToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatToDoTableViewCell.swift; sourceTree = "<group>"; };
 		8450A9E11FD03A60009117B6 /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
 		848D48331FE156B9004DB3B8 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -141,6 +145,14 @@
 				E13AF5A7BDB9AC2D2A8E07DE /* Pods-SOS.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		844179131FE29F1F00ECF06E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				844179191FE29FF700ECF06E /* StoriesTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		84B10F581F9B3D4E001C23C7 /* Cells */ = {
@@ -241,6 +253,7 @@
 		84E07E801FE17EBF0028BED8 /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				844179131FE29F1F00ECF06E /* Cells */,
 				84E07E811FE17EDA0028BED8 /* Controllers */,
 				84E07E831FE17F0E0028BED8 /* Stories.storyboard */,
 			);
@@ -251,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				84E07E871FE180160028BED8 /* StoriesTableViewController.swift */,
+				8441791D1FE2A42800ECF06E /* AddStoryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -575,6 +589,7 @@
 				84F3D9ED1F9CA17000046EF1 /* Pin.swift in Sources */,
 				8402CAA21F9B9C6D001FF052 /* Institute.swift in Sources */,
 				84D16D3B1F9BFFEB001D4019 /* HandBookViewController.swift in Sources */,
+				8441791A1FE29FF700ECF06E /* StoriesTableViewCell.swift in Sources */,
 				84C215E61FDA751300E3D054 /* DescriptionTableViewCell.swift in Sources */,
 				84E741A81F9A892900245B14 /* PageViewController.swift in Sources */,
 				84E26A971FCDB3A9001C23E4 /* WhatToDoTableViewController.swift in Sources */,
@@ -597,6 +612,7 @@
 				84E26A951FCDA5B1001C23E4 /* DescriptionViewController.swift in Sources */,
 				84B10F6B1F9B4F69001C23C7 /* GreenMainViewController.swift in Sources */,
 				8402CA9E1F9B8DB2001FF052 /* InstitutionViewController.swift in Sources */,
+				8441791E1FE2A42800ECF06E /* AddStoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

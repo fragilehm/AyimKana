@@ -18,9 +18,9 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     var names = ["Все о насилии", "Куда обратиться?", "Опасные зоны", "SOS - СМС", "Круг доверия", "Не могу молчать!"]
     var imageNames = ["infoImage", "institutionImage", "dangerZoneImage", "smsImage", "emergencyContactsImage", "storiesImage"]
     var descriptions = ["Что такое насилие? В этой категории вы найдете информацию о видах насилия, об учреждениях в которые вы можете обратиться и пошаговые инструкции действий для защиты ваших прав.", "В этой категории размещен справочник учреждений куда вы можете обратиться за помощью в случаях насилия", "На карте Кыргызстана вы сможете увидеть опасные зоны, где уровень гендерного насилия является высоким, и самостоятельно оставлять отметки о произошедших случаях.", "Оперативное оповещение круга доверенных лиц, о том, что вы находитесь в опасной ситуации и вам нужна помощь. СМС содержит текст вашего шаблона и координаты местоположения.", "Здесь вы можете добавить/изменять/удалять состав доверенным лиц. Так же написать шаблон SOS сообщения.", "В этом разделе вы можете анонимно высказаться о пережитом насилии или рассказать историю, где вы являетесь свидетелем. Также, вы можете прочитать истории других людей."]
-    var storyboards = ["HandBook", "Green", "Pins", "SMS", "Registration", "History"]
+    var storyboards = ["HandBook", "Green", "Pins", "SMS", "Registration", "Stories"]
     var vcs = ["HandBookViewController", "GreenMainViewController", "PinsViewController", "SMSViewController",
-    "RegistrationViewController", "HistoryViewController"]
+    "RegistrationViewController", "StoriesMainTableViewController"]
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
