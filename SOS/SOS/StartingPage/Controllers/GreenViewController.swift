@@ -9,8 +9,10 @@
 import UIKit
 import CoreLocation
 import AVFoundation
-class GreenViewController: UIViewController, CLLocationManagerDelegate {
+class GreenViewController: ViewController, CLLocationManagerDelegate {
 
+    @IBOutlet weak var directoryLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var greenView: UIView! {
         didSet {
             greenView.layer.masksToBounds = true
@@ -22,7 +24,8 @@ class GreenViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        directoryLabel.text = Constants.StartingPage.directory[0]
+        descriptionLabel.text = Constants.StartingPage.directory[1]
         //locationManager.delegate = self
         locationManager = CLLocationManager()
         locationManager.delegate = self

@@ -18,6 +18,7 @@ struct Contact {
 
 class DataManager {
     
+    var uDefaults = UserDefaults.standard
     class var shared: DataManager {
         struct Static {
             static let instance = DataManager()
@@ -89,5 +90,15 @@ class DataManager {
         //self.phones.removeAll()
         //self.names.removeAll()
         
+    }
+    
+    func setLanguage(language: String) {
+        uDefaults.removeObject(forKey: "language")
+        uDefaults.set(language, forKey: "language")
+        uDefaults.synchronize()
+    }
+    
+    func getLanguage() -> String {
+        return uDefaults.string(forKey: "language")!
     }
 }

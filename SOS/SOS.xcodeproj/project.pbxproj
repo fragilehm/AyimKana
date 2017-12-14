@@ -18,6 +18,11 @@
 		8402CAA01F9B8F9C001FF052 /* InstitutionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CA9F1F9B8F9C001FF052 /* InstitutionTableViewCell.swift */; };
 		8402CAA21F9B9C6D001FF052 /* Institute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CAA11F9B9C6D001FF052 /* Institute.swift */; };
 		8402CAA41F9BBA8A001FF052 /* EnvelopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CAA31F9BBA8A001FF052 /* EnvelopeViewController.swift */; };
+		842EA6161FE2798A00EC2034 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842EA6181FE2798A00EC2034 /* Localizable.strings */; };
+		842EA61B1FE27A9500EC2034 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EA61A1FE27A9500EC2034 /* LanguageViewController.swift */; };
+		842EA61D1FE27B2200EC2034 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EA61C1FE27B2200EC2034 /* Constants.swift */; };
+		842EA61F1FE27B7A00EC2034 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EA61E1FE27B7A00EC2034 /* ViewController.swift */; };
+		842EA6211FE2910D00EC2034 /* NoSilenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EA6201FE2910D00EC2034 /* NoSilenceViewController.swift */; };
 		8450A9E01FD02188009117B6 /* WhatToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A9DF1FD02188009117B6 /* WhatToDoTableViewCell.swift */; };
 		8450A9E21FD03A60009117B6 /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A9E11FD03A60009117B6 /* LegalViewController.swift */; };
 		848D48351FE156B9004DB3B8 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D48331FE156B9004DB3B8 /* MainCollectionViewCell.swift */; };
@@ -43,7 +48,6 @@
 		84E26A951FCDA5B1001C23E4 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E26A941FCDA5B1001C23E4 /* DescriptionViewController.swift */; };
 		84E26A971FCDB3A9001C23E4 /* WhatToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E26A961FCDB3A9001C23E4 /* WhatToDoTableViewController.swift */; };
 		84E741721F9A713E00245B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741711F9A713E00245B14 /* AppDelegate.swift */; };
-		84E741741F9A713E00245B14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741731F9A713E00245B14 /* ViewController.swift */; };
 		84E741771F9A713E00245B14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E741751F9A713E00245B14 /* Main.storyboard */; };
 		84E741791F9A713E00245B14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E741781F9A713E00245B14 /* Assets.xcassets */; };
 		84E7417C1F9A713E00245B14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E7417A1F9A713E00245B14 /* LaunchScreen.storyboard */; };
@@ -72,6 +76,16 @@
 		8402CA9F1F9B8F9C001FF052 /* InstitutionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionTableViewCell.swift; sourceTree = "<group>"; };
 		8402CAA11F9B9C6D001FF052 /* Institute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Institute.swift; sourceTree = "<group>"; };
 		8402CAA31F9BBA8A001FF052 /* EnvelopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvelopeViewController.swift; sourceTree = "<group>"; };
+		842EA60F1FE2792A00EC2034 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		842EA6101FE2792B00EC2034 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		842EA6111FE2794800EC2034 /* ky */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ky; path = ky.lproj/Main.strings; sourceTree = "<group>"; };
+		842EA6121FE2794800EC2034 /* ky */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ky; path = ky.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		842EA6171FE2798A00EC2034 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		842EA6191FE2798B00EC2034 /* ky */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ky; path = ky.lproj/Localizable.strings; sourceTree = "<group>"; };
+		842EA61A1FE27A9500EC2034 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		842EA61C1FE27B2200EC2034 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		842EA61E1FE27B7A00EC2034 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		842EA6201FE2910D00EC2034 /* NoSilenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSilenceViewController.swift; sourceTree = "<group>"; };
 		8450A9DF1FD02188009117B6 /* WhatToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatToDoTableViewCell.swift; sourceTree = "<group>"; };
 		8450A9E11FD03A60009117B6 /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
 		848D48331FE156B9004DB3B8 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -98,7 +112,6 @@
 		84E26A961FCDB3A9001C23E4 /* WhatToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatToDoTableViewController.swift; sourceTree = "<group>"; };
 		84E7416E1F9A713E00245B14 /* SOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E741711F9A713E00245B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84E741731F9A713E00245B14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84E741761F9A713E00245B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84E741781F9A713E00245B14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84E7417B1F9A713E00245B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -258,6 +271,7 @@
 		84E741651F9A713E00245B14 = {
 			isa = PBXGroup;
 			children = (
+				842EA6181FE2798A00EC2034 /* Localizable.strings */,
 				84E741701F9A713E00245B14 /* SOS */,
 				84E7416F1F9A713E00245B14 /* Products */,
 				2D827974C23F9BFE7F76AB63 /* Pods */,
@@ -287,7 +301,6 @@
 				84E741871F9A719400245B14 /* StartingPage */,
 				84E741851F9A718300245B14 /* Login */,
 				84E741711F9A713E00245B14 /* AppDelegate.swift */,
-				84E741731F9A713E00245B14 /* ViewController.swift */,
 				84E741751F9A713E00245B14 /* Main.storyboard */,
 				84E741781F9A713E00245B14 /* Assets.xcassets */,
 				84E7417A1F9A713E00245B14 /* LaunchScreen.storyboard */,
@@ -316,6 +329,8 @@
 				84E7419B1F9A733000245B14 /* ServerManager.swift */,
 				84E7419A1F9A732A00245B14 /* HTTPRequestManager.swift */,
 				84E741991F9A731600245B14 /* HTTPStatusCode.swift */,
+				842EA61C1FE27B2200EC2034 /* Constants.swift */,
+				842EA61E1FE27B7A00EC2034 /* ViewController.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -365,6 +380,8 @@
 				84E741AB1F9A8AB300245B14 /* YellowViewController.swift */,
 				84E741AD1F9A8ABE00245B14 /* RedViewController.swift */,
 				8402CAA31F9BBA8A001FF052 /* EnvelopeViewController.swift */,
+				842EA61A1FE27A9500EC2034 /* LanguageViewController.swift */,
+				842EA6201FE2910D00EC2034 /* NoSilenceViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -449,8 +466,8 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ky,
 			);
 			mainGroup = 84E741651F9A713E00245B14;
 			productRefGroup = 84E7416F1F9A713E00245B14 /* Products */;
@@ -470,6 +487,7 @@
 				84B10F5E1F9B4C6E001C23C7 /* Green.storyboard in Resources */,
 				84E7417C1F9A713E00245B14 /* LaunchScreen.storyboard in Resources */,
 				84D16D291F9BE05F001D4019 /* Registration.storyboard in Resources */,
+				842EA6161FE2798A00EC2034 /* Localizable.strings in Resources */,
 				84E741941F9A728800245B14 /* Login.storyboard in Resources */,
 				84D16D331F9BFF85001D4019 /* SMS.storyboard in Resources */,
 				84E741791F9A713E00245B14 /* Assets.xcassets in Resources */,
@@ -529,7 +547,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C67E80AFDC2A6F9959E07228 /* [CP] Copy Pods Resources */ = {
@@ -566,13 +584,16 @@
 				848D48381FE158F2004DB3B8 /* MainViewController.swift in Sources */,
 				8402CA911F9B6A17001FF052 /* Extensions.swift in Sources */,
 				8402CA921F9B6A17001FF052 /* ServerManager.swift in Sources */,
+				842EA61F1FE27B7A00EC2034 /* ViewController.swift in Sources */,
 				84F3D9E21F9C704800046EF1 /* DetailedViewController.swift in Sources */,
 				8402CA931F9B6A17001FF052 /* HTTPRequestManager.swift in Sources */,
+				842EA61B1FE27A9500EC2034 /* LanguageViewController.swift in Sources */,
 				84D16D431F9C2631001D4019 /* MessageComposer.swift in Sources */,
 				8402CA941F9B6A17001FF052 /* HTTPStatusCode.swift in Sources */,
 				84D16D3F1F9C0A69001D4019 /* Location.swift in Sources */,
 				84E741AA1F9A8AA500245B14 /* GreenViewController.swift in Sources */,
 				84F3D9ED1F9CA17000046EF1 /* Pin.swift in Sources */,
+				842EA6211FE2910D00EC2034 /* NoSilenceViewController.swift in Sources */,
 				8402CAA21F9B9C6D001FF052 /* Institute.swift in Sources */,
 				84D16D3B1F9BFFEB001D4019 /* HandBookViewController.swift in Sources */,
 				84C215E61FDA751300E3D054 /* DescriptionTableViewCell.swift in Sources */,
@@ -581,7 +602,7 @@
 				84F3D9E91F9C845200046EF1 /* Article.swift in Sources */,
 				848D48351FE156B9004DB3B8 /* MainCollectionViewCell.swift in Sources */,
 				84D16D3D1F9C035A001D4019 /* DetailsViewController.swift in Sources */,
-				84E741741F9A713E00245B14 /* ViewController.swift in Sources */,
+				842EA61D1FE27B2200EC2034 /* Constants.swift in Sources */,
 				8402CA9A1F9B7593001FF052 /* MainListTableViewCell.swift in Sources */,
 				84F3D9E71F9C83F900046EF1 /* HandBookTableViewCell.swift in Sources */,
 				84F3D9E41F9C717F00046EF1 /* DataManager.swift in Sources */,
@@ -603,10 +624,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		842EA6181FE2798A00EC2034 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				842EA6171FE2798A00EC2034 /* ru */,
+				842EA6191FE2798B00EC2034 /* ky */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		84E741751F9A713E00245B14 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				84E741761F9A713E00245B14 /* Base */,
+				842EA60F1FE2792A00EC2034 /* ru */,
+				842EA6111FE2794800EC2034 /* ky */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -615,6 +647,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				84E7417B1F9A713E00245B14 /* Base */,
+				842EA6101FE2792B00EC2034 /* ru */,
+				842EA6121FE2794800EC2034 /* ky */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -626,6 +660,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -683,6 +718,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -24,6 +24,7 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
             doneButton.layer.borderWidth = 1
             doneButton.layer.cornerRadius = 2
             doneButton.layer.borderColor = generalColor
+            doneButton.setTitle(Constants.Registration.save, for: .normal)
             //doneButton.layer.masksToBounds = false
 
             //doneButton.layer.shadowColor = UIColor.init(netHex: 0xBDBDBD).cgColor

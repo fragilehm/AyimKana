@@ -14,5 +14,5 @@ target 'SOS' do
     pod 'UITextView+Placeholder'
     pod 'Kingfisher'
     pod 'IQKeyboardManagerSwift', '5.0.0'
-
+    pod ‘PickerView’
 end
