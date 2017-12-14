@@ -54,7 +54,9 @@ class StoriesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoriesTableViewCell", for: indexPath) as! StoriesTableViewCell
         cell.storyContentLabel.text = stories.array[indexPath.row].body
-        cell.storyDate.text = stories.array[indexPath.row].timeAdded
+        let dateFull  = stories.array[indexPath.row].timeAdded
+        let indexEnd = dateFull.index(dateFull.startIndex, offsetBy: 9)
+        cell.storyDate.text = String(dateFull.prefix(through: indexEnd))
         return cell
     }
     

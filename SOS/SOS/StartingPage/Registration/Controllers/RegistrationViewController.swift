@@ -87,7 +87,7 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
             alertMessageTextView.layer.borderWidth = 1
             alertMessageTextView.layer.cornerRadius = 2
             alertMessageTextView.layer.borderColor = generalColor
-            alertMessageTextView.placeholder = "message"
+            alertMessageTextView.placeholder = "сообщение"
             alertMessageTextView.placeholderColor = UIColor.init(netHex: 0x6E7185)
         }
     }
@@ -129,13 +129,13 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
         vc.message = self.alertMessageTextView.text!
         DataManager.shared.setMessage(message: self.alertMessageTextView.text!)
         
-        if (UserDefaults.standard.bool(forKey: "wasLaunched"))
-        {
-            self.navigationController?.popViewController(animated: true)
-        } else {
+        //if (UserDefaults.standard.bool(forKey: "wasLaunched"))
+        //{
+        //    self.navigationController?.popViewController(animated: true)
+        //} else {
             let navigationController = UINavigationController(rootViewController: vc)
             self.present(navigationController, animated: true, completion: nil)
-        }
+        //}
     }
     
     @IBAction func contact1(_ sender: Any) {

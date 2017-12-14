@@ -23,7 +23,8 @@ class AddStoryViewController: UIViewController {
     
     @IBOutlet weak var addButton: UIButton! {
         didSet {
-            addButton.layer.borderWidth = 1
+            addButton.setTitle("Поделиться", for: .normal)
+            addButton.layer.borderWidth = 0.7
             addButton.layer.borderColor = UIColor.init(netHex: 0xBDBDBD).cgColor
             addButton.layer.cornerRadius = 2
         }

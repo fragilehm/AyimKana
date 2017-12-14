@@ -15,12 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        if UserDefaults.standard.bool(forKey: "wasLaunched") {
-            let storyboard = UIStoryboard.init(name: "MainPage", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController")
-            let navigationController = UINavigationController(rootViewController: vc)
-            self.window?.rootViewController = navigationController
-        }
+//        if UserDefaults.standard.bool(forKey: "wasLaunched") {
+//            let storyboard = UIStoryboard.init(name: "MainPage", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+//            let navigationController = UINavigationController(rootViewController: vc)
+//            self.window?.rootViewController = navigationController
+//        }
+        
         IQKeyboardManager.sharedManager().enable = true
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.init(netHex: 0x578C88)]
         
