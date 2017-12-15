@@ -21,7 +21,8 @@
 "mainmenu" = "Главное меню";
 "first_cell" = "Все о насилии";
 "second_cell" = "Куда обратиться?";
-"fourth_cell" = "Опасные зоны";
+"third_cell" = "Опасные зоны";
+"fourth_cell" = "SOS - СМС";
 "fifth_cell" = "Круг доверия";
 "sixth_cell" = "Не могу молчать!";
-"save"          = "Сохранить";
+"save" = "Сохранить";
