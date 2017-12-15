@@ -14,6 +14,7 @@ import SwiftyJSON
 
 class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
     
+    var category: Category?
     
     @IBOutlet weak var detailsView: UIView!
     @IBOutlet weak var DetailsSegmentedControl: UISegmentedControl!
@@ -30,6 +31,11 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("AAAAAAAA")
+        print(category?.name)
+        self.title = category?.name
+        
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
         

@@ -12,8 +12,16 @@ class InstitutionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var phoneLabel2: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel! {
+        didSet {
+            
+        }
+    }
+    @IBOutlet weak var phoneLabel2: UILabel! {
+        didSet {
+            
+        }
+    }
     @IBOutlet weak var centreDescription: UILabel!
     
     

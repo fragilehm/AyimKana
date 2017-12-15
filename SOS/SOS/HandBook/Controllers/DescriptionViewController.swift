@@ -44,6 +44,8 @@ class DescriptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         descriptionLabel.text = self.article?.description
+        self.title = article?.title
+        //self.navigationItem.title = "A Title"
         // Do any additional setup after loading the view.
     }
 
