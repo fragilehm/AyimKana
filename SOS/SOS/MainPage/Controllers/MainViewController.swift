@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class MainViewController: UIViewController, CLLocationManagerDelegate {
+class MainViewController: ViewController, CLLocationManagerDelegate {
     var messageComposer = MessageComposer()
     let locationManager = CLLocationManager()
     var userLongitude = CLLocationDegrees()
@@ -24,13 +24,13 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Выберите Язык", style: .plain, target: self, action: #selector(addTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "language".localized(lang: self.lang)!, style: .plain, target: self, action: #selector(addTapped))
         UserDefaults.standard.set(true, forKey: "wasLaunched")
         configureCollectionView()
         cofigureLocation()
     }
     @objc func addTapped(sender: UIBarButtonItem) {
-        let alertController = UIAlertController(title: "Выберите Язык" , message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Выберете Язык" , message: "", preferredStyle: .alert)
         let russianAction = UIAlertAction(title: "Русский", style: .default, handler: { (action) in
             DataManager.shared.setLanguage(language: "ru")
              self.navigationItem.title = Translation.mainMenu

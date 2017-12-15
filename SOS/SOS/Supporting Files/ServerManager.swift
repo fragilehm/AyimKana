@@ -38,6 +38,7 @@ class ServerManager: HTTPRequestManager  {
             completion(Categories(json: json))
         }, error: error)
     }
+    
     func getInstitutesById(id: Int, _ completion: @escaping (Institutes)-> Void, error: @escaping (String)-> Void) {
         self.get(api: "servicesByCat/\(id)/", completion: { (json) in
             completion(Institutes(json: json))

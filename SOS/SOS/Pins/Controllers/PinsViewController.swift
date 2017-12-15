@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-
+    
     @IBOutlet weak var mapView: MKMapView!
     let regionRadius: CLLocationDistance = 2000
     var location: Location!
@@ -21,6 +21,7 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let locationOfBishkek = CLLocation(latitude: 42.874722, longitude: 74.612222)
         
         let plusBtn = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTaped))
@@ -96,7 +97,7 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.title = "Зоны опасности"
+        self.title = "Опасные зоны"
     }
     
     func setPins(pins: Pins){
@@ -104,7 +105,7 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     }
     
     func setPoints(pins: Pins) {
-        self.title = "Карта"
+        //self.title = "Карта"
         for i in pins.array {
             if let lat = Double(i.latitude), let lon = Double(i.longitude) {
                 let point = MKPointAnnotation()
