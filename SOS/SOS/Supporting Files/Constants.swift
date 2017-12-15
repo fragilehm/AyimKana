@@ -32,7 +32,7 @@ struct Constants {
         Network.ErrorMessage.init()
         StartingPage.init()
         Registration.init()
-        MainPage.init()
+       // MainPage.init()
     }
     
     
@@ -100,14 +100,47 @@ struct Constants {
             Registration.save = "save".localized(lang: lang!)
         }
     }
-    struct MainPage {
-        static var mainmenu: String?
-        static var names = [String]()
-        init(){
-            MainPage.mainmenu = "mainmenu".localized(lang: lang!)
-            MainPage.names = ["frist_cell".localized(lang: lang!)!, "second_cell".localized(lang: lang!)!, "third_cell".localized(lang: lang!)!, "fourth_lang".localized(lang: lang!)!, "fifth_cell".localized(lang: lang!)!, "sixth".localized(lang: lang!)!]
-        }
+    
+//    struct MainPage {
+//        static var mainmenu: String?
+//
+//        static var names: [String] {
+//
+//            let lang = DataManager.shared.getLanguage()
+//             MainPage.mainmenu = "mainmenu".localized(lang: lang)
+//            return = ["first_cell".localized(lang: lang)!,
+//                              "second_cell".localized(lang: lang)!,
+//                              "third_cell".localized(lang: lang)!,
+//                              "fourth_cell".localized(lang: lang)!,
+//                              "fifth_cell".localized(lang: lang)!,
+//                              "sixth_cell".localized(lang: lang)!]
+//        }
+//        init() {}
+//    }
+
+}
+
+
+struct Translation {
+    
+    static var mainMenu: String {
+        let lang = DataManager.shared.getLanguage()
+        return "mainmenu".localized(lang: lang)!
     }
+
+    static var menuNames: [String] {
+        let lang: String = DataManager.shared.getLanguage()
+        return  ["first_cell".localized(lang: lang)!,
+        "second_cell".localized(lang: lang)!,
+        "third_cell".localized(lang: lang)!,
+        "fourth_cell".localized(lang: lang)!,
+        "fifth_cell".localized(lang: lang)!,
+        "sixth_cell".localized(lang: lang)!]
+    }
+        
+        
+    
+
 }
 
 
