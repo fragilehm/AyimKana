@@ -14,7 +14,7 @@ import SwiftyJSON
 
 class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
     
-    var category: Category?
+    var category: String?
     
     @IBOutlet weak var detailsView: UIView!
     @IBOutlet weak var DetailsSegmentedControl: UISegmentedControl!
@@ -31,11 +31,9 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("AAAAAAAA")
-        print(category?.name)
-        self.title = category?.name
-        
+
+        self.title = category
+    
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
         
@@ -85,10 +83,13 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         }
     }
 }
+
 extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return institutes.array.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InstitutionTableViewCell", for: indexPath) as! InstitutionTableViewCell
         cell.nameLabel.text = institutes.array[indexPath.row].name
@@ -99,5 +100,38 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (institutes.array[indexPath.row].phone_1 != "") {
+            
+        
+            if (institutes.array[indexPath.row].phone_2 != "")
+            {
+                let innerAlert = UIAlertController(title: "Выберете Номер", message: "На какой номер хотите позвонить?", preferredStyle: UIAlertControllerStyle.alert)
+                innerAlert.addAction(UIAlertAction(title: "\(institutes.array[indexPath.row].phone_1)", style: UIAlertActionStyle.default, handler: { action in
+                    if let url = URL(string: "tel://\(self.institutes.array[indexPath.row].phone_1)"), UIApplication.shared.canOpenURL(url)
+                    {
+                        print("YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAS")
+                        if #available(iOS 10, *) {
+                            UIApplication.shared.open(url)
+                        }
+                        else {
+                            UIApplication.shared.openURL(url)
+                        }
+                    }
+                }  ))
+                innerAlert.addAction(UIAlertAction(title: "\(institutes.array[indexPath.row].phone_2)", style: UIAlertActionStyle.default, handler: nil  ))
+                innerAlert.addAction(UIAlertAction(title: "Отмена", style: UIAlertActionStyle.default, handler: nil  ))
+                self.present(innerAlert, animated: true, completion: nil)
+            }
+            else {
+                let innerAlert = UIAlertController(title: "Позвонить", message: "Позвонить на номер \(institutes.array[indexPath.row].phone_1)?",       preferredStyle: UIAlertControllerStyle.alert)
+                innerAlert.addAction(UIAlertAction(title: "Да", style: UIAlertActionStyle.default, handler: nil  ))
+                innerAlert.addAction(UIAlertAction(title: "Отмена", style: UIAlertActionStyle.default, handler: nil  ))
+                self.present(innerAlert, animated: true, completion: nil)
+            }
+        }
+    }
+    
 }
 

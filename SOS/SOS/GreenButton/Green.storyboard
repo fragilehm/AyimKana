@@ -138,7 +138,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="595"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstitutionTableViewCell" rowHeight="139" id="Sqf-SP-mpS" customClass="InstitutionTableViewCell" customModule="SOS" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstitutionTableViewCell" rowHeight="139" id="Sqf-SP-mpS" customClass="InstitutionTableViewCell" customModule="SOS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="139"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sqf-SP-mpS" id="h9T-6l-Ph6">
@@ -157,13 +157,13 @@
                                                             <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+996 312 11 22 33" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0lE-LR-qXz">
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+996 312 11 22 33" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0lE-LR-qXz">
                                                             <rect key="frame" x="16" y="75.5" width="166.5" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0312-44-55-66" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="a1U-Mt-kvd">
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0312-44-55-66" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="a1U-Mt-kvd">
                                                             <rect key="frame" x="192.5" y="75.5" width="166.5" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -219,14 +219,14 @@
                                                     <outlet property="addressLabel" destination="AAk-Dd-5cJ" id="egG-Ay-Iqr"/>
                                                     <outlet property="centreDescription" destination="23D-nG-6g3" id="eEb-Cn-6dP"/>
                                                     <outlet property="nameLabel" destination="wug-sv-Y6e" id="r6Z-SX-heD"/>
-                                                    <outlet property="phoneLabel" destination="0lE-LR-qXz" id="uZX-JA-hJ2"/>
-                                                    <outlet property="phoneLabel2" destination="a1U-Mt-kvd" id="BHT-A5-RG1"/>
+                                                    <outlet property="phoneLabel" destination="0lE-LR-qXz" id="qRx-0P-3OX"/>
+                                                    <outlet property="phoneLabel2" destination="a1U-Mt-kvd" id="pAZ-cl-a6m"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
-                                            <outlet property="dataSource" destination="0uR-5j-ixL" id="B2o-WN-O8b"/>
-                                            <outlet property="delegate" destination="0uR-5j-ixL" id="yC7-jo-o0Z"/>
+                                            <outlet property="dataSource" destination="0uR-5j-ixL" id="oPx-3c-d1t"/>
+                                            <outlet property="delegate" destination="0uR-5j-ixL" id="e32-8V-f6e"/>
                                         </connections>
                                     </tableView>
                                 </subviews>

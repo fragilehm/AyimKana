@@ -11,6 +11,7 @@ import UIKit
 class GreenMainViewController: UIViewController {
 
     @IBOutlet weak var greenCategoryTableView: UITableView!
+    //let tap = UITapGestureRecognizer(target: self, action: #selector(GreenMainViewController.tapFunction))
     
     var categories = Categories()
     override func viewDidLoad() {
@@ -31,6 +32,11 @@ extension GreenMainViewController: UITableViewDelegate, UITableViewDataSource {
         return categories.array.count
     }
     
+//    @objc func tapFunction (sender: UITapGestureRecognizer)
+//    {
+//        print("Tap Tap")
+//    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = greenCategoryTableView.dequeueReusableCell(withIdentifier: "GreenCategoryTableViewCell", for: indexPath) as! GreenCategoryTableViewCell
         cell.titleLabel.text = categories.array[indexPath.row].name
@@ -39,8 +45,10 @@ extension GreenMainViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
         let vc = UIStoryboard(name: "Green", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
         vc.id = categories.array[indexPath.row].id
+        vc.category = categories.array[indexPath.row].name
         self.navigationController?.show(vc, sender: self)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
