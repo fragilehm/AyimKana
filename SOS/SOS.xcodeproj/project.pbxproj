@@ -11,8 +11,6 @@
 		8402CA921F9B6A17001FF052 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7419B1F9A733000245B14 /* ServerManager.swift */; };
 		8402CA931F9B6A17001FF052 /* HTTPRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7419A1F9A732A00245B14 /* HTTPRequestManager.swift */; };
 		8402CA941F9B6A17001FF052 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741991F9A731600245B14 /* HTTPStatusCode.swift */; };
-		8402CA981F9B73EB001FF052 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CA971F9B73EB001FF052 /* MainListViewController.swift */; };
-		8402CA9A1F9B7593001FF052 /* MainListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CA991F9B7593001FF052 /* MainListTableViewCell.swift */; };
 		8402CA9C1F9B7736001FF052 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CA961F9B6C79001FF052 /* RegistrationViewController.swift */; };
 		8402CA9E1F9B8DB2001FF052 /* InstitutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CA9D1F9B8DB2001FF052 /* InstitutionViewController.swift */; };
 		8402CAA01F9B8F9C001FF052 /* InstitutionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CA9F1F9B8F9C001FF052 /* InstitutionTableViewCell.swift */; };
@@ -73,8 +71,6 @@
 		18AF172DF51CFC48DE679C59 /* Pods_SOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E5A18DDC8000C5F161D3C2 /* Pods-SOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SOS/Pods-SOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8402CA961F9B6C79001FF052 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		8402CA971F9B73EB001FF052 /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
-		8402CA991F9B7593001FF052 /* MainListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableViewCell.swift; sourceTree = "<group>"; };
 		8402CA9D1F9B8DB2001FF052 /* InstitutionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionViewController.swift; sourceTree = "<group>"; };
 		8402CA9F1F9B8F9C001FF052 /* InstitutionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionTableViewCell.swift; sourceTree = "<group>"; };
 		8402CAA11F9B9C6D001FF052 /* Institute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Institute.swift; sourceTree = "<group>"; };
@@ -173,7 +169,6 @@
 		84B10F581F9B3D4E001C23C7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				8402CA991F9B7593001FF052 /* MainListTableViewCell.swift */,
 				848D48331FE156B9004DB3B8 /* MainCollectionViewCell.swift */,
 				848D48341FE156B9004DB3B8 /* MainCollectionViewCell.xib */,
 			);
@@ -407,7 +402,6 @@
 			isa = PBXGroup;
 			children = (
 				84D16D421F9C2631001D4019 /* MessageComposer.swift */,
-				8402CA971F9B73EB001FF052 /* MainListViewController.swift */,
 				848D48371FE158F2004DB3B8 /* MainViewController.swift */,
 			);
 			path = Controllers;
@@ -623,11 +617,9 @@
 				848D48351FE156B9004DB3B8 /* MainCollectionViewCell.swift in Sources */,
 				84D16D3D1F9C035A001D4019 /* DetailsViewController.swift in Sources */,
 				842EA61D1FE27B2200EC2034 /* Constants.swift in Sources */,
-				8402CA9A1F9B7593001FF052 /* MainListTableViewCell.swift in Sources */,
 				84F3D9E71F9C83F900046EF1 /* HandBookTableViewCell.swift in Sources */,
 				84F3D9E41F9C717F00046EF1 /* DataManager.swift in Sources */,
 				84E07E881FE180160028BED8 /* StoriesTableViewController.swift in Sources */,
-				8402CA981F9B73EB001FF052 /* MainListViewController.swift in Sources */,
 				8402CAA01F9B8F9C001FF052 /* InstitutionTableViewCell.swift in Sources */,
 				84E741721F9A713E00245B14 /* AppDelegate.swift in Sources */,
 				84E741AE1F9A8ABE00245B14 /* RedViewController.swift in Sources */,

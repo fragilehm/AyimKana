@@ -127,7 +127,7 @@ struct Translation {
         let lang = DataManager.shared.getLanguage()
         return "mainmenu".localized(lang: lang)!
     }
-
+    
     static var menuNames: [String] {
         let lang: String = DataManager.shared.getLanguage()
         return  ["first_cell".localized(lang: lang)!,
@@ -137,10 +137,8 @@ struct Translation {
         "fifth_cell".localized(lang: lang)!,
         "sixth_cell".localized(lang: lang)!]
     }
-        
-        
     
-
+    
 }
 
 

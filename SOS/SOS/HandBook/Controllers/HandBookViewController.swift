@@ -13,19 +13,12 @@ class HandBookViewController: UIViewController {
     
     let aColor = UIColor.init(netHex: 0xBDBDBD).cgColor
     @IBOutlet weak var tableView: UITableView!
-//    @IBOutlet weak var violenceContentView: UIView! {
-//        didSet {
-//            violenceContentView.backgroundColor = UIColor.white
-//            violenceContentView.layer.borderWidth = 1
-//            violenceContentView.layer.borderColor = aColor
-//            violenceContentView.layer.cornerRadius = 2
-//        }
-//    }
     
     var articles = Articles()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       // self.title =
         tableView.tableFooterView = UIView()
         ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
     }

@@ -36,7 +36,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         self.pageControl.currentPage = 0
         self.pageControl.tintColor = UIColor.black
         self.pageControl.pageIndicatorTintColor = UIColor.lightGray
-        self.pageControl.currentPageIndicatorTintColor = UIColor.black
+        self.pageControl.currentPageIndicatorTintColor = UIColor.init(netHex: 0x578C88)
         self.view.addSubview(pageControl)
     }
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {

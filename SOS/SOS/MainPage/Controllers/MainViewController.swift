@@ -34,6 +34,7 @@ class MainViewController: ViewController, CLLocationManagerDelegate {
         let russianAction = UIAlertAction(title: "Русский", style: .default, handler: { (action) in
             DataManager.shared.setLanguage(language: "ru")
              self.navigationItem.title = Translation.mainMenu
+           
             self.collectionView.reloadData()
         })
         let kyrgyzAction = UIAlertAction(title: "Кыргызча", style: .default, handler: { (action) in

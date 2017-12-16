@@ -138,7 +138,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="595"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstitutionTableViewCell" rowHeight="139" id="Sqf-SP-mpS" customClass="InstitutionTableViewCell" customModule="SOS" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="InstitutionTableViewCell" rowHeight="139" id="Sqf-SP-mpS" customClass="InstitutionTableViewCell" customModule="SOS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="139"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sqf-SP-mpS" id="h9T-6l-Ph6">
