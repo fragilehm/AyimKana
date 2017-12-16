@@ -86,12 +86,62 @@
                                     <action selector="savePressed:" destination="FPK-p3-yOo" eventType="touchUpInside" id="oy8-V9-S9y"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0G-hs-VwO">
+                                <rect key="frame" x="316" y="90" width="31" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="31" id="DPF-VG-XwJ"/>
+                                    <constraint firstAttribute="height" constant="31" id="Lf1-e3-pRk"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="15"/>
+                                <state key="normal" title="x"/>
+                                <connections>
+                                    <action selector="firstContactClicked:" destination="FPK-p3-yOo" eventType="touchUpInside" id="2Cu-q7-kpy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoI-tr-RdQ">
+                                <rect key="frame" x="316" y="140.5" width="31" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="31" id="Ywu-6u-XAu"/>
+                                    <constraint firstAttribute="height" constant="31" id="xqw-uo-uYB"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="15"/>
+                                <state key="normal" title="x"/>
+                                <connections>
+                                    <action selector="secondContactClicked:" destination="FPK-p3-yOo" eventType="touchUpInside" id="yhf-dg-g3s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LB1-2j-Ybs">
+                                <rect key="frame" x="316" y="191.5" width="31" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Bha-1n-m9p"/>
+                                    <constraint firstAttribute="width" constant="31" id="i7p-iF-1TC"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="15"/>
+                                <state key="normal" title="x"/>
+                                <connections>
+                                    <action selector="thirdContactClicked:" destination="FPK-p3-yOo" eventType="touchUpInside" id="inB-mP-eek"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaE-F3-Zwh">
+                                <rect key="frame" x="316" y="243" width="31" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="6xC-15-gXp"/>
+                                    <constraint firstAttribute="width" constant="31" id="AXD-Vu-CaC"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="15"/>
+                                <state key="normal" title="x"/>
+                                <connections>
+                                    <action selector="fourthContactClicked:" destination="FPK-p3-yOo" eventType="touchUpInside" id="3wU-69-gUz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cZN-Nk-eA4" firstAttribute="top" secondItem="HAS-Vn-lEc" secondAttribute="bottom" constant="12" id="1QO-kR-duX"/>
+                            <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="KoI-tr-RdQ" secondAttribute="trailing" constant="28" id="4pa-a8-uBN"/>
                             <constraint firstItem="ogL-nD-G98" firstAttribute="top" secondItem="BFb-Yg-4Yd" secondAttribute="bottom" constant="12" id="5BD-fx-Xc2"/>
                             <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="BFb-Yg-4Yd" secondAttribute="trailing" constant="24" id="5qr-XA-fm4"/>
+                            <constraint firstItem="LB1-2j-Ybs" firstAttribute="top" secondItem="roJ-SN-plk" secondAttribute="bottom" constant="16" id="6hV-NG-Kdr"/>
                             <constraint firstItem="ogL-nD-G98" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="8gH-jl-tRg"/>
                             <constraint firstItem="sOf-5z-a5P" firstAttribute="top" secondItem="7qe-Ov-PB8" secondAttribute="top" constant="12" id="AM7-5b-dqm"/>
                             <constraint firstItem="sOf-5z-a5P" firstAttribute="trailing" secondItem="7qe-Ov-PB8" secondAttribute="trailing" id="B2Z-pC-Xmd"/>
@@ -105,11 +155,17 @@
                             <constraint firstItem="roJ-SN-plk" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="SSU-VJ-Kns"/>
                             <constraint firstItem="q4G-Zv-YdF" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="SsT-Xs-Fob"/>
                             <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="roJ-SN-plk" secondAttribute="trailing" constant="24" id="TyR-8c-2Tb"/>
+                            <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="LB1-2j-Ybs" secondAttribute="trailing" constant="28" id="axf-VU-AR3"/>
                             <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="cZN-Nk-eA4" secondAttribute="trailing" constant="24" id="bZV-3e-0wG"/>
+                            <constraint firstItem="KoI-tr-RdQ" firstAttribute="top" secondItem="q4G-Zv-YdF" secondAttribute="bottom" constant="16" id="bhY-xC-97L"/>
                             <constraint firstItem="HAS-Vn-lEc" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" constant="24" id="c62-Mo-9Kv"/>
                             <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="l7q-TT-ysX" secondAttribute="trailing" id="cDz-MT-siV"/>
+                            <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="M0G-hs-VwO" secondAttribute="trailing" constant="28" id="cFz-WJ-5nQ"/>
+                            <constraint firstItem="PaE-F3-Zwh" firstAttribute="top" secondItem="HAS-Vn-lEc" secondAttribute="bottom" constant="16" id="eEW-Sn-zeg"/>
+                            <constraint firstItem="7qe-Ov-PB8" firstAttribute="trailing" secondItem="PaE-F3-Zwh" secondAttribute="trailing" constant="28" id="gXm-FL-dUi"/>
                             <constraint firstItem="q4G-Zv-YdF" firstAttribute="top" secondItem="sOf-5z-a5P" secondAttribute="bottom" constant="20" id="jf1-v0-MMu"/>
                             <constraint firstItem="BFb-Yg-4Yd" firstAttribute="top" secondItem="l7q-TT-ysX" secondAttribute="bottom" constant="12" id="oBW-08-2Uh"/>
+                            <constraint firstItem="M0G-hs-VwO" firstAttribute="top" secondItem="sOf-5z-a5P" secondAttribute="bottom" constant="24" id="qWk-rj-vC0"/>
                             <constraint firstItem="sOf-5z-a5P" firstAttribute="leading" secondItem="7qe-Ov-PB8" secondAttribute="leading" id="rnB-gY-Kgn"/>
                             <constraint firstItem="HAS-Vn-lEc" firstAttribute="top" secondItem="roJ-SN-plk" secondAttribute="bottom" constant="12" id="uMR-YB-XcN"/>
                             <constraint firstItem="l7q-TT-ysX" firstAttribute="top" secondItem="cZN-Nk-eA4" secondAttribute="bottom" constant="24" id="uTE-aQ-jb3"/>

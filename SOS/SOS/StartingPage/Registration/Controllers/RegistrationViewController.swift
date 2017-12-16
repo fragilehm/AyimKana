@@ -109,6 +109,24 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
         }
         self.alertMessageTextView.text = DataManager.shared.getMessage()
     }
+    let emptyContact = Contact(name: "", number: "")
+    @IBAction func firstContactClicked(_ sender: Any) {
+        firstContact.text = ""
+        DataManager.shared.updateContacts(contact: emptyContact, index: 0)
+    }
+    @IBAction func secondContactClicked(_ sender: Any) {
+        secondContact.text = ""
+        DataManager.shared.updateContacts(contact: emptyContact, index: 1)
+    }
+    @IBAction func thirdContactClicked(_ sender: Any) {
+        thirdContact.text = ""
+        DataManager.shared.updateContacts(contact: emptyContact, index: 2)
+    }
+    @IBAction func fourthContactClicked(_ sender: Any) {
+        fourthContact.text = ""
+        DataManager.shared.updateContacts(contact: emptyContact, index: 3)
+    }
+
     @IBAction func savePressed(_ sender: Any) {
         var numbers = [String]()
         if firstContact.text != "" {
