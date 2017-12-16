@@ -32,6 +32,7 @@ struct Constants {
         Network.ErrorMessage.init()
         StartingPage.init()
         Registration.init()
+        Stories.init()
        // MainPage.init()
     }
     
@@ -95,9 +96,29 @@ struct Constants {
     
     struct Registration {
         static var save: String?
+        static var contactsLabel: String?
+        static var sosSmsLabel: String?
+        static var smsPlaceholder: String?
         
         init() {
             Registration.save = "save".localized(lang: lang!)
+            Registration.contactsLabel = "contactsLabel".localized(lang: lang!)
+            Registration.sosSmsLabel = "sosSmsLabel".localized(lang: lang!)
+            Registration.smsPlaceholder = "smsPlaceholder".localized(lang: lang!)
+        }
+    }
+    
+    struct Stories {
+        static var addStoryLabel: String?
+         static var addStoryPlaceholder: String?
+        static var addNumberLabel: String?
+        static var addStoryButton: String?
+        
+        init() {
+            Stories.addStoryLabel = "add_story_label".localized(lang: lang!)
+            Stories.addStoryPlaceholder = "add_story_placeholder".localized(lang: lang!)
+            Stories.addNumberLabel = "add_number_label".localized(lang: lang!)
+            Stories.addStoryButton = "add_story_button".localized(lang: lang!)
         }
     }
     

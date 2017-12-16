@@ -11,6 +11,8 @@ import Kingfisher
 
 class HandBookViewController: UIViewController {
     
+    let lang: String = DataManager.shared.getLanguage()
+    
     let aColor = UIColor.init(netHex: 0xBDBDBD).cgColor
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,7 +20,7 @@ class HandBookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // self.title =
+        self.title = "first_cell".localized(lang: lang)!
         tableView.tableFooterView = UIView()
         ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
     }

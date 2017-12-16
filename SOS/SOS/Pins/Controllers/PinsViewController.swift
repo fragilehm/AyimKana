@@ -17,6 +17,8 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     var points = [MKPointAnnotation]()
     var gestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
     
+    let lang = DataManager.shared.getLanguage()
+    
     var alertTxtField: String!
     
     override func viewDidLoad() {
@@ -36,10 +38,10 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     @objc func addTaped()
     {
-        let alert = UIAlertController(title: "Добавление Опасной Зоны", message: "Выберете Место Которое Считаете Опасным", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "map_first_alert_title".localized(lang: lang)!, message: "map_first_alert_body".localized(lang: lang)!, preferredStyle: UIAlertControllerStyle.alert)
         
         //alert.addAction(UIAlertAction(title: "Current Location", style: UIAlertActionStyle.default, handler: addCurrLocation))
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: addChosenLocation))
+        alert.addAction(UIAlertAction(title: "map_first_alert_button".localized(lang: lang)!, style: UIAlertActionStyle.default, handler: addChosenLocation))
         
         self.present(alert, animated: true, completion: nil)
     }
@@ -63,14 +65,14 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
         print("Coordinates are \(coordinate)")
     
-        let addMsgAlert = UIAlertController(title: "Описание", message: "Добавьте Описание", preferredStyle: UIAlertControllerStyle.alert)
+        let addMsgAlert = UIAlertController(title: "map_second_alert_title".localized(lang: lang)!, message: "map_second_alert_body".localized(lang: lang)!, preferredStyle: UIAlertControllerStyle.alert)
         
         addMsgAlert.addTextField { (textField) in
-            textField.placeholder = "Message"
+            //textField.placeholder = "Message"
             
         }
     
-        addMsgAlert.addAction(UIAlertAction(title: "Добавить", style: UIAlertActionStyle.default, handler: { action in
+        addMsgAlert.addAction(UIAlertAction(title: "map_second_alert_addButton".localized(lang: lang)!, style: UIAlertActionStyle.default, handler: { action in
             let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
             var pin = Pin()
@@ -83,7 +85,7 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             //disable gestureRecognizer
         }))
         
-        addMsgAlert.addAction(UIAlertAction(title: "Отмена", style: UIAlertActionStyle.cancel, handler: { action in
+        addMsgAlert.addAction(UIAlertAction(title: "map_second_alert_cancelButton".localized(lang: lang)!, style: UIAlertActionStyle.cancel, handler: { action in
             self.gestureRecognizer.isEnabled = false
             //disable gestureRecognizer
         }  ))
@@ -97,7 +99,7 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.title = "Опасные зоны"
+        self.title = "map".localized(lang: lang)!
     }
     
     func setPins(pins: Pins){

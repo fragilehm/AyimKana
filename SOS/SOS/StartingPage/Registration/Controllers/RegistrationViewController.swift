@@ -19,18 +19,26 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
     var contactImageView = UIImageView()
     var contactImg = UIImage(named: "contactIcon")
     
+    
+    @IBOutlet weak var emergencyContactsLabel: UILabel! {
+        didSet {
+            emergencyContactsLabel.text = Constants.Registration.contactsLabel
+        }
+    }
+    
+    @IBOutlet weak var sosSmsLabel: UILabel! {
+        didSet {
+            sosSmsLabel.text = Constants.Registration.sosSmsLabel
+        }
+    }
+    
     @IBOutlet weak var doneButton: UIButton! {
         didSet {
             doneButton.layer.borderWidth = 1
             doneButton.layer.cornerRadius = 2
             doneButton.layer.borderColor = generalColor
             doneButton.setTitle(Constants.Registration.save, for: .normal)
-            //doneButton.layer.masksToBounds = false
 
-            //doneButton.layer.shadowColor = UIColor.init(netHex: 0xBDBDBD).cgColor
-            //doneButton.layer.shadowOpacity = 0.8;
-            //doneButton.layer.shadowRadius = 12;
-            //doneButton.layer.shadowOffset = CGSize(12.0)
         }
     }
     @IBOutlet weak var firstContact: UITextField! {
@@ -38,11 +46,7 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
             firstContact.layer.borderWidth = 1
             firstContact.layer.cornerRadius = 2
             firstContact.layer.borderColor = generalColor
-//            contactImageView.image = contactImg
-//            contactImageView.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
-//            firstContact.leftView = contactImageView
-//            firstContact.leftViewMode = UITextFieldViewMode.always
-//            view.addSubview(contactImageView)
+
         }
     }
     @IBOutlet weak var secondContact: UITextField! {
@@ -50,11 +54,7 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
             secondContact.layer.borderWidth = 1
             secondContact.layer.cornerRadius = 2
             secondContact.layer.borderColor = generalColor
-//            contactImageView.image = contactImg
-//            contactImageView.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
-//            secondContact.leftView = contactImageView
-//            secondContact.leftViewMode = UITextFieldViewMode.always
-//            view.addSubview(contactImageView)
+
         }
     }
     @IBOutlet weak var thirdContact: UITextField! {
@@ -62,11 +62,7 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
             thirdContact.layer.borderWidth = 1
             thirdContact.layer.cornerRadius = 2
             thirdContact.layer.borderColor = generalColor
-//            contactImageView.image = contactImg
-//            contactImageView.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
-//            thirdContact.leftView = contactImageView
-//            thirdContact.leftViewMode = UITextFieldViewMode.always
-//            view.addSubview(contactImageView)
+
         }
     }
     @IBOutlet weak var fourthContact: UITextField! {
@@ -74,11 +70,7 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
             fourthContact.layer.borderWidth = 1
             fourthContact.layer.cornerRadius = 2
             fourthContact.layer.borderColor = generalColor
-//            contactImageView.image = contactImg
-//            contactImageView.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
-//            fourthContact.leftView = contactImageView
-//            fourthContact.leftViewMode = UITextFieldViewMode.always
-//            view.addSubview(contactImageView)
+
         }
     }
     
@@ -87,7 +79,7 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
             alertMessageTextView.layer.borderWidth = 1
             alertMessageTextView.layer.cornerRadius = 2
             alertMessageTextView.layer.borderColor = generalColor
-            alertMessageTextView.placeholder = "сообщение"
+            alertMessageTextView.placeholder = Constants.Registration.smsPlaceholder
             alertMessageTextView.placeholderColor = UIColor.init(netHex: 0x6E7185)
         }
     }

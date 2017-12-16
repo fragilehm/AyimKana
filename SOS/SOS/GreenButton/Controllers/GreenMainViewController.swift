@@ -10,12 +10,15 @@ import UIKit
 
 class GreenMainViewController: UIViewController {
 
+    let lang: String = DataManager.shared.getLanguage()
+    
     @IBOutlet weak var greenCategoryTableView: UITableView!
     //let tap = UITapGestureRecognizer(target: self, action: #selector(GreenMainViewController.tapFunction))
     
     var categories = Categories()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "second_cell".localized(lang: lang)!
         greenCategoryTableView.estimatedRowHeight = 100
         greenCategoryTableView.tableFooterView = UIView()
         ServerManager.shared.getAllCategories(setCategories, error: showErrorAlert)

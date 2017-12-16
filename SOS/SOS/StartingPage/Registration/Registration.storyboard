@@ -70,7 +70,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Доверенный круг" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOf-5z-a5P">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Доверенный круг" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOf-5z-a5P">
                                 <rect key="frame" x="0.0" y="32" width="375" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" red="0.3411764706" green="0.54901960780000003" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -123,9 +123,11 @@
                     <connections>
                         <outlet property="alertMessageTextView" destination="BFb-Yg-4Yd" id="UeD-7B-qVI"/>
                         <outlet property="doneButton" destination="ogL-nD-G98" id="KYu-Z2-1nx"/>
+                        <outlet property="emergencyContactsLabel" destination="sOf-5z-a5P" id="Ab5-PE-HAn"/>
                         <outlet property="firstContact" destination="q4G-Zv-YdF" id="PGW-gs-cIh"/>
                         <outlet property="fourthContact" destination="cZN-Nk-eA4" id="zCp-fi-LoY"/>
                         <outlet property="secondContact" destination="roJ-SN-plk" id="0i9-wZ-LvA"/>
+                        <outlet property="sosSmsLabel" destination="l7q-TT-ysX" id="16b-Dt-gT0"/>
                         <outlet property="thirdContact" destination="HAS-Vn-lEc" id="2Og-DN-Bpn"/>
                     </connections>
                 </viewController>

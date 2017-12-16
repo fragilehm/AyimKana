@@ -11,6 +11,7 @@ import UIKit
 class DescriptionViewController: UIViewController {
     
     let aColor = UIColor.init(netHex: 0xBDBDBD).cgColor
+    let lang = DataManager.shared.getLanguage()
     
     var article: Article?
     
@@ -20,6 +21,7 @@ class DescriptionViewController: UIViewController {
             firstButton.layer.borderWidth = 0.7
             firstButton.layer.borderColor = aColor
             firstButton.layer.cornerRadius = 2
+            firstButton.setTitle("legal".localized(lang: lang)!, for: .normal)
         }
     }
     
@@ -58,9 +60,10 @@ class DescriptionViewController: UIViewController {
     {
         didSet {
             whatToDoButton.backgroundColor = UIColor.white
-            whatToDoButton.layer.borderWidth = 1
+            whatToDoButton.layer.borderWidth = 0.7
             whatToDoButton.layer.borderColor = aColor
             whatToDoButton.layer.cornerRadius = 2
+            whatToDoButton.setTitle("what_to_do".localized(lang: lang)!, for: .normal)
         }
     }
     

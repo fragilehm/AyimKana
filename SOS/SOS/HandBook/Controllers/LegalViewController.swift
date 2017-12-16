@@ -25,7 +25,10 @@ class LegalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //self.title = "legal".localized(lang: DataManager.shared.getLanguage())!
         legalLabel.text = text
+        
         
         // Do any additional setup after loading the view.
     }

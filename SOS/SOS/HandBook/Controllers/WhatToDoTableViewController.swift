@@ -9,6 +9,7 @@
 import UIKit
 
 let aColor = UIColor.init(netHex: 0xBDBDBD).cgColor
+let lang = DataManager.shared.getLanguage()
 
 enum ActionEnum: Int {
     case behave = 1
@@ -18,11 +19,11 @@ enum ActionEnum: Int {
     func getTitle() -> String {
         switch self {
         case .behave:
-            return "    - Как себя вести?"
+            return "    - \("behave".localized(lang: lang)!)"
         case .expect:
-            return "    - Что ожидать?"
+            return "    - \("expect".localized(lang: lang)!)"
         case .qa:
-            return "    - Вопросы и ответы"
+            return "    - \("qa".localized(lang: lang)!)"
         }
     }
     func getContent(_ content: Actions) -> String {
@@ -44,7 +45,7 @@ class WhatToDoTableViewController: UITableViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "what_to_do".localized(lang: lang)!
         dateCellExpanded = [Bool](repeating: false, count: actions.count)
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableViewAutomaticDimension

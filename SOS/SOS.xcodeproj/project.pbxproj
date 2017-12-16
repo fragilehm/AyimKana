@@ -12,7 +12,6 @@
 		8402CA931F9B6A17001FF052 /* HTTPRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7419A1F9A732A00245B14 /* HTTPRequestManager.swift */; };
 		8402CA941F9B6A17001FF052 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741991F9A731600245B14 /* HTTPStatusCode.swift */; };
 		8402CA9C1F9B7736001FF052 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CA961F9B6C79001FF052 /* RegistrationViewController.swift */; };
-		8402CA9E1F9B8DB2001FF052 /* InstitutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CA9D1F9B8DB2001FF052 /* InstitutionViewController.swift */; };
 		8402CAA01F9B8F9C001FF052 /* InstitutionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CA9F1F9B8F9C001FF052 /* InstitutionTableViewCell.swift */; };
 		8402CAA21F9B9C6D001FF052 /* Institute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CAA11F9B9C6D001FF052 /* Institute.swift */; };
 		8402CAA41F9BBA8A001FF052 /* EnvelopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402CAA31F9BBA8A001FF052 /* EnvelopeViewController.swift */; };
@@ -59,7 +58,6 @@
 		84E741AA1F9A8AA500245B14 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741A91F9A8AA500245B14 /* GreenViewController.swift */; };
 		84E741AC1F9A8AB300245B14 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741AB1F9A8AB300245B14 /* YellowViewController.swift */; };
 		84E741AE1F9A8ABE00245B14 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E741AD1F9A8ABE00245B14 /* RedViewController.swift */; };
-		84F3D9E21F9C704800046EF1 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3D9E11F9C704800046EF1 /* DetailedViewController.swift */; };
 		84F3D9E41F9C717F00046EF1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3D9E31F9C717F00046EF1 /* DataManager.swift */; };
 		84F3D9E71F9C83F900046EF1 /* HandBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3D9E61F9C83F900046EF1 /* HandBookTableViewCell.swift */; };
 		84F3D9E91F9C845200046EF1 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3D9E81F9C845200046EF1 /* Article.swift */; };
@@ -71,7 +69,6 @@
 		18AF172DF51CFC48DE679C59 /* Pods_SOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E5A18DDC8000C5F161D3C2 /* Pods-SOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SOS/Pods-SOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8402CA961F9B6C79001FF052 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		8402CA9D1F9B8DB2001FF052 /* InstitutionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionViewController.swift; sourceTree = "<group>"; };
 		8402CA9F1F9B8F9C001FF052 /* InstitutionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionTableViewCell.swift; sourceTree = "<group>"; };
 		8402CAA11F9B9C6D001FF052 /* Institute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Institute.swift; sourceTree = "<group>"; };
 		8402CAA31F9BBA8A001FF052 /* EnvelopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvelopeViewController.swift; sourceTree = "<group>"; };
@@ -129,7 +126,6 @@
 		84E741A91F9A8AA500245B14 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		84E741AB1F9A8AB300245B14 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		84E741AD1F9A8ABE00245B14 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
-		84F3D9E11F9C704800046EF1 /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		84F3D9E31F9C717F00046EF1 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		84F3D9E61F9C83F900046EF1 /* HandBookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandBookTableViewCell.swift; sourceTree = "<group>"; };
 		84F3D9E81F9C845200046EF1 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
@@ -189,9 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				84B10F6A1F9B4F69001C23C7 /* GreenMainViewController.swift */,
-				8402CA9D1F9B8DB2001FF052 /* InstitutionViewController.swift */,
 				84D16D3C1F9C035A001D4019 /* DetailsViewController.swift */,
-				84F3D9E11F9C704800046EF1 /* DetailedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -598,7 +592,6 @@
 				8402CA911F9B6A17001FF052 /* Extensions.swift in Sources */,
 				8402CA921F9B6A17001FF052 /* ServerManager.swift in Sources */,
 				842EA61F1FE27B7A00EC2034 /* ViewController.swift in Sources */,
-				84F3D9E21F9C704800046EF1 /* DetailedViewController.swift in Sources */,
 				8402CA931F9B6A17001FF052 /* HTTPRequestManager.swift in Sources */,
 				842EA61B1FE27A9500EC2034 /* LanguageViewController.swift in Sources */,
 				84D16D431F9C2631001D4019 /* MessageComposer.swift in Sources */,
@@ -629,7 +622,6 @@
 				84B10F701F9B4FCF001C23C7 /* GreenCategoryTableViewCell.swift in Sources */,
 				84E26A951FCDA5B1001C23E4 /* DescriptionViewController.swift in Sources */,
 				84B10F6B1F9B4F69001C23C7 /* GreenMainViewController.swift in Sources */,
-				8402CA9E1F9B8DB2001FF052 /* InstitutionViewController.swift in Sources */,
 				8441791E1FE2A42800ECF06E /* AddStoryViewController.swift in Sources */,
 				844179201FE2B7D500ECF06E /* Story.swift in Sources */,
 			);

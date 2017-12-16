@@ -41,7 +41,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnx-Yf-wUy">
                                                             <rect key="frame" x="8" y="8" width="327" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                             <color key="textColor" red="0.3411764706" green="0.54901960780000003" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -248,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="1869.5999999999999" y="105.69715142428787"/>
         </scene>
-        <!--Что Делать и Куда Обращаться-->
+        <!--What To Do Table View Controller-->
         <scene sceneID="mVT-VD-3a2">
             <objects>
-                <tableViewController storyboardIdentifier="WhatToDoTableViewController" title="Что Делать и Куда Обращаться" id="wex-qt-Q0p" customClass="WhatToDoTableViewController" customModule="SOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="WhatToDoTableViewController" id="wex-qt-Q0p" customClass="WhatToDoTableViewController" customModule="SOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jFO-Nv-QAq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
