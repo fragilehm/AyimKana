@@ -92,8 +92,10 @@
                                     <constraint firstAttribute="width" constant="31" id="DPF-VG-XwJ"/>
                                     <constraint firstAttribute="height" constant="31" id="Lf1-e3-pRk"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="15"/>
-                                <state key="normal" title="x"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="x">
+                                    <color key="titleColor" red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="firstContactClicked:" destination="FPK-p3-yOo" eventType="touchUpInside" id="2Cu-q7-kpy"/>
                                 </connections>
@@ -104,8 +106,10 @@
                                     <constraint firstAttribute="width" constant="31" id="Ywu-6u-XAu"/>
                                     <constraint firstAttribute="height" constant="31" id="xqw-uo-uYB"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="15"/>
-                                <state key="normal" title="x"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="x">
+                                    <color key="titleColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="secondContactClicked:" destination="FPK-p3-yOo" eventType="touchUpInside" id="yhf-dg-g3s"/>
                                 </connections>
@@ -116,8 +120,10 @@
                                     <constraint firstAttribute="height" constant="31" id="Bha-1n-m9p"/>
                                     <constraint firstAttribute="width" constant="31" id="i7p-iF-1TC"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="15"/>
-                                <state key="normal" title="x"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="x">
+                                    <color key="titleColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="thirdContactClicked:" destination="FPK-p3-yOo" eventType="touchUpInside" id="inB-mP-eek"/>
                                 </connections>
@@ -128,8 +134,10 @@
                                     <constraint firstAttribute="height" constant="31" id="6xC-15-gXp"/>
                                     <constraint firstAttribute="width" constant="31" id="AXD-Vu-CaC"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="15"/>
-                                <state key="normal" title="x"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="x">
+                                    <color key="titleColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="fourthContactClicked:" destination="FPK-p3-yOo" eventType="touchUpInside" id="3wU-69-gUz"/>
                                 </connections>
