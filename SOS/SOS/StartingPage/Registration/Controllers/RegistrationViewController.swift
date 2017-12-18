@@ -12,7 +12,7 @@ import QuartzCore
 import Contacts
 import ContactsUI
 
-class RegistrationViewController: UIViewController, UITextViewDelegate, CNContactPickerDelegate {
+class RegistrationViewController: ViewController, UITextViewDelegate, CNContactPickerDelegate {
     var contactId = 1
     let generalColor = UIColor.init(netHex: 0xBDBDBD).cgColor
     
@@ -22,13 +22,13 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
     
     @IBOutlet weak var emergencyContactsLabel: UILabel! {
         didSet {
-            emergencyContactsLabel.text = Constants.Registration.contactsLabel
+            emergencyContactsLabel.text = "contactsLabel".localized(lang: self.lang)
         }
     }
     
     @IBOutlet weak var sosSmsLabel: UILabel! {
         didSet {
-            sosSmsLabel.text = Constants.Registration.sosSmsLabel
+            sosSmsLabel.text = "sosSmsLabel".localized(lang: self.lang)
         }
     }
     
@@ -37,7 +37,7 @@ class RegistrationViewController: UIViewController, UITextViewDelegate, CNContac
             doneButton.layer.borderWidth = 1
             doneButton.layer.cornerRadius = 2
             doneButton.layer.borderColor = generalColor
-            doneButton.setTitle(Constants.Registration.save, for: .normal)
+            doneButton.setTitle("save".localized(lang: self.lang), for: .normal)
 
         }
     }

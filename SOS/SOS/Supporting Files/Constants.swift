@@ -33,7 +33,7 @@ struct Constants {
         StartingPage.init()
         Registration.init()
         Stories.init()
-       // MainPage.init()
+        //MainPage.init()
     }
     
     
@@ -99,12 +99,12 @@ struct Constants {
         static var contactsLabel: String?
         static var sosSmsLabel: String?
         static var smsPlaceholder: String?
-        
+        let lang: String = DataManager.shared.getLanguage()
         init() {
-            Registration.save = "save".localized(lang: lang!)
-            Registration.contactsLabel = "contactsLabel".localized(lang: lang!)
-            Registration.sosSmsLabel = "sosSmsLabel".localized(lang: lang!)
-            Registration.smsPlaceholder = "smsPlaceholder".localized(lang: lang!)
+            Registration.save = "save".localized(lang: self.lang)
+            Registration.contactsLabel = "contactsLabel".localized(lang: self.lang)
+            Registration.sosSmsLabel = "sosSmsLabel".localized(lang: self.lang)
+            Registration.smsPlaceholder = "smsPlaceholder".localized(lang: self.lang)
         }
     }
     

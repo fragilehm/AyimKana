@@ -8,11 +8,11 @@
 
 import UIKit
 
-class AddStoryViewController: UIViewController {
+class AddStoryViewController: ViewController {
 
     @IBOutlet weak var addMyStoryLabel: UILabel! {
         didSet {
-            addMyStoryLabel.text = Constants.Stories.addStoryLabel
+            addMyStoryLabel.text = "add_story_label".localized(lang: self.lang)
         }
     }
     
@@ -21,13 +21,13 @@ class AddStoryViewController: UIViewController {
             myStoryTextView.layer.borderWidth = 0.7
             myStoryTextView.layer.borderColor = UIColor.init(netHex: 0xBDBDBD).cgColor
             myStoryTextView.layer.cornerRadius = 5
-            myStoryTextView.placeholder = Constants.Stories.addStoryPlaceholder
+            myStoryTextView.placeholder = "add_story_placeholder".localized(lang: self.lang)
         }
     }
     
     @IBOutlet weak var addMyNumberLabel: UILabel! {
         didSet {
-            addMyNumberLabel.text = Constants.Stories.addNumberLabel
+            addMyNumberLabel.text = "add_number_label".localized(lang: self.lang)
         }
     }
     
@@ -35,7 +35,7 @@ class AddStoryViewController: UIViewController {
     
     @IBOutlet weak var addButton: UIButton! {
         didSet {
-            addButton.setTitle(Constants.Stories.addStoryButton, for: .normal)
+            addButton.setTitle("add_story_button".localized(lang: self.lang), for: .normal)
             addButton.layer.borderWidth = 0.7
             addButton.layer.borderColor = UIColor.init(netHex: 0xBDBDBD).cgColor
             addButton.layer.cornerRadius = 2

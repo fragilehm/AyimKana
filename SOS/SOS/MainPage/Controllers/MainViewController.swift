@@ -24,21 +24,26 @@ class MainViewController: ViewController, CLLocationManagerDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "language".localized(lang: self.lang)!, style: .plain, target: self, action: #selector(addTapped))
+        creatRightItem()
         UserDefaults.standard.set(true, forKey: "wasLaunched")
         configureCollectionView()
         cofigureLocation()
     }
+    func creatRightItem(){
+         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "language".localized(lang: self.lang)!, style: .plain, target: self, action: #selector(addTapped))
+    }
     @objc func addTapped(sender: UIBarButtonItem) {
-        let alertController = UIAlertController(title: "Выберете Язык" , message: "", preferredStyle: .alert)
+        let lang  = DataManager.shared.getLanguage()
+        let alertController = UIAlertController(title: "choose_language".localized(lang: lang) , message: "", preferredStyle: .alert)
         let russianAction = UIAlertAction(title: "Русский", style: .default, handler: { (action) in
             DataManager.shared.setLanguage(language: "ru")
              self.navigationItem.title = Translation.mainMenu
-           
+            self.navigationItem.rightBarButtonItem?.title = "language".localized(lang: "ru")!
             self.collectionView.reloadData()
         })
         let kyrgyzAction = UIAlertAction(title: "Кыргызча", style: .default, handler: { (action) in
             DataManager.shared.setLanguage(language: "ky")
+            self.navigationItem.rightBarButtonItem?.title = "language".localized(lang: "ky")!
              self.navigationItem.title = Translation.mainMenu
              self.collectionView.reloadData()
         })

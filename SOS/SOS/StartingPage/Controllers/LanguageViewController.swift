@@ -14,7 +14,12 @@ class LanguageViewController: UIViewController, PickerViewDataSource, PickerView
     @IBOutlet var languageView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var languagePickerView: PickerView!
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton! {
+        didSet{
+            nextButton.layer.masksToBounds = true
+            nextButton.layer.cornerRadius = 5
+        }
+    }
     
     var languages = ["Русский", "Кыргызча"]
     var selectLanguages = ["Язык", "Тил"]
