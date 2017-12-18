@@ -109,18 +109,27 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
             {
                 let innerAlert = UIAlertController(title: "Выберете Номер", message: "На какой номер хотите позвонить?", preferredStyle: UIAlertControllerStyle.alert)
                 innerAlert.addAction(UIAlertAction(title: "\(institutes.array[indexPath.row].phone_1)", style: UIAlertActionStyle.default, handler: { action in
-                    if let url = URL(string: "tel://\(self.institutes.array[indexPath.row].phone_1)"), UIApplication.shared.canOpenURL(url)
-                    {
-                        print("YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAS")
-                        if #available(iOS 10, *) {
-                            UIApplication.shared.open(url)
-                        }
-                        else {
-                            UIApplication.shared.openURL(url)
+                    let temp = self.returnNumber(number: self.institutes.array[indexPath.row].phone_1)
+                    if let url = NSURL(string: "telprompt:\(temp)"){
+                        if #available(iOS 10.0, *) {
+                            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+                        } else {
+                            
                         }
                     }
                 }  ))
-                innerAlert.addAction(UIAlertAction(title: "\(institutes.array[indexPath.row].phone_2)", style: UIAlertActionStyle.default, handler: nil  ))
+                innerAlert.addAction(UIAlertAction(title: "\(institutes.array[indexPath.row].phone_2)", style: UIAlertActionStyle.default, handler:
+                    { action in
+                        let temp = self.returnNumber(number: self.institutes.array[indexPath.row].phone_2)
+                        if let url = NSURL(string: "telprompt:\(temp)"){
+                            if #available(iOS 10.0, *) {
+                                UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+                            } else {
+                                
+                            }
+                        }
+                    }
+                ))
                 innerAlert.addAction(UIAlertAction(title: "Отмена", style: UIAlertActionStyle.default, handler: nil  ))
                 self.present(innerAlert, animated: true, completion: nil)
             }
@@ -131,6 +140,18 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
                 self.present(innerAlert, animated: true, completion: nil)
             }
         }
+    }
+    func returnNumber(number: String) -> String {
+        var ans = [Character]()
+        for char in number {
+            if ((String(char).rangeOfCharacter(from: CharacterSet.alphanumerics.inverted)) == nil) {
+                ans.append(char)
+            }
+            else if (String(char) == "+"){
+                ans.append(char)
+            }
+        }
+        return String(ans)
     }
     
 }
