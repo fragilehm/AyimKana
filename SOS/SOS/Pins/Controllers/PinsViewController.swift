@@ -75,6 +75,7 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         addMsgAlert.addAction(UIAlertAction(title: "map_second_alert_addButton".localized(lang: lang)!, style: UIAlertActionStyle.default, handler: { action in
             let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
+            annotation.title = addMsgAlert.textFields![0].text!
             var pin = Pin()
             pin.info = addMsgAlert.textFields![0].text!
             pin.latitude = coordinate.latitude.description
