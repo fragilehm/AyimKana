@@ -100,7 +100,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         if indexPath.row == 3 {
             if (self.messageComposer.canSendText()) {
                 let messageComposeVC = self.messageComposer.configuredMessageComposeViewController()
-                messageComposeVC.body = "\(DataManager.shared.getMessage()) \nhttp://maps.google.com/?saddr=\(userLatitude),\(userLongitude)"
+                messageComposeVC.body = "\(DataManager.shared.getMessage()) \nhttp://maps.google.com/?q=\(userLatitude),\(userLongitude)"
                 messageComposeVC.recipients = DataManager.shared.getNumbers()
                 print(DataManager.shared.getNumbers())
                 //                print(messageComposeVC.recipients)

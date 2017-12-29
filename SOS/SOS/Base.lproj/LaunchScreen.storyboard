@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,18 +19,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="wYX-sc-tjt">
-                                <rect key="frame" x="37" y="183.5" width="300" height="300"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="vEd-ux-IL8">
+                                <rect key="frame" x="20" y="166" width="335" height="335"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="71B-34-bLf"/>
-                                    <constraint firstAttribute="width" constant="300" id="kkc-U2-blu"/>
+                                    <constraint firstAttribute="width" secondItem="vEd-ux-IL8" secondAttribute="height" multiplier="1:1" id="bCf-hE-kuS"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wYX-sc-tjt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="15z-Yp-4IE"/>
-                            <constraint firstItem="wYX-sc-tjt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dPd-IB-TVc"/>
+                            <constraint firstItem="vEd-ux-IL8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="1hZ-Av-xyh"/>
+                            <constraint firstItem="vEd-ux-IL8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="JyX-Oa-Hvf"/>
+                            <constraint firstItem="vEd-ux-IL8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PAK-UT-J98"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vEd-ux-IL8" secondAttribute="trailing" constant="20" id="q65-pT-1Su"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,6 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo2" width="1024" height="1024"/>
+        <image name="logo2" width="512" height="512"/>
     </resources>
 </document>

@@ -139,13 +139,13 @@ class RegistrationViewController: ViewController, UITextViewDelegate, CNContactP
         vc.message = self.alertMessageTextView.text!
         DataManager.shared.setMessage(message: self.alertMessageTextView.text!)
         
-        //if (UserDefaults.standard.bool(forKey: "wasLaunched"))
-        //{
-        //    self.navigationController?.popViewController(animated: true)
-        //} else {
+        if (UserDefaults.standard.bool(forKey: "wasLaunched"))
+        {
+            self.navigationController?.popViewController(animated: true)
+        } else {
             let navigationController = UINavigationController(rootViewController: vc)
             self.present(navigationController, animated: true, completion: nil)
-        //}
+        }
     }
     
     @IBAction func contact1(_ sender: Any) {
