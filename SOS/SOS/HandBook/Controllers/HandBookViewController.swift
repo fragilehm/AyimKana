@@ -22,6 +22,7 @@ class HandBookViewController: UIViewController {
         super.viewDidLoad()
         self.title = "first_cell".localized(lang: lang)!
         tableView.tableFooterView = UIView()
+        print("shaa zdes")
         ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
     }
    
