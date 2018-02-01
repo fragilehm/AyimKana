@@ -37,7 +37,7 @@ class GreenViewController: ViewController, CLLocationManagerDelegate {
             if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
                 if CLLocationManager.isRangingAvailable() {
                     // do stuff
-                    print("hello")
+                    //print("hello")
                 }
             }
         }

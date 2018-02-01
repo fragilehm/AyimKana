@@ -11,8 +11,11 @@ import UIKit
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource{
     
     var pageControl = UIPageControl()
+    var pageViewControl: PageViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.dataSource = self
         self.delegate = self
         self.view.backgroundColor = UIColor.white
@@ -24,11 +27,12 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
                                animated: true,
                                completion: nil)
         }
+        
         // Do any additional setup after loading the view.
         
         
     }
-   
+    
     func configurePageControl() {
         // The total number of pages that are available is based on how many available colors we have.
         pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 50,width: UIScreen.main.bounds.width,height: 50))
@@ -37,13 +41,16 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         self.pageControl.tintColor = UIColor.black
         self.pageControl.pageIndicatorTintColor = UIColor.lightGray
         self.pageControl.currentPageIndicatorTintColor = UIColor.init(netHex: 0x578C88)
+        self.pageControl.isEnabled  = false
         self.view.addSubview(pageControl)
+        
     }
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
-        
+
         let previousIndex = viewControllerIndex - 1
         
         // User is on the first view controller and swiped left to loop to
