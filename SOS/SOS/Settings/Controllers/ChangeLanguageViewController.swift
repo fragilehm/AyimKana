@@ -7,64 +7,70 @@
 //
 
 import UIKit
-import PickerView
 
-class ChangeLanguageViewController: UIViewController, PickerViewDataSource, PickerViewDelegate {
-
-    @IBOutlet weak var languagePV: PickerView!
+class ChangeLanguageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+ 
+    @IBOutlet weak var languagesTableView: UITableView!
+    var selectedIndex: Int = -1
+    var selected = false
     
     var languages = ["Русский", "Кыргызча"]
     var selectLanguages = ["Язык", "Тил"]
-    var titles = ["Добро пожаловать!", "Кош келиниз!"]
-    var buttonTitles = ["Далее", "Кийинки"]
-    
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Language"
-        
-        languagePV.dataSource = self
-        languagePV.delegate = self
-        languagePV.selectionStyle = .defaultIndicator
-        languagePV.translatesAutoresizingMaskIntoConstraints = false
+        languagesTableView.tableFooterView = UIView()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneTapped))
     }
     
-//    @IBAction func nextButtonPressed(_ sender: Any) {
-//        if languagePickerView.currentSelectedIndex == 0 {
-//            DataManager.shared.setLanguage(language: "ru")
-//            showMainPage()
-//        }
-//        else {
-//            DataManager.shared.setLanguage(language: "ky")
-//            showMainPage()
-//        }
-//    }
+    @objc func doneTapped(sender: UIBarButtonItem) {
+        
+        let lang  = DataManager.shared.getLanguage()
+        
+        if selectedIndex == 0 {
+            DataManager.shared.setLanguage(language: "ru")
+            //self.navigationItem.rightBarButtonItem?.title = "language".localized(lang: "ru")!
+            //self.collectionView.reloadData()
+            self.navigationController?.popViewController(animated: true)
+            MainViewController().changeLanguageMainMenu(aLang: "ru")
+            
+        }
+        else if selectedIndex == 1 {
+            DataManager.shared.setLanguage(language: "ky")
+            //self.navigationItem.title = Translation.mainMenu
+            //self.collectionView.reloadData()
+            self.navigationController?.popViewController(animated: true)
+            MainViewController().changeLanguageMainMenu(aLang: "ky")
+
+        }
+        else {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+    }
     
-    func pickerViewNumberOfRows(_ pickerView: PickerView) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return languages.count
     }
-    func pickerView(_ pickerView: PickerView, titleForRow row: Int, index: Int) -> String {
-        let item = languages[index]
-        return item
-    }
-    func pickerViewHeightForRows(_ pickerView: PickerView) -> CGFloat {
-        return 30
-    }
-    func pickerView(_ pickerView: PickerView, didSelectRow row: Int, index: Int) {
-        
-        //nextButton.setTitle(buttonTitles[index], for: .normal)
-        self.title = "Changed"
-    }
-    func pickerView(_ pickerView: PickerView, styleForLabel label: UILabel, highlighted: Bool) {
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 25.0)
-        if highlighted {
-            label.textColor = .black
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LanguagesTableViewCellId") as! LanguagesTableViewCell
+        cell.languageNameLabel.text = languages[indexPath.row]
+        if selectedIndex == indexPath.row {
+                cell.checkedIcon.isHidden = false
         } else {
-            label.textColor = .lightGray
+            cell.checkedIcon.isHidden = true
         }
+        return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        self.languagesTableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -31,7 +31,7 @@ class MainViewController: ViewController, CLLocationManagerDelegate {
     }
     
     func creatRightItem(){
-         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "language".localized(lang: self.lang)!, style: .plain, target: self, action: #selector(addTapped))
+         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Settings"), style: .plain, target: self, action: #selector(addTapped))
         //navigationItem.rightBarButtonItem?.image = #imageLiteral(resourceName: "Settings")
         
     }
@@ -40,29 +40,18 @@ class MainViewController: ViewController, CLLocationManagerDelegate {
         
         self.navigationController?.show(getVC(storyboard: "Settings", name: "SettingsViewController"), sender: self)
         
-//        let lang  = DataManager.shared.getLanguage()
-//        let alertController = UIAlertController(title: "choose_language".localized(lang: lang) , message: "", preferredStyle: .alert)
-//        let russianAction = UIAlertAction(title: "Русский", style: .default, handler: { (action) in
-//            DataManager.shared.setLanguage(language: "ru")
-//             self.navigationItem.title = Translation.mainMenu
-//            self.navigationItem.rightBarButtonItem?.title = "language".localized(lang: "ru")!
-//            self.collectionView.reloadData()
-//        })
-//        let kyrgyzAction = UIAlertAction(title: "Кыргызча", style: .default, handler: { (action) in
-//            DataManager.shared.setLanguage(language: "ky")
-//            self.navigationItem.rightBarButtonItem?.title = "language".localized(lang: "ky")!
-//             self.navigationItem.title = Translation.mainMenu
-//             self.collectionView.reloadData()
-//        })
-//        alertController.addAction(russianAction)
-//        alertController.addAction(kyrgyzAction)
-//
-//        self.present(alertController, animated: true, completion: nil)
-//
     }
+    
+    public func changeLanguageMainMenu(aLang: String) {
+        DataManager.shared.setLanguage(language: aLang)
+        self.navigationItem.title = Translation.mainMenu
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
      
         self.navigationItem.title = Translation.mainMenu
+        self.collectionView.reloadData()
+
     }
 }
 extension MainViewController {

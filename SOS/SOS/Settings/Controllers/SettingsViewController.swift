@@ -12,12 +12,13 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var settingsTableView: UITableView!
     var settingsNames = ["Language", "About Aiymkana"]
-    var settingsIcons = ["", ""]
+    var settingsIcons = [#imageLiteral(resourceName: "language"), #imageLiteral(resourceName: "aboutApp")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Settings"
         settingsTableView.tableFooterView = UIView()
+        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,17 +27,21 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsTableViewCellId") as! SettingsTableViewCell
-        //cell.settingsIcon.image = UIImage(named: "")
+        cell.settingsIcon.image = settingsIcons[indexPath.row]
         cell.settingsNameLabel.text = settingsNames[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if settingsNames[indexPath.row] == "Language" {
-            //self.navigationController?.show(ChangeLanguageViewController(), sender: self)
+            let sb = UIStoryboard(name: "Settings", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "ChangeLanguageViewController") as! ChangeLanguageViewController
+            navigationController?.pushViewController(vc, animated: true)
         }
         else {
-            //self.navigationController?.show(getVC(storyboard: "AboutApp", name: "AboutAppViewController"), sender: self)
+            let sb = UIStoryboard(name: "AboutApp", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "AboutAppViewController") as! AboutAppViewController
+            navigationController?.pushViewController(vc, animated: true)
         }
         
     }
