@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--About App View Controller-->
+        <scene sceneID="Bco-fb-NEQ">
+            <objects>
+                <viewController storyboardIdentifier="AboutAppViewController" id="5yR-fo-etb" customClass="AboutAppViewController" customModule="SOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="adN-vb-1zH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjJ-nh-7yi">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neobis_logo" translatesAutoresizingMaskIntoConstraints="NO" id="P21-dV-PJu">
+                                        <rect key="frame" x="12" y="22" width="350" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="IfA-jm-AeI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auca_logo" translatesAutoresizingMaskIntoConstraints="NO" id="jsX-xT-JiT">
+                                        <rect key="frame" x="12" y="164" width="160" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="1f3-Nq-FcU"/>
+                                            <constraint firstAttribute="height" constant="120" id="5ny-8u-hqB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rp2-Wd-L2x">
+                                        <rect key="frame" x="202" y="164" width="160" height="120"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFW-7L-anH">
+                                        <rect key="frame" x="12" y="296" width="351" height="629"/>
+                                        <mutableString key="text">Целью проекта “Айымкана” является оказание своевременной информированности нуждающихся лиц, в основном женщин. Основной функционал мобильных приложений:
+Показ информации о видах насилия. Здесь пользователь сможет узнать определение насилию, виды насилия, конкретные примеры, куда обращаться, как себя вести и какие права нарушаются.
+Куда обратиться? Список учреждений на карте с инструкцией и ожидаемыми действиями.
+Опасные зоны: Показ отмеченных точек на карте, для выявления опасных или неблагоприятных мест/районов на карте Кыргызстана, где уровень гендерного насилия является высоким.
+SOS - CMC: Оперативное оповещение круга доверенных лиц, о том, что пользователь возможно находится в опасности.
+Истории: у пользователя есть возможность анонимно высказаться будучи свидетелем или жертвой гендерного насилия. Также пользователь может прочитать истории других людей.
+Владельцами приложения являются Общественный Фонд "Открытая Линия" и Американский Университет Центральной Азии</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Rp2-Wd-L2x" firstAttribute="leading" secondItem="jsX-xT-JiT" secondAttribute="trailing" constant="30" id="5gF-al-7wq"/>
+                                    <constraint firstAttribute="trailing" secondItem="QFW-7L-anH" secondAttribute="trailing" constant="12" id="KnA-E9-z7X"/>
+                                    <constraint firstItem="jsX-xT-JiT" firstAttribute="top" secondItem="P21-dV-PJu" secondAttribute="bottom" constant="22" id="XFu-6g-NCM"/>
+                                    <constraint firstItem="P21-dV-PJu" firstAttribute="leading" secondItem="jsX-xT-JiT" secondAttribute="leading" id="dXK-vj-2Jr"/>
+                                    <constraint firstItem="P21-dV-PJu" firstAttribute="leading" secondItem="cjJ-nh-7yi" secondAttribute="leading" constant="12" id="ffK-IL-zGz"/>
+                                    <constraint firstItem="P21-dV-PJu" firstAttribute="top" secondItem="cjJ-nh-7yi" secondAttribute="top" constant="22" id="hCF-AB-xpP"/>
+                                    <constraint firstItem="P21-dV-PJu" firstAttribute="centerX" secondItem="cjJ-nh-7yi" secondAttribute="centerX" id="iGX-jJ-J5w"/>
+                                    <constraint firstItem="QFW-7L-anH" firstAttribute="top" secondItem="jsX-xT-JiT" secondAttribute="bottom" constant="12" id="jS8-W3-FhZ"/>
+                                    <constraint firstItem="jsX-xT-JiT" firstAttribute="bottom" secondItem="Rp2-Wd-L2x" secondAttribute="bottom" id="kBt-P3-voG"/>
+                                    <constraint firstItem="jsX-xT-JiT" firstAttribute="top" secondItem="Rp2-Wd-L2x" secondAttribute="top" id="mKj-4T-mYP"/>
+                                    <constraint firstItem="QFW-7L-anH" firstAttribute="leading" secondItem="cjJ-nh-7yi" secondAttribute="leading" constant="12" id="nG0-hD-7ZY"/>
+                                    <constraint firstItem="P21-dV-PJu" firstAttribute="trailing" secondItem="Rp2-Wd-L2x" secondAttribute="trailing" id="r4E-gF-z2q"/>
+                                    <constraint firstAttribute="trailing" secondItem="P21-dV-PJu" secondAttribute="trailing" constant="13" id="u5v-fL-Lqi"/>
+                                    <constraint firstAttribute="bottom" secondItem="QFW-7L-anH" secondAttribute="bottom" constant="12" id="zU7-KJ-KqZ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cjJ-nh-7yi" firstAttribute="top" secondItem="LRw-G6-uVi" secondAttribute="top" id="Qh3-kx-E9t"/>
+                            <constraint firstAttribute="trailing" secondItem="cjJ-nh-7yi" secondAttribute="trailing" id="U9m-EA-53c"/>
+                            <constraint firstItem="cjJ-nh-7yi" firstAttribute="leading" secondItem="adN-vb-1zH" secondAttribute="leading" id="eLs-wF-WWH"/>
+                            <constraint firstItem="cjJ-nh-7yi" firstAttribute="bottom" secondItem="LRw-G6-uVi" secondAttribute="bottom" id="n2Z-q3-L5U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LRw-G6-uVi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dXz-Ka-KfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157.59999999999999" y="128.18590704647679"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="auca_logo" width="650" height="145"/>
+        <image name="neobis_logo" width="1800" height="590"/>
+    </resources>
+</document>
