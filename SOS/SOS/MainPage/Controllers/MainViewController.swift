@@ -29,29 +29,36 @@ class MainViewController: ViewController, CLLocationManagerDelegate {
         configureCollectionView()
         cofigureLocation()
     }
+    
     func creatRightItem(){
          navigationItem.rightBarButtonItem = UIBarButtonItem(title: "language".localized(lang: self.lang)!, style: .plain, target: self, action: #selector(addTapped))
-    }
-    @objc func addTapped(sender: UIBarButtonItem) {
-        let lang  = DataManager.shared.getLanguage()
-        let alertController = UIAlertController(title: "choose_language".localized(lang: lang) , message: "", preferredStyle: .alert)
-        let russianAction = UIAlertAction(title: "Русский", style: .default, handler: { (action) in
-            DataManager.shared.setLanguage(language: "ru")
-             self.navigationItem.title = Translation.mainMenu
-            self.navigationItem.rightBarButtonItem?.title = "language".localized(lang: "ru")!
-            self.collectionView.reloadData()
-        })
-        let kyrgyzAction = UIAlertAction(title: "Кыргызча", style: .default, handler: { (action) in
-            DataManager.shared.setLanguage(language: "ky")
-            self.navigationItem.rightBarButtonItem?.title = "language".localized(lang: "ky")!
-             self.navigationItem.title = Translation.mainMenu
-             self.collectionView.reloadData()
-        })
-        alertController.addAction(russianAction)
-        alertController.addAction(kyrgyzAction)
-
-        self.present(alertController, animated: true, completion: nil)
+        //navigationItem.rightBarButtonItem?.image = #imageLiteral(resourceName: "Settings")
         
+    }
+    
+    @objc func addTapped(sender: UIBarButtonItem) {
+        
+        self.navigationController?.show(getVC(storyboard: "Settings", name: "SettingsViewController"), sender: self)
+        
+//        let lang  = DataManager.shared.getLanguage()
+//        let alertController = UIAlertController(title: "choose_language".localized(lang: lang) , message: "", preferredStyle: .alert)
+//        let russianAction = UIAlertAction(title: "Русский", style: .default, handler: { (action) in
+//            DataManager.shared.setLanguage(language: "ru")
+//             self.navigationItem.title = Translation.mainMenu
+//            self.navigationItem.rightBarButtonItem?.title = "language".localized(lang: "ru")!
+//            self.collectionView.reloadData()
+//        })
+//        let kyrgyzAction = UIAlertAction(title: "Кыргызча", style: .default, handler: { (action) in
+//            DataManager.shared.setLanguage(language: "ky")
+//            self.navigationItem.rightBarButtonItem?.title = "language".localized(lang: "ky")!
+//             self.navigationItem.title = Translation.mainMenu
+//             self.collectionView.reloadData()
+//        })
+//        alertController.addAction(russianAction)
+//        alertController.addAction(kyrgyzAction)
+//
+//        self.present(alertController, animated: true, completion: nil)
+//
     }
     override func viewWillAppear(_ animated: Bool) {
      

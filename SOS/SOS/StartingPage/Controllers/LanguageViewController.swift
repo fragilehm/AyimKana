@@ -25,6 +25,7 @@ class LanguageViewController: UIViewController, PickerViewDataSource, PickerView
     var selectLanguages = ["Язык", "Тил"]
     var titles = ["Добро пожаловать!", "Кош келиниз!"]
     var buttonTitles = ["Далее", "Кийинки"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
