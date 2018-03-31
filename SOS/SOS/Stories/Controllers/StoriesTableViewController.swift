@@ -10,11 +10,12 @@ import UIKit
 
 class StoriesTableViewController: UITableViewController {
 
-    var stories = Stories()
+    var storiesPages = StoriesPages()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ServerManager.shared.getAllStories(setStories, error: showErrorAlert)
+        //ServerManager.shared.getAllStories(setStories, error: showErrorAlert)
+        ServerManager.shared.getAllStoriesByPage(page_num: 1, setStoriesPages, error: showErrorAlert)
         //self.view.backgroundColor = UIColor.init(netHex: 0xF7F7F7)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -23,13 +24,14 @@ class StoriesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        ServerManager.shared.getAllStories(setStories, error: showErrorAlert)
-    }
+    //override func viewWillAppear(_ animated: Bool) {
+        //ServerManager.shared.getAllStories(setStories, error: showErrorAlert)
+        //ServerManager.shared.getAllStoriesByPage(page_num: 1, setStories, error: showErrorAlert)
+    //}
     
-    func setStories(stories: Stories)
+    func setStoriesPages(storiesPages: StoriesPages)
     {
-        self.stories = stories
+        self.storiesPages = storiesPages
         tableView.reloadData()
     }
     
@@ -47,19 +49,31 @@ class StoriesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return stories.array.count
+        return storiesPages.array.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoriesTableViewCell", for: indexPath) as! StoriesTableViewCell
-        cell.storyContentLabel.text = stories.array[indexPath.row].body
-        let dateFull  = stories.array[indexPath.row].timeAdded
+        cell.storyContentLabel.text =
+            storiesPages.array[indexPath.section].results[indexPath.row].body
+        let dateFull  = storiesPages.array[indexPath.section].results[indexPath.row].timeAdded
         let indexEnd = dateFull.index(dateFull.startIndex, offsetBy: 9)
         cell.storyDate.text = String(dateFull.prefix(through: indexEnd))
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == storiesPages.array[0].results.count - 1 {
+            let page_num = (storiesPages.array[0].results.count / 10) + 1
+            ServerManager.shared.getAllStoriesByPage(page_num: page_num, { (storiesPages) in
+                self.storiesPages.array.append(contentsOf: storiesPages.array) //????
+                //self.stories.array.append(contentsOf: stories.array)
+                self.tableView.reloadData()
+            }, error: showErrorAlert)
+        }
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.

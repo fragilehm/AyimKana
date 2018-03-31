@@ -69,6 +69,7 @@
 		CE529D5E206BF956007385AE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE529D5D206BF956007385AE /* SettingsViewController.swift */; };
 		CE529D64206C0342007385AE /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE529D63206C0342007385AE /* SettingsTableViewCell.swift */; };
 		CE529D66206CB5B0007385AE /* ChangeLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE529D65206CB5B0007385AE /* ChangeLanguageViewController.swift */; };
+		FC35904C206F7FFB00F08FB3 /* StoriesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35904B206F7FFB00F08FB3 /* StoriesPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +142,7 @@
 		CE529D63206C0342007385AE /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		CE529D65206CB5B0007385AE /* ChangeLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageViewController.swift; sourceTree = "<group>"; };
 		E13AF5A7BDB9AC2D2A8E07DE /* Pods-SOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOS/Pods-SOS.release.xcconfig"; sourceTree = "<group>"; };
+		FC35904B206F7FFB00F08FB3 /* StoriesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +345,7 @@
 				84D16D3E1F9C0A69001D4019 /* Location.swift */,
 				84F3D9E81F9C845200046EF1 /* Article.swift */,
 				8441791F1FE2B7D500ECF06E /* Story.swift */,
+				FC35904B206F7FFB00F08FB3 /* StoriesPage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -667,6 +670,7 @@
 				842EA61D1FE27B2200EC2034 /* Constants.swift in Sources */,
 				84F3D9E71F9C83F900046EF1 /* HandBookTableViewCell.swift in Sources */,
 				84F3D9E41F9C717F00046EF1 /* DataManager.swift in Sources */,
+				FC35904C206F7FFB00F08FB3 /* StoriesPage.swift in Sources */,
 				84E07E881FE180160028BED8 /* StoriesTableViewController.swift in Sources */,
 				8402CAA01F9B8F9C001FF052 /* InstitutionTableViewCell.swift in Sources */,
 				84E741721F9A713E00245B14 /* AppDelegate.swift in Sources */,

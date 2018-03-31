@@ -13,7 +13,6 @@ class HandBookTableViewCell: UITableViewCell {
     @IBOutlet weak var violenceDescriptionLabel: UILabel!
     @IBOutlet weak var cardView: UIView!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         cardView.layer.cornerRadius = 5
