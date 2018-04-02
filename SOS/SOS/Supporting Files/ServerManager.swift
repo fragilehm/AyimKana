@@ -25,9 +25,9 @@ class ServerManager: HTTPRequestManager  {
         }, error: error)
     }
     
-    func getAllStoriesByPage(page_num: Int,_ completion: @escaping (StoriesPages)-> Void, error: @escaping (String)-> Void) {
+    func getAllStoriesByPage(page_num: Int,_ completion: @escaping (StoriesPage)-> Void, error: @escaping (String)-> Void) {
         self.get(api: "v2/stories/?page=\(page_num)&page_size=3", completion: { (json) in
-            completion(StoriesPages(json: json))
+            completion(StoriesPage(json: json))
         }, error: error)
     }
     

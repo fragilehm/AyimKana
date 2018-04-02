@@ -9,7 +9,7 @@
 import UIKit
 
 class AboutAppViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,7 +17,7 @@ class AboutAppViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        self.title = "AboutApp"
+        self.title = "AboutApp".localized(lang: DataManager.shared.getLanguage())!
     }
     
     override func didReceiveMemoryWarning() {
