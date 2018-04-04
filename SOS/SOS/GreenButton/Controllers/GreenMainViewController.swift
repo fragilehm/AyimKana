@@ -21,7 +21,7 @@ class GreenMainViewController: UIViewController {
         self.title = "second_cell".localized(lang: lang)!
         greenCategoryTableView.estimatedRowHeight = 100
         greenCategoryTableView.tableFooterView = UIView()
-        ServerManager.shared.getAllCategories(setCategories, error: showErrorAlert)
+        ServerManager.shared.getAllCategories(setCategories, error: showErrorAlert) 
         // Do any additional setup after loading the view.
     }
     

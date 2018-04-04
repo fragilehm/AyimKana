@@ -30,7 +30,9 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         self.navigationItem.setRightBarButton(plusBtn, animated: true)
         
         mapView.showsUserLocation = true
-        ServerManager.shared.getPins(setPins, error: showErrorAlert)
+        ServerManager.shared.getPins(setPins, error: showErrorAlert) { (json) in
+            
+        }
         
         mapView.delegate = self
         centerMapOnLocation(location: locationOfBishkek)
@@ -80,7 +82,9 @@ class PinsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             pin.info = addMsgAlert.textFields![0].text!
             pin.latitude = coordinate.latitude.description
             pin.longitude = coordinate.longitude.description
-            ServerManager.shared.addPins(pin: pin, self.addPin, error: self.showErrorAlert)
+            ServerManager.shared.addPins(pin: pin, self.addPin, error: self.showErrorAlert, json: { (json) in
+                
+            })
             self.mapView.addAnnotation(annotation)
             self.gestureRecognizer.isEnabled = false
             //disable gestureRecognizer

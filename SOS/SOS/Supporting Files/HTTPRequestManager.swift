@@ -16,11 +16,12 @@ class HTTPRequestManager {
     typealias SuccessHandler = (JSON) -> Void
     typealias FailureHandler = (String)-> Void
     typealias Parameter = [String: Any]?
+    typealias JSONValue = (Data) -> Void
     
     let url = "http://openline.kg:8000/ayimkana/"
 //    let url = "http://46.101.122.203:3000/"
     
-    private func request(method: HTTPMethod, api: String, parameters: Parameter, header: String, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
+    private func request(method: HTTPMethod, api: String, parameters: Parameter, header: String, completion: @escaping SuccessHandler, error: @escaping FailureHandler, json: @escaping JSONValue) {
         
         if !isConnectedToNetwork() {
             error("Нет подключения к интернету")
@@ -73,12 +74,15 @@ class HTTPRequestManager {
             case HttpStatusCode.ok.statusCode,
                  HttpStatusCode.accepted.statusCode,
                  HttpStatusCode.created.statusCode:
-                let json = JSON(data: response.data!)
-                if json["error"].stringValue.isEmpty {
-                    completion(JSON(data: response.data!))
+                
+                let jsonValue = JSON(data: response.data!)
+                
+                if jsonValue["error"].stringValue.isEmpty {
+                    completion(jsonValue)
+                    json(response.data!)
                     break;
                 }
-                error(json["error"].stringValue)
+                error(jsonValue["error"].stringValue)
                 break
             default:
                 
@@ -105,17 +109,17 @@ class HTTPRequestManager {
     }
     
     
-    internal func post(api: String, parameters: Parameter, header: String = "", completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
-        request(method: .post, api: api, parameters: parameters, header: header, completion: completion, error: error)
+    internal func post(api: String, parameters: Parameter, header: String = "", completion: @escaping SuccessHandler, error: @escaping FailureHandler, json: @escaping JSONValue) {
+        request(method: .post, api: api, parameters: parameters, header: header, completion: completion, error: error, json: json)
     }
-    internal func delete(api: String, parameters: Parameter,header: String = "",  completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
-        request(method: .delete, api: api, parameters: parameters, header: header, completion: completion, error: error)
+    internal func delete(api: String, parameters: Parameter,header: String = "",  completion: @escaping SuccessHandler, error: @escaping FailureHandler, json: @escaping JSONValue) {
+        request(method: .delete, api: api, parameters: parameters, header: header, completion: completion, error: error, json: json)
     }
-    internal func put(api: String, parameters: Parameter,header: String = "",  completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
-        request(method: .put, api: api, parameters: parameters, header: header, completion: completion, error: error)
+    internal func put(api: String, parameters: Parameter,header: String = "",  completion: @escaping SuccessHandler, error: @escaping FailureHandler, json: @escaping JSONValue) {
+        request(method: .put, api: api, parameters: parameters, header: header, completion: completion, error: error, json: json)
     }
-    internal func get(api: String, header: String = "", completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
-        request(method: .get, api: api, parameters: nil, header: header, completion: completion, error: error)
+    internal func get(api: String, header: String = "", completion: @escaping SuccessHandler, error: @escaping FailureHandler, json: @escaping JSONValue) {
+        request(method: .get, api: api, parameters: nil, header: header, completion: completion, error: error, json: json)
     }
     
    

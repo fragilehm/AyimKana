@@ -45,7 +45,9 @@ class AddStoryViewController: ViewController {
     
     @IBAction func AddButtonAction(_ sender: Any) {
         var story = Story(title: "Title", body: myStoryTextView.text, phoneNum: myNumberTextField.text!)
-        ServerManager.shared.addStories(story: story, storyAdded, error: showErrorAlert)
+        ServerManager.shared.addStories(story: story, storyAdded, error: showErrorAlert) { (json) in
+            
+        }
     }
     
     func storyAdded() {

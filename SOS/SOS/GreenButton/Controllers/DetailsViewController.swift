@@ -41,7 +41,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         mapView.delegate = self
         detailsView.isHidden = true
         if titles.count == 0 {
-            ServerManager.shared.getInstitutesById(id: id, setInstitutes, error: showErrorAlert)
+            ServerManager.shared.getInstitutesById(id: id, setInstitutes, error: showErrorAlert) 
         }
         
     }
