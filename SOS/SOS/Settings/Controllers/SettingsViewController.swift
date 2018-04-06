@@ -19,7 +19,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         settingsTableView.tableFooterView = UIView()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,7 +26,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         settingsNames = ["Language".localized(lang: lang)!, "AboutApp".localized(lang: lang)!]
         self.title = "Settings".localized(lang: lang)!
         settingsTableView.reloadData()
-        print(lang)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,7 +50,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             let vc = sb.instantiateViewController(withIdentifier: "AboutAppViewController") as! AboutAppViewController
             navigationController?.pushViewController(vc, animated: true)
         }
-        
     }
 
     override func didReceiveMemoryWarning() {

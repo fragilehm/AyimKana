@@ -27,7 +27,6 @@ class MessageComposer: NSObject, MFMessageComposeViewControllerDelegate {
     // Configures and returns a MFMessageComposeViewController instance
     func configuredMessageComposeViewController() -> MFMessageComposeViewController {
         let messageComposeVC = MFMessageComposeViewController()
-        print(textMessageRecipients.count)
         messageComposeVC.messageComposeDelegate = self
         messageComposeVC.recipients = textMessageRecipients
         messageComposeVC.body = ""

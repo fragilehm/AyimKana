@@ -75,7 +75,7 @@ class ServerManager: HTTPRequestManager  {
             if err.contains("Нет подключения к интернету") {
                 completion(Categories(json: JSON(data)))
             }
-            error(err)
+            //error(err)
         }) { (jsonValue) in
             UserDefaults.standard.set(jsonValue, forKey: "categories")
             UserDefaults.standard.set(true, forKey: "categoriesCached")
@@ -97,7 +97,7 @@ class ServerManager: HTTPRequestManager  {
             if err.contains("Нет подключения к интернету") {
                 completion(Institutes(json: JSON(data)))
             }
-            error(err)
+            //error(err)
         }) { (jsonValue) in
             UserDefaults.standard.set(jsonValue, forKey: "institutesById")
             UserDefaults.standard.set(true, forKey: "institutesByIdCached")

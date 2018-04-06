@@ -11,7 +11,7 @@ import UIKit
 class ChangeLanguageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
  
     let lang: String = DataManager.shared.getLanguage()
-    
+        
     @IBOutlet weak var languagesTableView: UITableView!
     var selectedIndex: Int = -1
     var selected = false
@@ -27,20 +27,16 @@ class ChangeLanguageViewController: UIViewController, UITableViewDataSource, UIT
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done".localized(lang: lang)!, style: .done, target: self, action: #selector(doneTapped))
     }
     
+   
     @objc func doneTapped(sender: UIBarButtonItem) {
                 
         if selectedIndex == 0 {
             DataManager.shared.setLanguage(language: "ru")
-            //self.navigationItem.rightBarButtonItem?.title = "language".localized(lang: "ru")!
-            //self.collectionView.reloadData()
             MainViewController().changeLanguageMainMenu(aLang: "ru")
             self.navigationController?.popViewController(animated: true)
-            
         }
         else if selectedIndex == 1 {
             DataManager.shared.setLanguage(language: "ky")
-            //self.navigationItem.title = Translation.mainMenu
-            //self.collectionView.reloadData()
             MainViewController().changeLanguageMainMenu(aLang: "ky")
             self.navigationController?.popViewController(animated: true)
         }
