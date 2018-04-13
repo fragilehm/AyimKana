@@ -38,6 +38,7 @@ class MainViewController: ViewController, CLLocationManagerDelegate {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         configureCollectionView()
         cofigureLocation()
+        
         ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
         ServerManager.shared.getAllCategories(setCategories, error: showErrorAlert) 
     }
