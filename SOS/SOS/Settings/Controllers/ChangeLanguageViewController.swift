@@ -29,21 +29,27 @@ class ChangeLanguageViewController: UIViewController, UITableViewDataSource, UIT
     
    
     @objc func doneTapped(sender: UIBarButtonItem) {
-                
-        if selectedIndex == 0 {
-            DataManager.shared.setLanguage(language: "ru")
-            MainViewController().changeLanguageMainMenu(aLang: "ru")
-            self.navigationController?.popViewController(animated: true)
-        }
-        else if selectedIndex == 1 {
-            DataManager.shared.setLanguage(language: "ky")
-            MainViewController().changeLanguageMainMenu(aLang: "ky")
-            self.navigationController?.popViewController(animated: true)
+        if (HTTPRequestManager().isConnectedToNetwork()) {
+            if selectedIndex == 0 {
+                DataManager.shared.setLanguage(language: "ru")
+                MainViewController().changeLanguageMainMenu(aLang: "ru")
+                self.navigationController?.popViewController(animated: true)
+            }
+            else if selectedIndex == 1 {
+                DataManager.shared.setLanguage(language: "ky")
+                MainViewController().changeLanguageMainMenu(aLang: "ky")
+                self.navigationController?.popViewController(animated: true)
+            }
+            else {
+                self.navigationController?.popViewController(animated: true)
+            }
         }
         else {
-            self.navigationController?.popViewController(animated: true)
+            let alert = UIAlertController(title: "Warning".localized(lang: lang)!, message: "If you want to change the language you should be connected to the internet".localized(lang: lang)!, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
         }
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

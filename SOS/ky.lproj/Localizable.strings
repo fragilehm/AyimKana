@@ -57,3 +57,6 @@
 "Language" = "Тил";
 "AboutApp" = "Айымкана жөнүндө";
 "Done" = "Тайар";
+
+"Warning" = "Предупреждение";
+"If you want to change the language you should be connected to the internet" = "Для изменения языка подключитесь к интернету";

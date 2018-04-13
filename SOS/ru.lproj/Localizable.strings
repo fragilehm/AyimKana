@@ -57,4 +57,6 @@
 "AboutApp" = "Об Айымкана";
 "Done" = "Готово";
 
+"Warning" = "Предупреждение";
+"If you want to change the language you should be connected to the internet" = "Для изменения языка подключитесь к интернету";
 
