@@ -64,8 +64,7 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     }
     
     func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-                                                                  regionRadius * 2.0, regionRadius * 2.0)
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
     @IBAction func valueChanged(_ sender: Any) {
@@ -104,7 +103,6 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (institutes.array[indexPath.row].phone_1 != "") {
             
-        
             if (institutes.array[indexPath.row].phone_2 != "")
             {
                 let innerAlert = UIAlertController(title: "Выберете Номер", message: "На какой номер хотите позвонить?", preferredStyle: UIAlertControllerStyle.alert)
@@ -113,9 +111,7 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
                     if let url = NSURL(string: "telprompt:\(temp)"){
                         if #available(iOS 10.0, *) {
                             UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
-                        } else {
-                            
-                        }
+                        } else { }
                     }
                 }  ))
                 innerAlert.addAction(UIAlertAction(title: "\(institutes.array[indexPath.row].phone_2)", style: UIAlertActionStyle.default, handler:
@@ -124,9 +120,7 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
                         if let url = NSURL(string: "telprompt:\(temp)"){
                             if #available(iOS 10.0, *) {
                                 UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
-                            } else {
-                                
-                            }
+                            } else {}
                         }
                     }
                 ))
@@ -134,8 +128,16 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
                 self.present(innerAlert, animated: true, completion: nil)
             }
             else {
-                let innerAlert = UIAlertController(title: "Позвонить", message: "Позвонить на номер \(institutes.array[indexPath.row].phone_1)?",       preferredStyle: UIAlertControllerStyle.alert)
-                innerAlert.addAction(UIAlertAction(title: "Да", style: UIAlertActionStyle.default, handler: nil  ))
+                let innerAlert = UIAlertController(title: "Позвонить", message: "Позвонить на номер \(institutes.array[indexPath.row].phone_1)?", preferredStyle: UIAlertControllerStyle.alert)
+                innerAlert.addAction(UIAlertAction(title: "Да", style: UIAlertActionStyle.default, handler:
+                { action in
+                    let temp = self.returnNumber(number: self.institutes.array[indexPath.row].phone_1)
+                    if let url = NSURL(string: "telprompt:\(temp)"){
+                        if #available(iOS 10.0, *) {
+                            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+                        } else {}
+                    }
+                }))
                 innerAlert.addAction(UIAlertAction(title: "Отмена", style: UIAlertActionStyle.default, handler: nil  ))
                 self.present(innerAlert, animated: true, completion: nil)
             }

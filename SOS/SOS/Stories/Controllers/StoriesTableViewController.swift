@@ -14,9 +14,7 @@ class StoriesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ServerManager.shared.getAllStoriesByPage(page_num: 1, setStoriesPage, error: showErrorAlert) { (json) in
-            
-        }
+        ServerManager.shared.getAllStoriesByPage(page_num: 1, setStoriesPage, error: showErrorAlert)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 1000
     }
@@ -62,7 +60,8 @@ class StoriesTableViewController: UITableViewController {
             let page_num = (storiesPage.results.count / 3) + 1
             ServerManager.shared.getAllStoriesByPage(page_num: page_num, { (storiesPage) in
                 self.storiesPage.results.append(contentsOf: storiesPage.results)
-            }, error: showErrorAlert) { (json) in }
+                self.tableView.reloadData()
+            }, error: showErrorAlert)
         }
     }
     

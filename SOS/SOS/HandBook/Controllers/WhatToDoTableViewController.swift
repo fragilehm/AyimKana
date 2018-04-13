@@ -9,7 +9,7 @@
 import UIKit
 
 let aColor = UIColor.init(netHex: 0xBDBDBD).cgColor
-let lang = DataManager.shared.getLanguage()
+var lang = ""
 
 enum ActionEnum: Int {
     case behave = 1
@@ -45,11 +45,17 @@ class WhatToDoTableViewController: UITableViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lang = DataManager.shared.getLanguage()
+        print("Lang: ", lang)
         self.title = "what_to_do".localized(lang: lang)!
+        
         dateCellExpanded = [Bool](repeating: false, count: actions.count)
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.tableFooterView = UIView()
+        
+        
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
