@@ -60,3 +60,10 @@
 "Warning" = "Предупреждение";
 "If you want to change the language you should be connected to the internet" = "Для изменения языка подключитесь к интернету";
 
+"Chose phone number" = "Выберете номер";
+"Chose phone number you want to dial" = "Выберете номер на который хотите позвонить";
+"Call" = "Позвонить";
+"Call to number" = "Позвонить на номер";
+"Yes" = "Да";
+"Cancel" = "Отмена";
+

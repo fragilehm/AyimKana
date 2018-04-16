@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class GreenMainViewController: UIViewController {
 
@@ -16,19 +17,33 @@ class GreenMainViewController: UIViewController {
     //let tap = UITapGestureRecognizer(target: self, action: #selector(GreenMainViewController.tapFunction))
     
     var categories = Categories()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "second_cell".localized(lang: lang)!
         greenCategoryTableView.estimatedRowHeight = 100
         greenCategoryTableView.tableFooterView = UIView()
-        ServerManager.shared.getAllCategories(setCategories, error: showErrorAlert) 
-        // Do any additional setup after loading the view.
+        
+        //ServerManager.shared.getAllCategories(setCategories, error: showErrorAlert)
+        getCachedCategories()
+        setCategories(categories: self.categories)
+    }
+    
+    func getCachedCategories() {
+        let userDefaults = UserDefaults.standard
+        if let jsonCategories = JSON(userDefaults.data(forKey: "categories")) as? JSON {
+            for category in jsonCategories.array! {
+                let category = Category(json: category)
+                    self.categories.array.append(category)
+            }
+        }
     }
     
     func setCategories(categories: Categories) {
         self.categories = categories
         greenCategoryTableView.reloadData()
     }
+    
 }
 extension GreenMainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,6 +69,7 @@ extension GreenMainViewController: UITableViewDelegate, UITableViewDataSource {
         vc.category = categories.array[indexPath.row].name
         self.navigationController?.show(vc, sender: self)
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }

@@ -16,6 +16,8 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     
     var category: String?
     
+    var lang: String = DataManager.shared.getLanguage()
+    
     @IBOutlet weak var detailsView: UIView!
     @IBOutlet weak var DetailsSegmentedControl: UISegmentedControl!
     @IBOutlet weak var mapView: MKMapView!
@@ -24,11 +26,11 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     var titles: [String] = []
     let regionRadius: CLLocationDistance = 2000
     var address = ""
-    // var institute: Institute?
+    
     var institutes = Institutes()
+    
     var id = 0
     var points = [MKPointAnnotation]()
-  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,12 +42,29 @@ class DetailsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         mapView.showsUserLocation = true
         mapView.delegate = self
         detailsView.isHidden = true
-        if titles.count == 0 {
-            ServerManager.shared.getInstitutesById(id: id, setInstitutes, error: showErrorAlert) 
-        }
         
+        //if titles.count == 0 {
+            //ServerManager.shared.getInstitutes(setInstitutes, error: showErrorAlert)
+        //}
+        
+        getCachedInstitutes()
+        setInstitutes(institutes: self.institutes)
     }
+    
+    func getCachedInstitutes() {
+        let userDefaults = UserDefaults.standard
+        if let jsonInstitutes = JSON(userDefaults.data(forKey: "institutes")) as? JSON {
+            for institute in jsonInstitutes.array! {
+                let anInstitute = Institute(json: institute)
+                if anInstitute.category == self.id {
+                    self.institutes.array.append(anInstitute)
+                }
+            }
+        }
+    }
+    
     func setInstitutes(institutes: Institutes){
+        
         self.institutes = institutes
         let locationOfBishkek = CLLocation(latitude: 42.874722, longitude: 74.612222)
         
@@ -105,7 +124,7 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
             
             if (institutes.array[indexPath.row].phone_2 != "")
             {
-                let innerAlert = UIAlertController(title: "Выберете Номер", message: "На какой номер хотите позвонить?", preferredStyle: UIAlertControllerStyle.alert)
+                let innerAlert = UIAlertController(title: "Chose phone number".localized(lang: lang), message: "Chose phone number you want to dial".localized(lang: lang), preferredStyle: UIAlertControllerStyle.alert)
                 innerAlert.addAction(UIAlertAction(title: "\(institutes.array[indexPath.row].phone_1)", style: UIAlertActionStyle.default, handler: { action in
                     let temp = self.returnNumber(number: self.institutes.array[indexPath.row].phone_1)
                     if let url = NSURL(string: "telprompt:\(temp)"){
@@ -124,12 +143,13 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
                         }
                     }
                 ))
-                innerAlert.addAction(UIAlertAction(title: "Отмена", style: UIAlertActionStyle.default, handler: nil  ))
+                innerAlert.addAction(UIAlertAction(title: "Cancel".localized(lang: lang), style: UIAlertActionStyle.default, handler: nil  ))
                 self.present(innerAlert, animated: true, completion: nil)
             }
             else {
-                let innerAlert = UIAlertController(title: "Позвонить", message: "Позвонить на номер \(institutes.array[indexPath.row].phone_1)?", preferredStyle: UIAlertControllerStyle.alert)
-                innerAlert.addAction(UIAlertAction(title: "Да", style: UIAlertActionStyle.default, handler:
+                let callTo = "Call to number".localized(lang: lang)
+                let innerAlert = UIAlertController(title: "Call".localized(lang: lang), message: "\(callTo!) \(institutes.array[indexPath.row].phone_1)?", preferredStyle: UIAlertControllerStyle.alert)
+                innerAlert.addAction(UIAlertAction(title: "Yes".localized(lang: lang), style: UIAlertActionStyle.default, handler:
                 { action in
                     let temp = self.returnNumber(number: self.institutes.array[indexPath.row].phone_1)
                     if let url = NSURL(string: "telprompt:\(temp)"){
@@ -138,7 +158,7 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
                         } else {}
                     }
                 }))
-                innerAlert.addAction(UIAlertAction(title: "Отмена", style: UIAlertActionStyle.default, handler: nil  ))
+                innerAlert.addAction(UIAlertAction(title: "Cancel".localized(lang: lang), style: UIAlertActionStyle.default, handler: nil  ))
                 self.present(innerAlert, animated: true, completion: nil)
             }
         }

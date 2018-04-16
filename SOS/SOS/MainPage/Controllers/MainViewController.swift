@@ -17,8 +17,9 @@ class MainViewController: ViewController, CLLocationManagerDelegate {
     var userLatitude = CLLocationDegrees()
     var message = ""
     
-    var articles = Articles()
-    var categories = Categories()
+    private var articles = Articles()
+    private var categories = Categories()
+    private var allInstitutes = Institutes()
     
     var imageNames = ["infoImage", "institutionImage", "dangerZoneImage", "smsImage", "emergencyContactsImage", "storiesImage"]
     
@@ -30,7 +31,7 @@ class MainViewController: ViewController, CLLocationManagerDelegate {
     "RegistrationViewController", "StoriesMainTableViewController"]
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         creatRightItem()
@@ -39,8 +40,18 @@ class MainViewController: ViewController, CLLocationManagerDelegate {
         configureCollectionView()
         cofigureLocation()
         
+        //ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
+        //ServerManager.shared.getAllCategories(setCategories, error: showErrorAlert)
+        //ServerManager.shared.getInstitutes(setInstitutes, error: showErrorAlert)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.navigationItem.title = Translation.mainMenu
         ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
-        ServerManager.shared.getAllCategories(setCategories, error: showErrorAlert) 
+        ServerManager.shared.getAllCategories(setCategories, error: showErrorAlert)
+        ServerManager.shared.getInstitutes(setInstitutes, error: showErrorAlert)
+        self.collectionView.reloadData()
     }
     
     func setArticles(articles: Articles){
@@ -49,6 +60,10 @@ class MainViewController: ViewController, CLLocationManagerDelegate {
     
     func setCategories(categories: Categories) {
         self.categories = categories
+    }
+    
+    func setInstitutes(institutes: Institutes) {
+        self.allInstitutes = institutes
     }
     
     func creatRightItem(){
@@ -68,12 +83,6 @@ class MainViewController: ViewController, CLLocationManagerDelegate {
         self.navigationItem.title = Translation.mainMenu
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-     
-        self.navigationItem.title = Translation.mainMenu
-        self.collectionView.reloadData()
-
-    }
 }
 extension MainViewController {
     func configureCollectionView(){

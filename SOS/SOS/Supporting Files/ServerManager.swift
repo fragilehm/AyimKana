@@ -32,8 +32,7 @@ class ServerManager: HTTPRequestManager  {
         }, error: { (err) in
             if err.contains("Нет подключения к интернету") {
                 completion(Articles(json: JSON(data)))
-            }
-            //error(err)
+            } else { error(err) }
         }) { (jsonValue) in
             UserDefaults.standard.set(jsonValue, forKey: "articles")
             UserDefaults.standard.set(true, forKey: "articlesCached")
@@ -77,8 +76,7 @@ class ServerManager: HTTPRequestManager  {
         }, error: { (err) in
             if err.contains("Нет подключения к интернету") {
                 completion(Categories(json: JSON(data)))
-            }
-            //error(err)
+            } else { error(err) }
         }) { (jsonValue) in
             UserDefaults.standard.set(jsonValue, forKey: "categories")
             UserDefaults.standard.set(true, forKey: "categoriesCached")
@@ -99,8 +97,7 @@ class ServerManager: HTTPRequestManager  {
         }, error: { (err) in
             if err.contains("Нет подключения к интернету") {
                 completion(Institutes(json: JSON(data)))
-            }
-            //error(err)
+            } else { error(err) }
         }) { (jsonValue) in
             UserDefaults.standard.set(jsonValue, forKey: "institutesById")
             UserDefaults.standard.set(true, forKey: "institutesByIdCached")
@@ -108,6 +105,26 @@ class ServerManager: HTTPRequestManager  {
         
     }
     
+    func getInstitutes(_ completion: @escaping (Institutes)-> Void, error: @escaping (String)-> Void) {
+        
+        let data = UserDefaults.standard.data(forKey: "institutes")
+        //        if UserDefaults.standard.bool(forKey: "institutesByIdCached") {
+        //            completion(Institutes(json: JSON(data)))
+        //            return
+        //        }
+        
+        self.get(api: "services", completion: { (json) in
+            completion(Institutes(json: json))
+        }, error: { (err) in
+            if err.contains("Нет подключения к интернету") {
+                completion(Institutes(json: JSON(data)))
+            } else { error(err) }
+        }) { (jsonValue) in
+            UserDefaults.standard.set(jsonValue, forKey: "institutes")
+            UserDefaults.standard.set(true, forKey: "institutesCached")
+        }
+        
+    }
 
     func getPins(_ completion: @escaping (Pins)-> Void, error: @escaping (String)-> Void) {
         self.get(api: "pins", completion: { (json) in

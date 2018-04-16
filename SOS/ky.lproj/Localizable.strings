@@ -60,3 +60,10 @@
 
 "Warning" = "Предупреждение";
 "If you want to change the language you should be connected to the internet" = "Для изменения языка подключитесь к интернету";
+
+"Chose phone number" = "Тандаңыз";
+"Chose phone number you want to dial" = "Чала турган номерди тандаңыз";
+"Call" = "Чалуу";
+"Call to number" = "Номерге чалуу";
+"Yes" = "Ооба";
+"Cancel" = "Жокко чыгаруу";

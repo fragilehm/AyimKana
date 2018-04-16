@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,19 +23,19 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFW-7L-anH">
                                         <rect key="frame" x="24" y="144" width="327" height="669.5"/>
-                                        <mutableString key="text">Целью проекта “Айымкана” является оказание своевременной информированности нуждающихся лиц, в основном женщин. Основной функционал мобильных приложений:
+                                        <string key="text">Целью проекта “Айымкана” является оказание своевременной информированности нуждающихся лиц, в основном женщин. Основной функционал мобильных приложений:
 Показ информации о видах насилия. Здесь пользователь сможет узнать определение насилию, виды насилия, конкретные примеры, куда обращаться, как себя вести и какие права нарушаются.
 Куда обратиться? Список учреждений на карте с инструкцией и ожидаемыми действиями.
 Опасные зоны: Показ отмеченных точек на карте, для выявления опасных или неблагоприятных мест/районов на карте Кыргызстана, где уровень гендерного насилия является высоким.
 SOS - CMC: Оперативное оповещение круга доверенных лиц, о том, что пользователь возможно находится в опасности.
 Истории: у пользователя есть возможность анонимно высказаться будучи свидетелем или жертвой гендерного насилия. Также пользователь может прочитать истории других людей.
-Владельцами приложения являются Общественный Фонд "Открытая Линия" и Американский Университет Центральной Азии</mutableString>
+Владельцами приложения являются Общественный Фонд "Открытая Линия" и Американский Университет Центральной Азии</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Developed by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLS-Fh-H9r">
-                                        <rect key="frame" x="100" y="834.5" width="88.5" height="22"/>
+                                        <rect key="frame" x="100" y="835.5" width="88.5" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.49376991149999999" green="0.51034610859999996" blue="0.52845415610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
