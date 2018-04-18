@@ -15,66 +15,62 @@
             <objects>
                 <viewController storyboardIdentifier="AboutAppViewController" id="5yR-fo-etb" customClass="AboutAppViewController" customModule="SOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="adN-vb-1zH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjJ-nh-7yi">
-                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="880"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFW-7L-anH">
-                                        <rect key="frame" x="24" y="144" width="327" height="669.5"/>
-                                        <string key="text">Целью проекта “Айымкана” является оказание своевременной информированности нуждающихся лиц, в основном женщин. Основной функционал мобильных приложений:
-Показ информации о видах насилия. Здесь пользователь сможет узнать определение насилию, виды насилия, конкретные примеры, куда обращаться, как себя вести и какие права нарушаются.
-Куда обратиться? Список учреждений на карте с инструкцией и ожидаемыми действиями.
-Опасные зоны: Показ отмеченных точек на карте, для выявления опасных или неблагоприятных мест/районов на карте Кыргызстана, где уровень гендерного насилия является высоким.
-SOS - CMC: Оперативное оповещение круга доверенных лиц, о том, что пользователь возможно находится в опасности.
-Истории: у пользователя есть возможность анонимно высказаться будучи свидетелем или жертвой гендерного насилия. Также пользователь может прочитать истории других людей.
-Владельцами приложения являются Общественный Фонд "Открытая Линия" и Американский Университет Центральной Азии</string>
+                                        <rect key="frame" x="24" y="12" width="327" height="1278.5"/>
+                                        <mutableString key="text">Что такое приложение “Айымкана”?
+
+Приложение "Айымкана" является простым в использовании информационным правовым справочником, в котором размещена информация о том, как поступать в случаях насилия,  куда обратиться и какие важные шаги при обращении в государственные органы важно предпринять.
+В главном меню пользователи увидят 6 категории: “Все о насилии”, “Куда обратиться?”, “Опасные зоны”, “SOS - СМС”, “Круг доверия” и “Не могу молчать”.
+ 
+Категория “Все о насилии” - содержит правовую информацию о видах насилия, детальные планы действий для ситуаций, связанных с насилием и составлении заявления в МВД.
+ 
+В категории “Куда обратиться?” Пользователи  увидят информацию с контактными данными государственных и негосударственных структур, в которые можно обращаться за  помощью или консультацией в случаях насилия.
+ 
+Опасные зоны. Это интерактивный раздел приложения, позволяющий всем пользователям самостоятельно в режиме реального времени оставлять отметки о произошедших случаях нарушений.
+
+Круг доверия - каждый пользователь создает свою базу доверительных контактов и вводит текст экстренного сообщения, чтобы позвать на помощь.
+ 
+Раздел SOS-СМС актуален  для всех, кто нуждается в мгновенном уведомлении близких об опасности
+
+Раздел “Не могу молчать!”   - Анонимный чат,  где каждый может делиться своими мыслями и чувствами с единомышленниками.
+
+Закачивайте приложение "Айымкана", вооружайтесь правовыми знаниями о том как вести себя в случаях насилия и будьте защищены.
+ 
+Разработано в рамках Хакатона "Безопасный город и безопасная среда " командой Необис - АУЦА, ОФ "Открытая линия" при поддержке ООН Женщины в Кыргызстане и Сигрит Раузинг Траст Фонда.</mutableString>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Developed by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLS-Fh-H9r">
-                                        <rect key="frame" x="100" y="835.5" width="88.5" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Developed by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLS-Fh-H9r">
+                                        <rect key="frame" x="100" y="1312.5" width="88.5" height="19"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.49376991149999999" green="0.51034610859999996" blue="0.52845415610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bQn-aL-ob1">
-                                        <rect key="frame" x="12" y="12" width="351" height="120"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auca_logo" translatesAutoresizingMaskIntoConstraints="NO" id="jsX-xT-JiT">
-                                                <rect key="frame" x="0.0" y="0.0" width="170.5" height="120"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="120" id="Zyl-wi-6pE"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="openlineLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Rp2-Wd-L2x">
-                                                <rect key="frame" x="180.5" y="0.0" width="170.5" height="120"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="neobis_logo" translatesAutoresizingMaskIntoConstraints="NO" id="P21-dV-PJu">
-                                        <rect key="frame" x="193" y="824.5" width="79" height="30"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="neobis_logo" translatesAutoresizingMaskIntoConstraints="NO" id="P21-dV-PJu">
+                                        <rect key="frame" x="193" y="1301.5" width="79" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="jrk-mh-MM1"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="mLS-Fh-H9r" firstAttribute="top" secondItem="QFW-7L-anH" secondAttribute="bottom" constant="20" id="3cK-rO-JIm"/>
-                                    <constraint firstItem="bQn-aL-ob1" firstAttribute="centerX" secondItem="cjJ-nh-7yi" secondAttribute="centerX" id="9ma-BW-M4S"/>
-                                    <constraint firstAttribute="trailing" secondItem="bQn-aL-ob1" secondAttribute="trailing" constant="12" id="D9a-Zw-mr4"/>
+                                    <constraint firstItem="P21-dV-PJu" firstAttribute="top" secondItem="QFW-7L-anH" secondAttribute="bottom" constant="11" id="3X2-66-3jo"/>
                                     <constraint firstAttribute="bottom" secondItem="mLS-Fh-H9r" secondAttribute="bottom" constant="12" id="E2I-Ab-h8Y"/>
-                                    <constraint firstItem="bQn-aL-ob1" firstAttribute="top" secondItem="cjJ-nh-7yi" secondAttribute="top" constant="12" id="JhV-R0-B2a"/>
+                                    <constraint firstItem="QFW-7L-anH" firstAttribute="centerX" secondItem="cjJ-nh-7yi" secondAttribute="centerX" id="IXC-YD-HVf"/>
                                     <constraint firstAttribute="trailing" secondItem="QFW-7L-anH" secondAttribute="trailing" constant="24" id="KnA-E9-z7X"/>
-                                    <constraint firstItem="QFW-7L-anH" firstAttribute="top" secondItem="bQn-aL-ob1" secondAttribute="bottom" constant="12" id="Lls-I5-G9e"/>
-                                    <constraint firstItem="P21-dV-PJu" firstAttribute="top" secondItem="QFW-7L-anH" secondAttribute="bottom" constant="12" id="MkQ-SK-Sml"/>
                                     <constraint firstItem="P21-dV-PJu" firstAttribute="leading" secondItem="mLS-Fh-H9r" secondAttribute="trailing" constant="4.5" id="PpE-qH-4C8"/>
-                                    <constraint firstItem="bQn-aL-ob1" firstAttribute="leading" secondItem="cjJ-nh-7yi" secondAttribute="leading" constant="12" id="bGZ-Zb-tX3"/>
+                                    <constraint firstItem="mLS-Fh-H9r" firstAttribute="top" secondItem="QFW-7L-anH" secondAttribute="bottom" constant="22" id="T4B-5c-jtg"/>
                                     <constraint firstItem="mLS-Fh-H9r" firstAttribute="leading" secondItem="cjJ-nh-7yi" secondAttribute="leading" constant="100" id="dFo-8d-TQd"/>
                                     <constraint firstAttribute="trailing" secondItem="P21-dV-PJu" secondAttribute="trailing" constant="103" id="jRE-4w-rvm"/>
                                     <constraint firstItem="QFW-7L-anH" firstAttribute="leading" secondItem="cjJ-nh-7yi" secondAttribute="leading" constant="24" id="nG0-hD-7ZY"/>
+                                    <constraint firstItem="QFW-7L-anH" firstAttribute="top" secondItem="cjJ-nh-7yi" secondAttribute="top" constant="12" id="oYV-95-sRK"/>
                                     <constraint firstAttribute="bottom" secondItem="P21-dV-PJu" secondAttribute="bottom" constant="12" id="r4C-7q-vfU"/>
                                 </constraints>
                             </scrollView>
@@ -88,7 +84,7 @@ SOS - CMC: Оперативное оповещение круга доверен
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LRw-G6-uVi"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="375" height="900"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXz-Ka-KfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,8 +92,6 @@ SOS - CMC: Оперативное оповещение круга доверен
         </scene>
     </scenes>
     <resources>
-        <image name="auca_logo" width="591" height="282"/>
         <image name="neobis_logo" width="1800" height="590"/>
-        <image name="openlineLogo" width="800" height="423"/>
     </resources>
 </document>
