@@ -10,10 +10,13 @@ import UIKit
 
 class AboutAppViewController: UIViewController {
     
+    let lang = DataManager.shared.getLanguage()
+    
+    @IBOutlet weak var aboutAppTextLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        aboutAppTextLabel.text = "about_app_text".localized(lang: lang)
     }
 
     override func viewWillAppear(_ animated: Bool) {

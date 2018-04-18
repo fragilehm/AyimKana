@@ -42,21 +42,19 @@ class MainViewController: ViewController, CLLocationManagerDelegate {
         configureCollectionView()
         cofigureLocation()
         
-        //ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
-        //ServerManager.shared.getAllCategories(setCategories, error: showErrorAlert)
-        //ServerManager.shared.getInstitutes(setInstitutes, error: showErrorAlert)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
         self.navigationItem.title = Translation.mainMenu
         
-        if(HTTPRequestManager().isConnectedToNetwork()) && count < 3 {
+        if(HTTPRequestManager().isConnectedToNetwork()){
             KRProgressHUD.show()
-            ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
-            ServerManager.shared.getAllCategories(setCategories, error: showErrorAlert)
-            ServerManager.shared.getInstitutes(setInstitutes, error: showErrorAlert)
         }
+        
+        ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
+        ServerManager.shared.getAllCategories(setCategories, error: showErrorAlert)
+        ServerManager.shared.getInstitutes(setInstitutes, error: showErrorAlert)
         
         self.collectionView.reloadData()
     }

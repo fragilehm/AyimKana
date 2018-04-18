@@ -85,6 +85,9 @@
                         <viewLayoutGuide key="safeArea" id="LRw-G6-uVi"/>
                     </view>
                     <size key="freeformSize" width="375" height="900"/>
+                    <connections>
+                        <outlet property="aboutAppTextLabel" destination="QFW-7L-anH" id="vnC-2f-ZF3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXz-Ka-KfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

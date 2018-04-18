@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 import Kingfisher
 
 class HandBookViewController: UIViewController {
@@ -22,9 +23,22 @@ class HandBookViewController: UIViewController {
         super.viewDidLoad()
         self.title = "first_cell".localized(lang: lang)!
         tableView.tableFooterView = UIView()
-        ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
+        
+        //ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
+        getCachedArticles()
+        setArticles(articles: self.articles)
     }
    
+    func getCachedArticles() {
+        let userDefaults = UserDefaults.standard
+        if let jsonArticles = JSON(userDefaults.data(forKey: "articles")) as? JSON {
+            for article in jsonArticles.array! {
+                let article = Article(json: article)
+                self.articles.array.append(article)
+            }
+        }
+    }
+    
     func setArticles(articles: Articles){
         self.articles = articles
         tableView.reloadData()
