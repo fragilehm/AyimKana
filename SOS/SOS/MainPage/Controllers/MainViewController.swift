@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import KRProgressHUD
 
 class MainViewController: ViewController, CLLocationManagerDelegate {
     
@@ -16,6 +17,7 @@ class MainViewController: ViewController, CLLocationManagerDelegate {
     var userLongitude = CLLocationDegrees()
     var userLatitude = CLLocationDegrees()
     var message = ""
+    var count = 0
     
     private var articles = Articles()
     private var categories = Categories()
@@ -48,22 +50,39 @@ class MainViewController: ViewController, CLLocationManagerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         
         self.navigationItem.title = Translation.mainMenu
-        ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
-        ServerManager.shared.getAllCategories(setCategories, error: showErrorAlert)
-        ServerManager.shared.getInstitutes(setInstitutes, error: showErrorAlert)
+        
+        if(HTTPRequestManager().isConnectedToNetwork()) && count < 3 {
+            KRProgressHUD.show()
+            ServerManager.shared.getArticles(setArticles, error: showErrorAlert)
+            ServerManager.shared.getAllCategories(setCategories, error: showErrorAlert)
+            ServerManager.shared.getInstitutes(setInstitutes, error: showErrorAlert)
+        }
+        
         self.collectionView.reloadData()
     }
     
     func setArticles(articles: Articles){
         self.articles = articles
+        count += 1
+        if count >= 3 {
+            KRProgressHUD.dismiss()
+        }
     }
     
     func setCategories(categories: Categories) {
         self.categories = categories
+        count += 1
+        if count >= 3 {
+            KRProgressHUD.dismiss()
+        }
     }
     
     func setInstitutes(institutes: Institutes) {
         self.allInstitutes = institutes
+        count += 1
+        if count >= 3 {
+            KRProgressHUD.dismiss()
+        }
     }
     
     func creatRightItem(){

@@ -15,4 +15,5 @@ target 'SOS' do
     pod 'Kingfisher'
     pod 'IQKeyboardManagerSwift', '5.0.0'
     pod ‘PickerView’
+    pod 'KRProgressHUD'
 end

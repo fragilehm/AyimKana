@@ -21,7 +21,7 @@
 - Indicator color can be customized
 
 ## Requirements
-- iOS 10.0+
+- iOS 8.0+
 - Xcode 9.0+
 - Swift 4.0+
 
@@ -98,7 +98,7 @@ class func showSuccess()
 class func showInfo()
 class func showWarning()
 class func showError()
-class func showImage() // This can set custom image.
+class func showImage() // This can set custom image. (Max size is 50x50)
 ```
 
 Show the HUD (only message)
@@ -175,12 +175,12 @@ These `set()` setting can be reset by
 I'm seeking bug reports and feature requests.
 
 ## Release Note
-+ 3.1.0 :
-  - Available at CocoaPods and Carthage with Xcode9 and Swift4.
++ 3.2.0 :
+  - Can now customize mask color.
+  - Fixed bug of HUD layout when the screen orientation changes.
 
-+ 3.0.0 :
-  - [ADD] Set styles with method chaining.
-  - [ADD] Show HUD on VC.
++ 3.1.2 :
+  - Fixed bug of custom small image.
 
 ## License
 KRProgressHUD is available under the MIT license.
