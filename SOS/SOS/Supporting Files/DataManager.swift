@@ -75,6 +75,13 @@ class DataManager {
         }
         return self.message
     }
+    var languageDidChange = false
+    func setLanguageChanged(value: Bool) {
+        languageDidChange = value
+    }
+    func getLanguageChanged() -> Bool {
+        return self.languageDidChange
+    }
     func clearData(){
         //self.phones.removeAll()
         //self.names.removeAll()

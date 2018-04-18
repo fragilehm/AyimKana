@@ -11,20 +11,22 @@ import UIKit
 class ChangeLanguageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
  
     let lang: String = DataManager.shared.getLanguage()
-        
+    
     @IBOutlet weak var languagesTableView: UITableView!
-    var selectedIndex: Int = -1
+    private var selectedIndex: Int = -1
     var selected = false
     
-    var languages = ["Русский", "Кыргызча"]
-    var selectLanguages = ["Язык", "Тил"]
- 
+    private var languages = ["Русский", "Кыргызча"]
+    private var selectLanguages = ["Язык", "Тил"]
+    private var changeLanguage = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Language".localized(lang: lang)!
         languagesTableView.tableFooterView = UIView()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done".localized(lang: lang)!, style: .done, target: self, action: #selector(doneTapped))
+        changeLanguage = false
+        DataManager.shared.setLanguageChanged(value: false)
     }
     
    
@@ -33,16 +35,22 @@ class ChangeLanguageViewController: UIViewController, UITableViewDataSource, UIT
             if selectedIndex == 0 {
                 DataManager.shared.setLanguage(language: "ru")
                 MainViewController().changeLanguageMainMenu(aLang: "ru")
+                changeLanguage = true
+                DataManager.shared.setLanguageChanged(value: true)
                 self.navigationController?.popViewController(animated: true)
             }
             else if selectedIndex == 1 {
                 DataManager.shared.setLanguage(language: "ky")
                 MainViewController().changeLanguageMainMenu(aLang: "ky")
+                changeLanguage = true
+                DataManager.shared.setLanguageChanged(value: true)
+
                 self.navigationController?.popViewController(animated: true)
             }
             else {
                 self.navigationController?.popViewController(animated: true)
             }
+            
         }
         else {
             let alert = UIAlertController(title: "Warning".localized(lang: lang)!, message: "If you want to change the language you should be connected to the internet".localized(lang: lang)!, preferredStyle: UIAlertControllerStyle.alert)
@@ -70,6 +78,10 @@ class ChangeLanguageViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndex = indexPath.row
         self.languagesTableView.reloadData()
+    }
+    
+    func changedLanguage() -> Bool{
+        return changeLanguage
     }
     
     override func didReceiveMemoryWarning() {

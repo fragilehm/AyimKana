@@ -48,7 +48,7 @@ class MainViewController: ViewController, CLLocationManagerDelegate {
         
         self.navigationItem.title = Translation.mainMenu
         
-        if(HTTPRequestManager().isConnectedToNetwork()){
+        if((HTTPRequestManager().isConnectedToNetwork() && count < 3) || DataManager.shared.getLanguageChanged()) {
             KRProgressHUD.show()
         }
         
